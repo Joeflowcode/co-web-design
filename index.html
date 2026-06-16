@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Web design and SEO for Central Oregon businesses. Custom websites built in Bend that rank on Google and get cited by AI search. Transparent pricing, local expertise.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:title" content="Central Oregon Web Design & SEO — Get Found on the Map">
+<meta property="og:description" content="Custom websites that rank on Google and AI search. Built in Bend for Central Oregon businesses.">
+<meta property="og:type" content="website">
+<title>Central Oregon Web Design &amp; SEO | Websites That Get Found | Bend, Oregon</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,600;12..96,800&family=Schibsted+Grotesk:wght@400;500;700&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Central Oregon Web Design & SEO",
+  "description": "Custom web design and SEO services for businesses in Bend, Redmond, and Central Oregon.",
+  "areaServed": ["Bend OR", "Redmond OR", "La Pine OR", "Sisters OR", "Central Oregon"],
+  "priceRange": "$$",
+  "address": {"@type": "PostalAddress", "addressLocality": "Bend", "addressRegion": "OR", "addressCountry": "US"}
+}
+</script>
+
+<style>
+:root{
+  --ink:        #0e1318;   /* obsidian night */
+  --basalt:     #161e26;   /* raised dark surface */
+  --basalt-2:   #1d2733;   /* card on dark */
+  --alpenglow:  #ff7456;   /* cascade dusk coral */
+  --alpenglow-2:#ffa07e;   /* lighter glow */
+  --sage:       #a9bfa4;   /* high desert sage */
+  --sand:       #f3ede2;   /* warm light section */
+  --sand-2:     #eae2d3;   /* deeper sand */
+  --snow:       #f7f4ee;   /* text on dark */
+  --dim:        #9aa6b2;   /* muted on dark */
+  --soil:       #2c2620;   /* text on sand */
+  --soil-dim:   #6e675d;   /* muted on sand */
+  --line-dark:  rgba(247,244,238,.09);
+  --line-sand:  rgba(44,38,32,.12);
+  --ff-display: 'Bricolage Grotesque', system-ui, sans-serif;
+  --ff-body:    'Schibsted Grotesk', system-ui, sans-serif;
+  --ff-mono:    'Spline Sans Mono', ui-monospace, monospace;
+  --ease:       cubic-bezier(.22,1,.36,1);
+  --mw:         1200px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--ff-body);background:var(--ink);color:var(--snow);line-height:1.6;overflow-x:clip}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
+:focus-visible{outline:2px solid var(--alpenglow);outline-offset:3px}
+::selection{background:var(--alpenglow);color:var(--ink)}
+
+/* ── coordinate eyebrow ─────────────────────────── */
+.coord{font-family:var(--ff-mono);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;display:inline-flex;align-items:center;gap:.6rem;color:var(--alpenglow)}
+.coord::before{content:'';width:26px;height:1px;background:currentColor}
+.on-sand .coord{color:#c75636}
+
+/* ── nav ────────────────────────────────────────── */
+#nav{position:fixed;inset:0 0 auto;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1rem 2rem;transition:background .35s,box-shadow .35s;backdrop-filter:blur(0px)}
+#nav.scrolled{background:rgba(14,19,24,.86);backdrop-filter:blur(14px);box-shadow:0 1px 0 var(--line-dark)}
+.nav-logo{font-family:var(--ff-display);font-weight:800;font-size:1.05rem;letter-spacing:-.01em;display:flex;align-items:center;gap:.6rem}
+.nav-logo .pin{width:26px;height:26px;border-radius:50% 50% 50% 0;background:linear-gradient(135deg,var(--alpenglow),var(--alpenglow-2));transform:rotate(-45deg);display:grid;place-items:center;flex-shrink:0}
+.nav-logo .pin::after{content:'';width:8px;height:8px;border-radius:50%;background:var(--ink)}
+.nav-links{display:flex;gap:2rem;align-items:center}
+.nav-links a{font-size:.82rem;font-weight:500;color:var(--dim);transition:color .2s}
+.nav-links a:hover{color:var(--snow)}
+.nav-cta{font-size:.8rem;font-weight:700;padding:.6rem 1.3rem;border-radius:99px;background:var(--snow);color:var(--ink);transition:background .25s,transform .25s}
+.nav-cta:hover{background:var(--alpenglow);transform:translateY(-1px)}
+@media(max-width:860px){.nav-links a:not(.nav-cta){display:none}}
+
+/* ── hero ───────────────────────────────────────── */
+#hero{position:relative;min-height:100svh;display:grid;align-items:center;padding:7.5rem 2rem 4rem;overflow:clip}
+.topo{position:absolute;inset:-20%;z-index:0;opacity:.5;pointer-events:none}
+.topo path{fill:none;stroke:var(--sage);stroke-width:1;opacity:.16}
+.topo .glow{stroke:var(--alpenglow);opacity:.22}
+.hero-grid{position:relative;z-index:1;max-width:var(--mw);margin:0 auto;width:100%;display:grid;grid-template-columns:1.15fr .85fr;gap:4rem;align-items:center}
+@media(max-width:960px){.hero-grid{grid-template-columns:1fr;gap:3rem}}
+.hero-h1{font-family:var(--ff-display);font-weight:800;font-size:clamp(2.6rem,6vw,4.6rem);line-height:.98;letter-spacing:-.03em;margin:1.1rem 0 1.4rem}
+.hero-h1 .glow-word{background:linear-gradient(100deg,var(--alpenglow) 10%,var(--alpenglow-2) 60%,var(--sage));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero-sub{font-size:1.06rem;color:var(--dim);max-width:46ch;margin-bottom:2.2rem}
+.hero-sub strong{color:var(--snow);font-weight:500}
+.hero-btns{display:flex;gap:.9rem;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:.55rem;font-weight:700;font-size:.88rem;padding:.95rem 1.7rem;border-radius:99px;transition:transform .25s var(--ease),background .25s,box-shadow .25s}
+.btn-glow{background:linear-gradient(110deg,var(--alpenglow),#ff8e63);color:#1a0e08;box-shadow:0 8px 30px -8px rgba(255,116,86,.55)}
+.btn-glow:hover{transform:translateY(-2px);box-shadow:0 14px 38px -8px rgba(255,116,86,.7)}
+.btn-line{border:1px solid var(--line-dark);color:var(--snow);background:rgba(255,255,255,.02)}
+.btn-line:hover{border-color:var(--sage);transform:translateY(-2px)}
+.hero-proof{display:flex;gap:2.2rem;margin-top:2.6rem;flex-wrap:wrap}
+.proof b{font-family:var(--ff-display);font-weight:800;font-size:1.5rem;display:block;letter-spacing:-.02em}
+.proof span{font-size:.72rem;color:var(--dim);font-family:var(--ff-mono);letter-spacing:.08em;text-transform:uppercase}
+
+/* search demo card */
+.serp{background:linear-gradient(170deg,var(--basalt-2),var(--basalt));border:1px solid var(--line-dark);border-radius:18px;padding:1.4rem;box-shadow:0 30px 80px -20px rgba(0,0,0,.6);transform:rotate(1.5deg)}
+.serp-bar{display:flex;align-items:center;gap:.7rem;background:var(--ink);border:1px solid var(--line-dark);border-radius:99px;padding:.7rem 1.1rem;margin-bottom:1.1rem}
+.serp-bar svg{flex-shrink:0;opacity:.55}
+.serp-q{font-family:var(--ff-mono);font-size:.8rem;color:var(--snow);white-space:nowrap;overflow:hidden}
+.serp-q::after{content:'▍';color:var(--alpenglow);animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.serp-row{display:flex;align-items:center;gap:.85rem;padding:.72rem .9rem;border-radius:10px;margin-bottom:.45rem;background:rgba(255,255,255,.025);transition:transform .8s var(--ease),background .8s,opacity .8s}
+.serp-row .rank{font-family:var(--ff-mono);font-size:.72rem;color:var(--dim);width:1.3rem;flex-shrink:0}
+.serp-row .fav{width:22px;height:22px;border-radius:6px;flex-shrink:0;background:var(--basalt-2);border:1px solid var(--line-dark)}
+.serp-row .t{font-size:.8rem;font-weight:500;line-height:1.3}
+.serp-row .u{font-size:.66rem;color:var(--dim);font-family:var(--ff-mono)}
+.serp-row.you{background:linear-gradient(100deg,rgba(255,116,86,.16),rgba(169,191,164,.08));border:1px solid rgba(255,116,86,.35)}
+.serp-row.you .fav{background:linear-gradient(135deg,var(--alpenglow),var(--alpenglow-2));border:none}
+.serp-row.you .rank{color:var(--alpenglow);font-weight:500}
+.serp-tag{display:inline-flex;align-items:center;gap:.4rem;font-family:var(--ff-mono);font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--sage);margin-top:.75rem}
+.serp-tag::before{content:'';width:7px;height:7px;border-radius:50%;background:var(--sage);animation:pulse 2s infinite}
+@keyframes pulse{50%{opacity:.3}}
+@media(max-width:960px){.serp{transform:none}}
+
+/* ── marquee ────────────────────────────────────── */
+.marquee{border-top:1px solid var(--line-dark);border-bottom:1px solid var(--line-dark);padding:1.1rem 0;overflow:clip;background:var(--basalt)}
+.marquee-track{display:flex;gap:3.5rem;width:max-content;animation:scroll 30s linear infinite}
+.marquee span{font-family:var(--ff-mono);font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:var(--dim);display:flex;align-items:center;gap:3.5rem;white-space:nowrap}
+.marquee span::after{content:'◆';color:var(--alpenglow);font-size:.5rem}
+@keyframes scroll{to{transform:translateX(-50%)}}
+
+/* ── sections ───────────────────────────────────── */
+.sec{padding:6.5rem 2rem}
+.sec-inner{max-width:var(--mw);margin:0 auto}
+.sec-head{max-width:640px;margin-bottom:3.5rem}
+.sec-h2{font-family:var(--ff-display);font-weight:800;font-size:clamp(1.9rem,4vw,3rem);line-height:1.02;letter-spacing:-.025em;margin:1rem 0 1.1rem}
+.sec-lead{color:var(--dim);font-size:1rem}
+.on-sand{background:var(--sand);color:var(--soil)}
+.on-sand .sec-lead{color:var(--soil-dim)}
+
+/* bento why-us */
+.bento{display:grid;grid-template-columns:repeat(6,1fr);gap:1rem}
+.bento-card{background:var(--basalt);border:1px solid var(--line-dark);border-radius:16px;padding:1.8rem;position:relative;overflow:clip;transition:transform .35s var(--ease),border-color .35s}
+.bento-card:hover{transform:translateY(-4px);border-color:rgba(255,116,86,.35)}
+.bento-card h3{font-family:var(--ff-display);font-weight:600;font-size:1.15rem;margin:.9rem 0 .45rem;letter-spacing:-.01em}
+.bento-card p{font-size:.86rem;color:var(--dim)}
+.bento-ic{width:38px;height:38px;border-radius:10px;display:grid;place-items:center;background:rgba(255,116,86,.12);color:var(--alpenglow)}
+.b-3{grid-column:span 3}.b-2{grid-column:span 2}.b-4{grid-column:span 4}
+@media(max-width:880px){.b-3,.b-2,.b-4{grid-column:span 6}}
+.bento-card.feature{background:linear-gradient(150deg,rgba(255,116,86,.14),var(--basalt) 55%)}
+.bento-card.feature .big{font-family:var(--ff-display);font-weight:800;font-size:2.6rem;letter-spacing:-.03em;background:linear-gradient(100deg,var(--alpenglow),var(--alpenglow-2));-webkit-background-clip:text;background-clip:text;color:transparent}
+
+/* services on sand */
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+@media(max-width:880px){.svc-grid{grid-template-columns:1fr}}
+.svc{background:#fff;border:1px solid var(--line-sand);border-radius:16px;padding:1.9rem;transition:transform .35s var(--ease),box-shadow .35s}
+.svc:hover{transform:translateY(-5px);box-shadow:0 24px 50px -22px rgba(44,38,32,.35)}
+.svc .coord{margin-bottom:.9rem}
+.svc h3{font-family:var(--ff-display);font-weight:600;font-size:1.2rem;letter-spacing:-.01em;margin-bottom:.5rem}
+.svc p{font-size:.87rem;color:var(--soil-dim)}
+
+/* pricing */
+.tiers{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;align-items:stretch}
+@media(max-width:1080px){.tiers{grid-template-columns:1fr 1fr}}
+@media(max-width:620px){.tiers{grid-template-columns:1fr}}
+.tier{background:var(--basalt);border:1px solid var(--line-dark);border-radius:18px;padding:1.9rem 1.6rem;display:flex;flex-direction:column;transition:transform .35s var(--ease),border-color .35s}
+.tier:hover{transform:translateY(-5px)}
+.tier h3{font-family:var(--ff-display);font-weight:600;font-size:1.05rem}
+.tier .range{font-family:var(--ff-display);font-weight:800;font-size:1.7rem;letter-spacing:-.025em;margin:.7rem 0 .15rem}
+.tier .for{font-size:.76rem;color:var(--dim);margin-bottom:1.2rem;min-height:2.3em}
+.tier ul{flex:1;display:flex;flex-direction:column;gap:.55rem;margin-bottom:1.5rem}
+.tier li{font-size:.82rem;color:var(--dim);padding-left:1.3rem;position:relative}
+.tier li::before{content:'✓';position:absolute;left:0;color:var(--sage);font-weight:700}
+.tier .btn{justify-content:center}
+.tier.hot{background:linear-gradient(165deg,rgba(255,116,86,.16),var(--basalt) 60%);border-color:rgba(255,116,86,.45);position:relative}
+.tier.hot::before{content:'MOST CHOSEN';position:absolute;top:-11px;left:50%;transform:translateX(-50%);font-family:var(--ff-mono);font-size:.58rem;letter-spacing:.14em;background:var(--alpenglow);color:#1a0e08;font-weight:500;padding:.3rem .8rem;border-radius:99px}
+.tier.hot .range{color:var(--alpenglow-2)}
+.addons{margin-top:2.5rem;display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+@media(max-width:880px){.addons{grid-template-columns:1fr}}
+.addon{border:1px dashed var(--line-dark);border-radius:14px;padding:1.4rem;display:flex;justify-content:space-between;align-items:center;gap:1rem;transition:border-color .3s}
+.addon:hover{border-color:var(--sage)}
+.addon b{font-size:.9rem;display:block}
+.addon small{font-size:.74rem;color:var(--dim)}
+.addon .p{font-family:var(--ff-mono);font-size:.78rem;color:var(--sage);white-space:nowrap}
+
+/* process — elevation profile */
+.trail{position:relative;margin-top:4rem}
+.trail-line{position:absolute;left:0;right:0;top:26px;height:2px;background:linear-gradient(90deg,var(--alpenglow),var(--sage));opacity:.4}
+.steps{display:grid;grid-template-columns:repeat(6,1fr);gap:1.2rem;position:relative}
+@media(max-width:980px){.steps{grid-template-columns:repeat(2,1fr)}.trail-line{display:none}}
+@media(max-width:560px){.steps{grid-template-columns:1fr}}
+.step .dot{width:54px;height:54px;border-radius:50%;background:var(--basalt-2);border:1px solid var(--line-dark);display:grid;place-items:center;font-family:var(--ff-mono);font-size:.78rem;color:var(--alpenglow);margin-bottom:1rem;position:relative;z-index:1}
+.step h3{font-family:var(--ff-display);font-weight:600;font-size:.98rem;margin-bottom:.35rem}
+.step p{font-size:.78rem;color:var(--dim)}
+.step .elev{font-family:var(--ff-mono);font-size:.62rem;color:var(--sage);letter-spacing:.1em;margin-top:.5rem;display:block}
+
+/* results on sand */
+.results{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+@media(max-width:880px){.results{grid-template-columns:1fr}}
+.result{background:#fff;border:1px solid var(--line-sand);border-radius:16px;overflow:clip;transition:transform .35s var(--ease),box-shadow .35s}
+.result:hover{transform:translateY(-5px);box-shadow:0 24px 50px -22px rgba(44,38,32,.35)}
+.result-top{padding:1.7rem 1.7rem 0}
+.result .kind{font-family:var(--ff-mono);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:#c75636}
+.result h3{font-family:var(--ff-display);font-weight:600;font-size:1.1rem;margin:.5rem 0 .4rem;letter-spacing:-.01em}
+.result p{font-size:.84rem;color:var(--soil-dim)}
+.result-stat{margin-top:1.3rem;padding:1.1rem 1.7rem;background:var(--sand-2);display:flex;align-items:baseline;gap:.6rem}
+.result-stat b{font-family:var(--ff-display);font-weight:800;font-size:1.7rem;letter-spacing:-.03em;color:#c75636}
+.result-stat span{font-size:.74rem;color:var(--soil-dim)}
+
+/* testimonials */
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+@media(max-width:880px){.quotes{grid-template-columns:1fr}}
+.quote{background:var(--basalt);border:1px solid var(--line-dark);border-radius:16px;padding:1.8rem;display:flex;flex-direction:column;gap:1.1rem}
+.quote .stars{color:var(--alpenglow);letter-spacing:.2em;font-size:.8rem}
+.quote p{font-size:.9rem;color:var(--snow);flex:1}
+.quote footer b{font-size:.84rem;display:block}
+.quote footer span{font-size:.74rem;color:var(--dim)}
+
+/* AI search section */
+.ai-wrap{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:center}
+@media(max-width:920px){.ai-wrap{grid-template-columns:1fr}}
+.ai-chat{background:var(--basalt);border:1px solid var(--line-dark);border-radius:18px;padding:1.5rem;display:flex;flex-direction:column;gap:.9rem}
+.bubble{max-width:88%;padding:.85rem 1.1rem;border-radius:14px;font-size:.84rem;line-height:1.55}
+.bubble.user{align-self:flex-end;background:var(--basalt-2);border:1px solid var(--line-dark);border-bottom-right-radius:4px}
+.bubble.ai{align-self:flex-start;background:linear-gradient(120deg,rgba(255,116,86,.13),rgba(169,191,164,.09));border:1px solid rgba(255,116,86,.25);border-bottom-left-radius:4px}
+.bubble.ai mark{background:rgba(255,116,86,.25);color:var(--alpenglow-2);padding:.05em .25em;border-radius:4px}
+.ai-list{display:flex;flex-direction:column;gap:.9rem;margin-top:1.6rem}
+.ai-list li{display:flex;gap:.85rem;font-size:.9rem;color:var(--dim)}
+.ai-list li b{color:var(--snow);font-weight:500}
+.ai-list .tick{color:var(--sage);font-weight:700;flex-shrink:0}
+
+/* FAQ */
+.faq{max-width:780px;margin:0 auto}
+.faq details{border-bottom:1px solid var(--line-sand)}
+.faq summary{display:flex;justify-content:space-between;align-items:center;gap:1.5rem;padding:1.4rem .2rem;cursor:pointer;font-family:var(--ff-display);font-weight:600;font-size:1.02rem;list-style:none;letter-spacing:-.01em}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:'+';font-weight:300;font-size:1.6rem;color:#c75636;transition:transform .3s var(--ease);flex-shrink:0}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq .a{padding:0 .2rem 1.5rem;font-size:.9rem;color:var(--soil-dim);max-width:62ch}
+
+/* CTA */
+#contact{position:relative;overflow:clip;text-align:center;padding:7.5rem 2rem}
+#contact .topo{opacity:.35}
+.cta-h{font-family:var(--ff-display);font-weight:800;font-size:clamp(2.2rem,5vw,3.6rem);letter-spacing:-.03em;line-height:1;margin:1.1rem 0 1.2rem;position:relative}
+.cta-sub{color:var(--dim);max-width:46ch;margin:0 auto 2.4rem;position:relative}
+.cta-cards{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:3rem;position:relative}
+.cta-card{background:var(--basalt);border:1px solid var(--line-dark);border-radius:14px;padding:1.3rem 1.8rem;min-width:215px;transition:transform .3s var(--ease),border-color .3s}
+.cta-card:hover{transform:translateY(-4px);border-color:rgba(255,116,86,.4)}
+.cta-card .lbl{font-family:var(--ff-mono);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--dim);display:block;margin-bottom:.4rem}
+.cta-card b{font-size:.95rem}
+
+/* footer */
+footer{border-top:1px solid var(--line-dark);padding:3.5rem 2rem 2rem;background:var(--ink)}
+.ft{max-width:var(--mw);margin:0 auto;display:flex;justify-content:space-between;gap:2rem;flex-wrap:wrap}
+.ft p{font-size:.8rem;color:var(--dim);max-width:34ch;margin-top:.8rem}
+.ft-links{display:flex;gap:3.5rem;flex-wrap:wrap}
+.ft-links h4{font-family:var(--ff-mono);font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--dim);margin-bottom:.9rem}
+.ft-links a{display:block;font-size:.84rem;color:var(--snow);opacity:.75;margin-bottom:.5rem;transition:opacity .2s}
+.ft-links a:hover{opacity:1}
+.ft-base{max-width:var(--mw);margin:2.5rem auto 0;padding-top:1.5rem;border-top:1px solid var(--line-dark);display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;font-size:.72rem;color:var(--dim)}
+.ft-base .mono{font-family:var(--ff-mono);letter-spacing:.06em}
+
+/* reveal */
+[data-r]{opacity:0;transform:translateY(26px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+[data-r].in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){
+  [data-r]{opacity:1;transform:none;transition:none}
+  .marquee-track{animation:none}
+  *{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<nav id="nav" aria-label="Main">
+  <a class="nav-logo" href="#"><span class="pin" aria-hidden="true"></span>CO&nbsp;Web&nbsp;Design</a>
+  <div class="nav-links">
+    <a href="#services">Services</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#results">Results</a>
+    <a href="#faq">FAQ</a>
+    <a class="nav-cta" href="#contact">Free consultation</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header id="hero">
+  <svg class="topo" viewBox="0 0 1400 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <path d="M-50,700 Q200,640 400,690 T800,650 T1250,700 T1500,660"/>
+    <path d="M-50,640 Q220,570 430,630 T830,580 T1280,640 T1500,590" class="glow"/>
+    <path d="M-50,580 Q240,500 460,570 T860,510 T1300,580 T1500,520"/>
+    <path d="M-50,510 Q260,430 480,500 T880,440 T1320,510 T1500,450"/>
+    <path d="M-50,440 Q280,360 500,430 T900,370 T1340,440 T1500,380" class="glow"/>
+    <path d="M-50,370 Q300,290 520,360 T920,300 T1360,370 T1500,310"/>
+    <path d="M-50,300 Q320,220 540,290 T940,230 T1380,300 T1500,240"/>
+    <path d="M-50,230 Q340,150 560,220 T960,160 T1400,230 T1500,170" class="glow"/>
+    <path d="M-50,160 Q360,90 580,150 T980,100 T1420,160 T1500,110"/>
+  </svg>
+
+  <div class="hero-grid">
+    <div>
+      <span class="coord">44.0582° N, 121.3153° W — Bend, Oregon</span>
+      <h1 class="hero-h1">Websites that<br>get <span class="glow-word">found.</span></h1>
+      <p class="hero-sub">Custom web design and SEO for Central Oregon businesses. We build sites that rank on Google, get cited by AI search, and turn visitors into customers — <strong>no templates, no hidden fees.</strong></p>
+      <div class="hero-btns">
+        <a class="btn btn-glow" href="#pricing">See pricing</a>
+        <a class="btn btn-line" href="#contact">Book a free consultation</a>
+      </div>
+      <div class="hero-proof">
+        <div class="proof"><b data-count="150">0</b><span>% avg. lead growth</span></div>
+        <div class="proof"><b data-count="40">0</b><span>+ sites launched</span></div>
+        <div class="proof"><b>#1</b><span>local rankings won</span></div>
+      </div>
+    </div>
+
+    <!-- live search demo -->
+    <div class="serp" aria-label="Animated example of a business rising to the top of Google search results">
+      <div class="serp-bar">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
+        <span class="serp-q" id="serp-q"></span>
+      </div>
+      <div id="serp-results">
+        <div class="serp-row"><span class="rank">1</span><span class="fav"></span><div><div class="t">National directory site</div><div class="u">bigdirectory.com</div></div></div>
+        <div class="serp-row"><span class="rank">2</span><span class="fav"></span><div><div class="t">Out-of-state chain</div><div class="u">megachain.com</div></div></div>
+        <div class="serp-row you"><span class="rank">7</span><span class="fav"></span><div><div class="t">Your business</div><div class="u">yourbusiness.com</div></div></div>
+      </div>
+      <span class="serp-tag">After our SEO: page one, position one</span>
+    </div>
+  </div>
+</header>
+
+<!-- marquee -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Web design</span><span>Local SEO</span><span>AI search optimization</span><span>Site redesigns</span><span>Content strategy</span><span>Google Business Profile</span><span>Bend</span><span>Redmond</span><span>Sisters</span><span>La Pine</span>
+    <span>Web design</span><span>Local SEO</span><span>AI search optimization</span><span>Site redesigns</span><span>Content strategy</span><span>Google Business Profile</span><span>Bend</span><span>Redmond</span><span>Sisters</span><span>La Pine</span>
+  </div>
+</div>
+
+<!-- WHY US — bento -->
+<section class="sec" id="why">
+  <div class="sec-inner">
+    <div class="sec-head" data-r>
+      <span class="coord">Why us</span>
+      <h2 class="sec-h2">Local expertise.<br>Measurable results.</h2>
+      <p class="sec-lead">We're not a faceless agency in another time zone. We build for the Central Oregon market because we live in it.</p>
+    </div>
+    <div class="bento">
+      <div class="bento-card feature b-3" data-r>
+        <span class="big">+150%</span>
+        <h3>Average lead growth in 6 months</h3>
+        <p>Across client sites with our design + SEO packages. Real inquiries, not vanity traffic.</p>
+      </div>
+      <div class="bento-card b-3" data-r>
+        <div class="bento-ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg></div>
+        <h3>Built for local search</h3>
+        <p>Google Business Profile optimization, local citations, and geo-targeted content that puts you on the map — literally.</p>
+      </div>
+      <div class="bento-card b-2" data-r>
+        <div class="bento-ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8M12 18v3"/></svg></div>
+        <h3>Custom design</h3>
+        <p>Every site designed from scratch around your brand. No themes, no templates.</p>
+      </div>
+      <div class="bento-card b-2" data-r>
+        <div class="bento-ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z"/></svg></div>
+        <h3>Fast by default</h3>
+        <p>Speed-optimized builds that pass Core Web Vitals — a direct ranking factor.</p>
+      </div>
+      <div class="bento-card b-2" data-r>
+        <div class="bento-ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3a9 9 0 1 0 9 9"/><path d="M12 7v5l3 3"/><path d="M17 3h4v4"/><path d="m21 3-6 6"/></svg></div>
+        <h3>AI-search ready</h3>
+        <p>Structured data and content built so ChatGPT, Claude, and Perplexity cite you.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES — on sand -->
+<section class="sec on-sand" id="services">
+  <div class="sec-inner">
+    <div class="sec-head" data-r>
+      <span class="coord">Services</span>
+      <h2 class="sec-h2">Everything between idea and inquiry.</h2>
+      <p class="sec-lead">Pick a single service or bundle them — every engagement starts with a free consultation and a clear quote.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc" data-r><span class="coord">Design</span><h3>Website design &amp; development</h3><p>Strategy, custom design, and a fast, secure build — launched and ready to win customers.</p></div>
+      <div class="svc" data-r><span class="coord">Search</span><h3>Search engine optimization</h3><p>Technical SEO, keyword strategy, and authority building that moves you up the rankings month over month.</p></div>
+      <div class="svc" data-r><span class="coord">Refresh</span><h3>Website redesign</h3><p>Modernize an outdated site without losing the search authority you've already earned.</p></div>
+      <div class="svc" data-r><span class="coord">Maps</span><h3>Local SEO</h3><p>Own the map pack. Google Business Profile, reviews strategy, and citations across Central Oregon.</p></div>
+      <div class="svc" data-r><span class="coord">Content</span><h3>Content strategy &amp; copywriting</h3><p>Pages and posts that answer what your customers actually search — written to rank and convert.</p></div>
+      <div class="svc" data-r><span class="coord">Care</span><h3>Maintenance &amp; support</h3><p>Updates, security, backups, and performance monitoring so your site never falls behind.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="sec" id="pricing">
+  <div class="sec-inner">
+    <div class="sec-head" data-r>
+      <span class="coord">Pricing</span>
+      <h2 class="sec-h2">Clear packages. No surprises.</h2>
+      <p class="sec-lead">Every package includes mobile-first design, SSL, analytics, and SEO fundamentals. You'll know the full cost before we start.</p>
+    </div>
+    <div class="tiers">
+      <div class="tier" data-r>
+        <h3>Basic</h3>
+        <div class="range">$1,499–2,499</div>
+        <p class="for">For small businesses getting online on a budget</p>
+        <ul><li>3–5 pages</li><li>Mobile responsive</li><li>Contact form</li><li>Basic SEO setup</li><li>1 year hosting</li></ul>
+        <a class="btn btn-line" href="#contact">Start here</a>
+      </div>
+      <div class="tier" data-r>
+        <h3>Starter</h3>
+        <div class="range">$3,500–5,500</div>
+        <p class="for">For new businesses building a real foundation</p>
+        <ul><li>5–7 pages</li><li>Custom design</li><li>On-page SEO</li><li>Analytics setup</li><li>1 year hosting</li></ul>
+        <a class="btn btn-line" href="#contact">Get a quote</a>
+      </div>
+      <div class="tier hot" data-r>
+        <h3>Professional</h3>
+        <div class="range">$7,500–12,000</div>
+        <p class="for">For growing businesses that want results now</p>
+        <ul><li>10–15 pages</li><li>Advanced SEO</li><li>Blog + content strategy</li><li>Lead capture &amp; CRO</li><li>Speed optimization</li><li>3 months SEO support</li></ul>
+        <a class="btn btn-glow" href="#contact">Most popular</a>
+      </div>
+      <div class="tier" data-r>
+        <h3>Premium</h3>
+        <div class="range">$15,000+</div>
+        <p class="for">For market leaders ready to dominate</p>
+        <ul><li>Unlimited pages</li><li>Full SEO strategy</li><li>6 months support</li><li>Content calendar</li><li>Monthly reporting</li><li>Priority access</li></ul>
+        <a class="btn btn-line" href="#contact">Talk to us</a>
+      </div>
+    </div>
+    <div class="addons">
+      <div class="addon" data-r><div><b>Website redesign</b><small>Modernize without losing rankings</small></div><span class="p">$8k–20k</span></div>
+      <div class="addon" data-r><div><b>SEO only</b><small>Improve your existing site</small></div><span class="p">$500–3k/mo</span></div>
+      <div class="addon" data-r><div><b>Enterprise</b><small>Multi-site, dedicated manager</small></div><span class="p">$30k+</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS — trail markers -->
+<section class="sec" id="process" style="background:var(--basalt)">
+  <div class="sec-inner">
+    <div class="sec-head" data-r>
+      <span class="coord">The route</span>
+      <h2 class="sec-h2">Six switchbacks to the summit.</h2>
+      <p class="sec-lead">A clear, proven trail from first call to a site that performs. You'll always know where we are on the map.</p>
+    </div>
+    <div class="trail">
+      <div class="trail-line" aria-hidden="true"></div>
+      <div class="steps">
+        <div class="step" data-r><div class="dot">01</div><h3>Listen</h3><p>Your goals, your customers, your market. Questions first, assumptions never.</p><span class="elev">TRAILHEAD</span></div>
+        <div class="step" data-r><div class="dot">02</div><h3>Strategy</h3><p>Site structure, keyword research, and a content roadmap.</p><span class="elev">+1,200 FT</span></div>
+        <div class="step" data-r><div class="dot">03</div><h3>Design &amp; build</h3><p>Custom design, clean code, SEO baked in from line one.</p><span class="elev">+2,800 FT</span></div>
+        <div class="step" data-r><div class="dot">04</div><h3>Test</h3><p>Every device, every speed check, every conversion path.</p><span class="elev">+4,100 FT</span></div>
+        <div class="step" data-r><div class="dot">05</div><h3>Launch</h3><p>Deploy, monitor, and start generating leads.</p><span class="elev">+5,500 FT</span></div>
+        <div class="step" data-r><div class="dot">06</div><h3>Grow</h3><p>Ongoing SEO and optimization so results compound.</p><span class="elev">SUMMIT</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESULTS — on sand -->
+<section class="sec on-sand" id="results">
+  <div class="sec-inner">
+    <div class="sec-head" data-r>
+      <span class="coord">Results</span>
+      <h2 class="sec-h2">Work that pays for itself.</h2>
+      <p class="sec-lead">Real outcomes for real Central Oregon businesses.</p>
+    </div>
+    <div class="results">
+      <div class="result" data-r>
+        <div class="result-top"><span class="kind">Contractor — website + SEO</span><h3>From invisible to fully booked</h3><p>A local contracting company needed residential leads. We built the site and owned the local rankings.</p></div>
+        <div class="result-stat"><b>+150%</b><span>leads in 6 months</span></div>
+      </div>
+      <div class="result" data-r>
+        <div class="result-top"><span class="kind">E-commerce — redesign</span><h3>A store that finally converts</h3><p>An outdated shop was bleeding customers at checkout. We redesigned for conversion and speed.</p></div>
+        <div class="result-stat"><b>+45%</b><span>conversion rate</span></div>
+      </div>
+      <div class="result" data-r>
+        <div class="result-top"><span class="kind">Dental practice — launch</span><h3>New practice, page-one presence</h3><p>A new dental office needed credibility and patients fast. Local SEO did the heavy lifting.</p></div>
+        <div class="result-stat"><b>#1</b><span>for local searches</span></div>
+      </div>
+      <div class="result" data-r>
+        <div class="result-top"><span class="kind">Manufacturing — B2B</span><h3>Qualified leads on autopilot</h3><p>A manufacturer with zero online visibility became the obvious choice in their category.</p></div>
+        <div class="result-stat"><b>+200%</b><span>qualified leads</span></div>
+      </div>
+      <div class="result" data-r>
+        <div class="result-top"><span class="kind">Professional services</span><h3>Traffic that builds trust</h3><p>A consulting firm's new site and content strategy turned search traffic into signed clients.</p></div>
+        <div class="result-stat"><b>+89%</b><span>website traffic</span></div>
+      </div>
+      <div class="result" data-r>
+        <div class="result-top"><span class="kind">Nonprofit</span><h3>A mission people can find</h3><p>A community nonprofit needed donations, not just visits. We designed for giving.</p></div>
+        <div class="result-stat"><b>+60%</b><span>online donations</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="sec" id="testimonials">
+  <div class="sec-inner">
+    <div class="sec-head" data-r>
+      <span class="coord">Client words</span>
+      <h2 class="sec-h2">Don't take our word for it.</h2>
+    </div>
+    <div class="quotes">
+      <div class="quote" data-r><span class="stars">★★★★★</span><p>"They understood our vision immediately and delivered a website that exceeded expectations. Our leads tripled within three months."</p><footer><b>Sarah Johnson</b><span>Owner, Bend Home Services</span></footer></div>
+      <div class="quote" data-r><span class="stars">★★★★★</span><p>"They didn't just build us a website — they built us a sales tool. Highly recommended for any Central Oregon business."</p><footer><b>Mike Chen</b><span>CEO, Tech Solutions Inc.</span></footer></div>
+      <div class="quote" data-r><span class="stars">★★★★★</span><p>"Finally, a local web designer who gets it. Our site ranks on Google and customers tell us they had no problem finding us."</p><footer><b>Jennifer Martinez</b><span>Manager, Central Oregon Dental</span></footer></div>
+      <div class="quote" data-r><span class="stars">★★★★★</span><p>"We went from struggling to find customers to consistent leads every week. Their SEO strategy actually works."</p><footer><b>David Thompson</b><span>Founder, Local Contracting Co.</span></footer></div>
+      <div class="quote" data-r><span class="stars">★★★★★</span><p>"Transparent communication, fair pricing, excellent results. They treated our small business like their only client."</p><footer><b>Rachel Green</b><span>Owner, Bend Boutique</span></footer></div>
+      <div class="quote" data-r><span class="stars">★★★★★</span><p>"As a nonprofit, budget is tight. They created something beautiful that actually brought in donations."</p><footer><b>Tom Wilson</b><span>Director, Community Nonprofit</span></footer></div>
+    </div>
+  </div>
+</section>
+
+<!-- AI SEARCH -->
+<section class="sec" id="ai" style="background:var(--basalt)">
+  <div class="sec-inner ai-wrap">
+    <div data-r>
+      <span class="coord">The new search</span>
+      <h2 class="sec-h2">When customers ask AI, you're the answer.</h2>
+      <p class="sec-lead">ChatGPT, Claude, and Perplexity now answer "who should I hire?" directly. We structure your site so AI systems can read it, trust it, and recommend you by name.</p>
+      <ul class="ai-list">
+        <li><span class="tick">✓</span><span><b>Schema &amp; structured data</b> — so AI understands exactly what you do and where</span></li>
+        <li><span class="tick">✓</span><span><b>Question-shaped content</b> — pages that answer what people actually ask</span></li>
+        <li><span class="tick">✓</span><span><b>FAQ extraction format</b> — built for AI citation, not just keywords</span></li>
+        <li><span class="tick">✓</span><span><b>Authority signals</b> — the trusted citations AI prefers to quote</span></li>
+      </ul>
+    </div>
+    <div class="ai-chat" data-r aria-label="Example AI chat recommending a local business">
+      <div class="bubble user">Who's the best plumber in Bend, Oregon?</div>
+      <div class="bubble ai">Based on reviews and local presence, <mark>High Desert Plumbing</mark> is a top choice in Bend — licensed, 5-star rated, and serving all of Central Oregon…</div>
+      <div class="bubble user">Do they handle emergency calls?</div>
+      <div class="bubble ai">Yes — their site lists <mark>24/7 emergency service</mark> with a typical response time under an hour in Bend and Redmond.</div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ — on sand -->
+<section class="sec on-sand" id="faq">
+  <div class="sec-inner">
+    <div class="sec-head" data-r style="max-width:780px;margin-inline:auto;text-align:center">
+      <span class="coord">FAQ</span>
+      <h2 class="sec-h2">Questions, answered straight.</h2>
+    </div>
+    <div class="faq" data-r>
+      <details open>
+        <summary>How much does a website cost?</summary>
+        <p class="a">Packages run from $1,499 for a basic site to $25,000+ for premium builds, with most growing businesses landing in the $7,500–12,000 Professional range. Every quote is fixed and itemized before we start — no hidden fees, ever.</p>
+      </details>
+      <details>
+        <summary>How long does it take to build?</summary>
+        <p class="a">Starter sites take 6–8 weeks; Professional and Premium builds run 8–12. We start development in a staging environment as soon as your homepage is approved, and you'll see progress at every step.</p>
+      </details>
+      <details>
+        <summary>Why do I need SEO?</summary>
+        <p class="a">A beautiful site nobody finds is a brochure in a locked drawer. SEO is how customers searching "near me" actually reach you — more qualified visitors, more leads, no ad spend required.</p>
+      </details>
+      <details>
+        <summary>Can you redesign my existing website?</summary>
+        <p class="a">Yes — redesigns are a specialty. We modernize the design, improve speed and UX, and migrate your content carefully so you keep the search authority you've already earned.</p>
+      </details>
+      <details>
+        <summary>Do you offer SEO without a new website?</summary>
+        <p class="a">Yes. Standalone SEO starts at $500/month and covers keyword research, technical audits, on-page optimization, and monthly reporting on your existing site.</p>
+      </details>
+      <details>
+        <summary>Can AI chatbots really recommend my business?</summary>
+        <p class="a">They already recommend someone — the question is whether it's you. We add the structured data, FAQ formatting, and authority signals that make AI systems cite your business when customers ask.</p>
+      </details>
+      <details>
+        <summary>Are you actually local?</summary>
+        <p class="a">Yes — based in Bend, serving Redmond, Sisters, La Pine, and all of Central Oregon. We know this market because we operate in it.</p>
+      </details>
+      <details>
+        <summary>Do you guarantee #1 rankings?</summary>
+        <p class="a">No legitimate agency can. What we do guarantee: a proven process, transparent monthly reporting, and the track record above. Our clients consistently see significant ranking and traffic gains.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="contact">
+  <svg class="topo" viewBox="0 0 1400 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <path d="M-50,700 Q200,640 400,690 T800,650 T1250,700 T1500,660"/>
+    <path d="M-50,580 Q240,500 460,570 T860,510 T1300,580 T1500,520" class="glow"/>
+    <path d="M-50,440 Q280,360 500,430 T900,370 T1340,440 T1500,380"/>
+    <path d="M-50,300 Q320,220 540,290 T940,230 T1380,300 T1500,240" class="glow"/>
+    <path d="M-50,160 Q360,90 580,150 T980,100 T1420,160 T1500,110"/>
+  </svg>
+  <span class="coord" style="position:relative">Free 30-minute discovery call</span>
+  <h2 class="cta-h">Ready to be the business<br>customers find first?</h2>
+  <p class="cta-sub">No obligation, no pressure — just honest advice about what your business actually needs.</p>
+  <a class="btn btn-glow" href="tel:+15415551234" style="position:relative">Book your free consultation</a>
+  <div class="cta-cards">
+    <a class="cta-card" href="tel:+15415551234"><span class="lbl">Call</span><b>(541) 555-1234</b></a>
+    <a class="cta-card" href="mailto:hello@yourwebsite.com"><span class="lbl">Email</span><b>hello@yourwebsite.com</b></a>
+    <div class="cta-card"><span class="lbl">Based in</span><b>Bend, Oregon</b></div>
+  </div>
+</section>
+
+<footer>
+  <div class="ft">
+    <div>
+      <a class="nav-logo" href="#"><span class="pin" aria-hidden="true"></span>CO&nbsp;Web&nbsp;Design</a>
+      <p>Custom websites and SEO for businesses across Central Oregon. Built in Bend since 2024.</p>
+    </div>
+    <div class="ft-links">
+      <div>
+        <h4>Services</h4>
+        <a href="#services">Web design</a>
+        <a href="#services">SEO</a>
+        <a href="#services">Redesigns</a>
+        <a href="#services">Local SEO</a>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <a href="#results">Results</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </div>
+  <div class="ft-base">
+    <span>© 2026 Central Oregon Web Design. All rights reserved.</span>
+    <span class="mono">44.0582° N, 121.3153° W</span>
+  </div>
+</footer>
+
+<script>
+/* nav background on scroll */
+const nav = document.getElementById('nav');
+addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 40), {passive:true});
+
+/* scroll reveal */
+const io = new IntersectionObserver(es => es.forEach(e => {
+  if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+}), {threshold:.12});
+document.querySelectorAll('[data-r]').forEach(el => io.observe(el));
+
+/* hero counters */
+const cio = new IntersectionObserver(es => es.forEach(e => {
+  if (!e.isIntersecting) return;
+  const el = e.target, end = +el.dataset.count, t0 = performance.now();
+  const tick = now => {
+    const p = Math.min((now - t0)/1400, 1);
+    el.textContent = '+' + Math.round(end * (1-Math.pow(1-p,3)));
+    if (p < 1) requestAnimationFrame(tick);
+  };
+  requestAnimationFrame(tick);
+  cio.unobserve(el);
+}), {threshold:.5});
+document.querySelectorAll('[data-count]').forEach(el => cio.observe(el));
+
+/* search demo: type query, then promote "you" to #1 */
+const queries = ['plumber near bend oregon','best dentist redmond or','contractor central oregon'];
+const qEl = document.getElementById('serp-q');
+const results = document.getElementById('serp-results');
+const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+function runDemo(i){
+  const q = queries[i % queries.length];
+  const rows = [...results.children];
+  const you = results.querySelector('.you');
+  /* reset */
+  results.append(you);
+  you.querySelector('.rank').textContent = '7';
+  let c = 0;
+  qEl.textContent = '';
+  const type = setInterval(() => {
+    qEl.textContent = q.slice(0, ++c);
+    if (c >= q.length){
+      clearInterval(type);
+      setTimeout(() => {
+        results.prepend(you);
+        you.querySelector('.rank').textContent = '1';
+        [...results.children].forEach((r,n) => { if(!r.classList.contains('you')) r.querySelector('.rank').textContent = n+1; });
+        setTimeout(() => runDemo(i+1), 3800);
+      }, 900);
+    }
+  }, 55);
+}
+if (reduced){
+  qEl.textContent = queries[0];
+  const you = results.querySelector('.you');
+  results.prepend(you);
+  you.querySelector('.rank').textContent = '1';
+} else {
+  runDemo(0);
+}
+</script>
+
+</body>
+</html>
