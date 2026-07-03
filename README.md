@@ -1,8 +1,14 @@
-# Central Oregon Web Design
+# Cascade Local Marketing
 
-A custom marketing website for web design and SEO services across Central Oregon.
+A marketing website for free websites + monthly AI-powered marketing services across Central Oregon.
 
 **Live:** [Your site URL will go here]
+
+## Business Model
+
+- **Free custom website** included with any monthly marketing package (no upfront design fee)
+- **12-month minimum** on all plans — website files are yours to keep after 12 paid months
+- **Three tiers:** Starter Visibility ($300/mo), Growth Engine ($500/mo), Local Domination ($700/mo)
 
 ## Features
 
@@ -11,6 +17,7 @@ A custom marketing website for web design and SEO services across Central Oregon
 - **No dependencies** — pure HTML, CSS, and vanilla JavaScript
 - **Fast loading** with optimized animations and minimal external resources
 - **Accessible** with proper semantic HTML and ARIA labels
+- **Lead capture form** ready for Formspree (or swap for Tally/Google Forms)
 
 ## Design System
 
@@ -20,37 +27,42 @@ A custom marketing website for web design and SEO services across Central Oregon
 
 ## Sections
 
-1. **Hero** — Main value proposition with animated search ranking demo
-2. **Why Us** — Bento grid of differentiators
-3. **Services** — 6 core offerings with descriptions
-4. **Pricing** — 4 tiers + add-ons
-5. **Process** — 6-step visual roadmap
-6. **Results** — Case studies and outcomes
-7. **Testimonials** — Client social proof
-8. **AI Search** — How your site gets recommended by ChatGPT/Claude
-9. **FAQ** — Collapsible Q&A
-10. **CTA** — Contact and booking section
+1. **Hero** — Free website + monthly marketing value proposition
+2. **Why Us** — Bento grid of differentiators (no unsupported metrics)
+3. **Services** — What's included in monthly packages
+4. **How It Works** — 5-step explanation of free website ownership model
+5. **Packages** — 3 recurring tiers + featured Growth Engine offer
+6. **Process** — 6-step path from audit to ownership
+7. **Outcomes** — Example results the system is built to deliver (not fake case studies)
+8. **Early Client Offer** — Honest founding-client CTA instead of placeholder testimonials
+9. **AI Search** — How sites are built for modern search (softened messaging)
+10. **FAQ** — Cancellation, ownership, and package questions
+11. **CTA** — Lead form + contact info
 
 ## Deployment
 
 ### GitHub Pages (Free)
 1. Push to GitHub
 2. Enable Pages in Settings
-3. Live at `https://yourusername.github.io/co-web-design`
+3. Live at `https://yourusername.github.io/cascade-local`
 
 ### Netlify (Recommended)
 1. Connect GitHub repo
 2. Auto-deploys on push
 3. Add custom domain in settings
 
-## Customization
+## Before Going Live
 
-Before going live, update:
-- `(541) 555-1234` → Your actual phone number
-- `hello@yourwebsite.com` → Your actual email
-- Testimonials with real client names and stories
-- Results with your actual metrics
-- Service descriptions to match your offerings
+Update these placeholders:
+
+| Placeholder | Replace with |
+|---|---|
+| `(541) 555-1234` | Your actual phone number |
+| `hello@cascadelocal.com` | Your actual email |
+| `https://formspree.io/f/YOUR_FORM_ID` | Your Formspree (or Tally) form endpoint |
+| `Cascade Local` | Your final brand name (if different) |
+
+Do **not** add fake testimonials or unverified performance metrics. Add real client stories only after you have them.
 
 ## File Structure
 
@@ -68,7 +80,7 @@ README.md     — This file
 
 ## License
 
-© 2026 Central Oregon Web Design. All rights reserved.
+© 2026 Cascade Local Marketing. All rights reserved.
 
 ---
 
