@@ -8,7 +8,7 @@ A professional marketing website for a speckled epoxy garage floor coating busin
 
 - **Service:** Full flake epoxy garage floor coatings (residential & light commercial)
 - **Area:** Lyons, Mehama, Mill City, Stayton, Scio, Sublimity, and surrounding Linn/Marion County communities
-- **Model:** Free on-site estimates → 1–2 day install → written warranty
+- **Model:** $7/sq ft flat rate · free on-site estimates · 1–2 day install
 
 ## Features
 
@@ -25,7 +25,7 @@ A professional marketing website for a speckled epoxy garage floor coating busin
 3. **Services** — Garages, shops, basements, commercial
 4. **Color Options** — Four sample flake blends (custom available)
 5. **Process** — 4-step install from estimate to top coat
-6. **Pricing** — Transparent ranges for Lyons area
+6. **Pricing & Calculator** — $7/sq ft with interactive estimate calculator
 7. **Service Area** — North Santiam Valley coverage map
 8. **FAQ** — Common customer questions
 9. **Contact** — Lead form + phone/email
@@ -40,7 +40,7 @@ Update these placeholders:
 | `hello@specklecraftepoxy.com` | Your actual email |
 | `https://formspree.io/f/YOUR_FORM_ID` | Your Formspree (or Tally) form endpoint |
 | `SpeckleCraft` | Your final brand name (if different) |
-| Pricing ranges | Your actual rates after market research |
+| Pricing | Your actual $/sq ft rate (currently $7/sq ft) |
 
 Also consider:
 - Adding real before/after photos once you complete jobs
