@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Web design and SEO for Central Oregon businesses. Custom websites built in Bend that rank on Google and get cited by AI search. Transparent pricing, local expertise.">
+<meta name="description" content="Free custom websites for Central Oregon businesses with monthly AI-powered marketing. SEO, Google Business posts, and lead tracking — no upfront design fee. Bend, Oregon.">
 <meta name="robots" content="index, follow, max-image-preview:large">
-<meta property="og:title" content="Central Oregon Web Design & SEO — Get Found on the Map">
-<meta property="og:description" content="Custom websites that rank on Google and AI search. Built in Bend for Central Oregon businesses.">
+<meta property="og:title" content="Free Websites for Central Oregon Businesses — Monthly AI Marketing">
+<meta property="og:description" content="Get a free custom website when you join a monthly marketing package. SEO, Google Business posts, and lead tracking for Bend and Central Oregon.">
 <meta property="og:type" content="website">
-<title>Central Oregon Web Design &amp; SEO | Websites That Get Found | Bend, Oregon</title>
+<title>Free Websites + Monthly Marketing | Central Oregon | Bend, Oregon</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,10 +18,10 @@
 {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
-  "name": "Central Oregon Web Design & SEO",
-  "description": "Custom web design and SEO services for businesses in Bend, Redmond, and Central Oregon.",
+  "name": "Cascade Local Marketing",
+  "description": "Free custom websites and monthly AI-powered marketing for businesses in Bend, Redmond, and Central Oregon.",
   "areaServed": ["Bend OR", "Redmond OR", "La Pine OR", "Sisters OR", "Central Oregon"],
-  "priceRange": "$$",
+  "priceRange": "$300–$700/mo",
   "address": {"@type": "PostalAddress", "addressLocality": "Bend", "addressRegion": "OR", "addressCountry": "US"}
 }
 </script>
@@ -155,9 +155,50 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 .svc p{font-size:.87rem;color:var(--soil-dim)}
 
 /* pricing */
-.tiers{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;align-items:stretch}
-@media(max-width:1080px){.tiers{grid-template-columns:1fr 1fr}}
-@media(max-width:620px){.tiers{grid-template-columns:1fr}}
+.tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;align-items:stretch}
+@media(max-width:980px){.tiers{grid-template-columns:1fr}}
+.tier .mo{font-size:.82rem;font-weight:500;color:var(--dim)}
+.tier .term{font-size:.72rem;color:var(--dim);margin-bottom:1rem;font-family:var(--ff-mono);letter-spacing:.06em}
+.offer-banner{background:linear-gradient(150deg,rgba(255,116,86,.14),var(--basalt) 55%);border:1px solid rgba(255,116,86,.4);border-radius:18px;padding:2rem;margin-bottom:2.5rem;display:grid;grid-template-columns:1.2fr .8fr;gap:2rem;align-items:center}
+@media(max-width:880px){.offer-banner{grid-template-columns:1fr}}
+.offer-banner h3{font-family:var(--ff-display);font-weight:800;font-size:clamp(1.4rem,3vw,2rem);letter-spacing:-.02em;margin-bottom:.6rem}
+.offer-banner .price{font-family:var(--ff-display);font-weight:800;font-size:2.4rem;letter-spacing:-.03em;color:var(--alpenglow-2)}
+.offer-banner ul{display:flex;flex-direction:column;gap:.45rem}
+.offer-banner li{font-size:.84rem;color:var(--dim);padding-left:1.3rem;position:relative}
+.offer-banner li::before{content:'✓';position:absolute;left:0;color:var(--sage);font-weight:700}
+
+/* how it works */
+.how-steps{display:grid;grid-template-columns:repeat(5,1fr);gap:1rem;margin-top:1rem}
+@media(max-width:1080px){.how-steps{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.how-steps{grid-template-columns:1fr}}
+.how-step{background:var(--basalt);border:1px solid var(--line-dark);border-radius:16px;padding:1.6rem;position:relative}
+.on-sand .how-step{background:#fff;border-color:var(--line-sand)}
+.how-step .num{font-family:var(--ff-mono);font-size:.72rem;color:var(--alpenglow);letter-spacing:.12em;margin-bottom:.8rem;display:block}
+.how-step h3{font-family:var(--ff-display);font-weight:600;font-size:1rem;margin-bottom:.4rem;letter-spacing:-.01em}
+.how-step p{font-size:.82rem;color:var(--dim)}
+.on-sand .how-step p{color:var(--soil-dim)}
+
+/* outcomes */
+.outcomes{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+@media(max-width:880px){.outcomes{grid-template-columns:1fr}}
+.outcome{background:var(--basalt);border:1px solid var(--line-dark);border-radius:16px;padding:1.8rem}
+.outcome h3{font-family:var(--ff-display);font-weight:600;font-size:1.05rem;margin:.6rem 0 .4rem;letter-spacing:-.01em}
+.outcome p{font-size:.84rem;color:var(--dim)}
+
+/* early offer */
+.early-offer{background:linear-gradient(150deg,rgba(169,191,164,.12),var(--basalt) 60%);border:1px solid rgba(169,191,164,.35);border-radius:18px;padding:2.5rem;text-align:center;max-width:720px;margin:0 auto}
+.early-offer h3{font-family:var(--ff-display);font-weight:800;font-size:clamp(1.4rem,3vw,1.9rem);letter-spacing:-.02em;margin:1rem 0 .8rem}
+.early-offer p{font-size:.95rem;color:var(--dim);max-width:52ch;margin:0 auto 1.5rem}
+
+/* lead form */
+.lead-form{max-width:520px;margin:2rem auto 0;text-align:left;position:relative}
+.lead-form .row{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;margin-bottom:.8rem}
+@media(max-width:560px){.lead-form .row{grid-template-columns:1fr}}
+.lead-form label{display:block;font-size:.72rem;font-family:var(--ff-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--dim);margin-bottom:.35rem}
+.lead-form input,.lead-form select,.lead-form textarea{width:100%;padding:.75rem 1rem;border-radius:10px;border:1px solid var(--line-dark);background:var(--basalt);color:var(--snow);font-family:var(--ff-body);font-size:.9rem;transition:border-color .2s}
+.lead-form input:focus,.lead-form select:focus,.lead-form textarea:focus{border-color:var(--alpenglow);outline:none}
+.lead-form textarea{min-height:90px;resize:vertical}
+.lead-form .btn{width:100%;justify-content:center;margin-top:.4rem}
 .tier{background:var(--basalt);border:1px solid var(--line-dark);border-radius:18px;padding:1.9rem 1.6rem;display:flex;flex-direction:column;transition:transform .35s var(--ease),border-color .35s}
 .tier:hover{transform:translateY(-5px)}
 .tier h3{font-family:var(--ff-display);font-weight:600;font-size:1.05rem}
@@ -268,13 +309,13 @@ footer{border-top:1px solid var(--line-dark);padding:3.5rem 2rem 2rem;background
 <body>
 
 <nav id="nav" aria-label="Main">
-  <a class="nav-logo" href="#"><span class="pin" aria-hidden="true"></span>CO&nbsp;Web&nbsp;Design</a>
+  <a class="nav-logo" href="#"><span class="pin" aria-hidden="true"></span>Cascade&nbsp;Local</a>
   <div class="nav-links">
+    <a href="#how-it-works">How it works</a>
+    <a href="#pricing">Packages</a>
     <a href="#services">Services</a>
-    <a href="#pricing">Pricing</a>
-    <a href="#results">Results</a>
     <a href="#faq">FAQ</a>
-    <a class="nav-cta" href="#contact">Free consultation</a>
+    <a class="nav-cta" href="#contact">Free website audit</a>
   </div>
 </nav>
 
@@ -295,16 +336,16 @@ footer{border-top:1px solid var(--line-dark);padding:3.5rem 2rem 2rem;background
   <div class="hero-grid">
     <div>
       <span class="coord">44.0582° N, 121.3153° W — Bend, Oregon</span>
-      <h1 class="hero-h1">Websites that<br>get <span class="glow-word">found.</span></h1>
-      <p class="hero-sub">Custom web design and SEO for Central Oregon businesses. We build sites that rank on Google, get cited by AI search, and turn visitors into customers — <strong>no templates, no hidden fees.</strong></p>
+      <h1 class="hero-h1">Free websites for<br>Central Oregon <span class="glow-word">businesses.</span></h1>
+      <p class="hero-sub">We build your business a clean, mobile-friendly website at <strong>no upfront cost</strong> when you join a monthly marketing package. You get SEO pages, Google Business posts, review help, lead tracking, and AI-powered content support every month.</p>
       <div class="hero-btns">
-        <a class="btn btn-glow" href="#pricing">See pricing</a>
-        <a class="btn btn-line" href="#contact">Book a free consultation</a>
+        <a class="btn btn-glow" href="#pricing">See monthly packages</a>
+        <a class="btn btn-line" href="#contact">Get a free website audit</a>
       </div>
       <div class="hero-proof">
-        <div class="proof"><b data-count="150">0</b><span>% avg. lead growth</span></div>
-        <div class="proof"><b data-count="40">0</b><span>+ sites launched</span></div>
-        <div class="proof"><b>#1</b><span>local rankings won</span></div>
+        <div class="proof"><b>Free</b><span>custom website</span></div>
+        <div class="proof"><b>$300+</b><span>monthly plans</span></div>
+        <div class="proof"><b>12 mo</b><span>then yours forever</span></div>
       </div>
     </div>
 
@@ -327,8 +368,8 @@ footer{border-top:1px solid var(--line-dark);padding:3.5rem 2rem 2rem;background
 <!-- marquee -->
 <div class="marquee" aria-hidden="true">
   <div class="marquee-track">
-    <span>Web design</span><span>Local SEO</span><span>AI search optimization</span><span>Site redesigns</span><span>Content strategy</span><span>Google Business Profile</span><span>Bend</span><span>Redmond</span><span>Sisters</span><span>La Pine</span>
-    <span>Web design</span><span>Local SEO</span><span>AI search optimization</span><span>Site redesigns</span><span>Content strategy</span><span>Google Business Profile</span><span>Bend</span><span>Redmond</span><span>Sisters</span><span>La Pine</span>
+    <span>Free websites</span><span>Monthly SEO</span><span>Google Business posts</span><span>Lead tracking</span><span>Review help</span><span>Local marketing</span><span>Bend</span><span>Redmond</span><span>Sisters</span><span>La Pine</span>
+    <span>Free websites</span><span>Monthly SEO</span><span>Google Business posts</span><span>Lead tracking</span><span>Review help</span><span>Local marketing</span><span>Bend</span><span>Redmond</span><span>Sisters</span><span>La Pine</span>
   </div>
 </div>
 
@@ -337,24 +378,24 @@ footer{border-top:1px solid var(--line-dark);padding:3.5rem 2rem 2rem;background
   <div class="sec-inner">
     <div class="sec-head" data-r>
       <span class="coord">Why us</span>
-      <h2 class="sec-h2">Local expertise.<br>Measurable results.</h2>
-      <p class="sec-lead">We're not a faceless agency in another time zone. We build for the Central Oregon market because we live in it.</p>
+      <h2 class="sec-h2">More visibility.<br>Less work for you.</h2>
+      <p class="sec-lead">We're not a faceless agency in another time zone. We live in Central Oregon and help local businesses look legit, show up on Google, and turn searches into calls.</p>
     </div>
     <div class="bento">
       <div class="bento-card feature b-3" data-r>
-        <span class="big">+150%</span>
-        <h3>Average lead growth in 6 months</h3>
-        <p>Across client sites with our design + SEO packages. Real inquiries, not vanity traffic.</p>
+        <span class="big">$0</span>
+        <h3>Upfront website cost</h3>
+        <p>Your custom site is included with any monthly marketing package. No big design invoice before we start.</p>
       </div>
       <div class="bento-card b-3" data-r>
         <div class="bento-ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg></div>
         <h3>Built for local search</h3>
-        <p>Google Business Profile optimization, local citations, and geo-targeted content that puts you on the map — literally.</p>
+        <p>Google Business Profile optimization, local keywords, and geo-targeted pages that put you on the map — literally.</p>
       </div>
       <div class="bento-card b-2" data-r>
         <div class="bento-ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8M12 18v3"/></svg></div>
-        <h3>Custom design</h3>
-        <p>Every site designed from scratch around your brand. No themes, no templates.</p>
+        <h3>Custom look, smart systems</h3>
+        <p>Every site looks unique to your brand. Behind the scenes we use proven layouts and AI-assisted workflows so you get more for less.</p>
       </div>
       <div class="bento-card b-2" data-r>
         <div class="bento-ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z"/></svg></div>
@@ -363,8 +404,8 @@ footer{border-top:1px solid var(--line-dark);padding:3.5rem 2rem 2rem;background
       </div>
       <div class="bento-card b-2" data-r>
         <div class="bento-ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3a9 9 0 1 0 9 9"/><path d="M12 7v5l3 3"/><path d="M17 3h4v4"/><path d="m21 3-6 6"/></svg></div>
-        <h3>AI-search ready</h3>
-        <p>Structured data and content built so ChatGPT, Claude, and Perplexity cite you.</p>
+        <h3>Search-engine ready</h3>
+        <p>Structured data and clear content built so Google and AI tools can understand what you do and where you serve.</p>
       </div>
     </div>
   </div>
@@ -375,16 +416,34 @@ footer{border-top:1px solid var(--line-dark);padding:3.5rem 2rem 2rem;background
   <div class="sec-inner">
     <div class="sec-head" data-r>
       <span class="coord">Services</span>
-      <h2 class="sec-h2">Everything between idea and inquiry.</h2>
-      <p class="sec-lead">Pick a single service or bundle them — every engagement starts with a free consultation and a clear quote.</p>
+      <h2 class="sec-h2">Monthly marketing that keeps working.</h2>
+      <p class="sec-lead">Every package includes a free website build, hosting, and ongoing support. Pick the level that fits your business — all plans require a 12-month commitment.</p>
     </div>
     <div class="svc-grid">
-      <div class="svc" data-r><span class="coord">Design</span><h3>Website design &amp; development</h3><p>Strategy, custom design, and a fast, secure build — launched and ready to win customers.</p></div>
-      <div class="svc" data-r><span class="coord">Search</span><h3>Search engine optimization</h3><p>Technical SEO, keyword strategy, and authority building that moves you up the rankings month over month.</p></div>
-      <div class="svc" data-r><span class="coord">Refresh</span><h3>Website redesign</h3><p>Modernize an outdated site without losing the search authority you've already earned.</p></div>
-      <div class="svc" data-r><span class="coord">Maps</span><h3>Local SEO</h3><p>Own the map pack. Google Business Profile, reviews strategy, and citations across Central Oregon.</p></div>
-      <div class="svc" data-r><span class="coord">Content</span><h3>Content strategy &amp; copywriting</h3><p>Pages and posts that answer what your customers actually search — written to rank and convert.</p></div>
-      <div class="svc" data-r><span class="coord">Care</span><h3>Maintenance &amp; support</h3><p>Updates, security, backups, and performance monitoring so your site never falls behind.</p></div>
+      <div class="svc" data-r><span class="coord">Website</span><h3>Free custom website</h3><p>A mobile-friendly site built for your brand — home, services, about, contact, and FAQ. Included with every plan at no upfront design fee.</p></div>
+      <div class="svc" data-r><span class="coord">Search</span><h3>Local SEO &amp; content</h3><p>Page titles, service keywords, and new SEO pages each month so you rank for what customers actually search.</p></div>
+      <div class="svc" data-r><span class="coord">Maps</span><h3>Google Business Profile</h3><p>Profile optimization, posting schedule, and review response help so you show up in local map results.</p></div>
+      <div class="svc" data-r><span class="coord">Leads</span><h3>Tracking &amp; reporting</h3><p>Form submissions, call tracking setup, and a monthly snapshot of traffic, rankings, and what's improving.</p></div>
+      <div class="svc" data-r><span class="coord">Content</span><h3>Monthly updates</h3><p>Fresh Google posts, service page additions, seasonal offers, and site edits — handled for you every month.</p></div>
+      <div class="svc" data-r><span class="coord">Care</span><h3>Hosting &amp; support</h3><p>Hosting, security, backups, and priority edits while your plan is active. After 12 paid months, the website files are yours to keep.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW THE FREE WEBSITE WORKS -->
+<section class="sec on-sand" id="how-it-works">
+  <div class="sec-inner">
+    <div class="sec-head" data-r>
+      <span class="coord">How it works</span>
+      <h2 class="sec-h2">How the free website works.</h2>
+      <p class="sec-lead">No confusion, no surprises. Here's exactly what you get and how ownership works.</p>
+    </div>
+    <div class="how-steps">
+      <div class="how-step" data-r><span class="num">Step 01</span><h3>We build your site</h3><p>Custom website with no upfront design fee. You review, we refine, and launch when you're happy.</p></div>
+      <div class="how-step" data-r><span class="num">Step 02</span><h3>You pick a package</h3><p>Choose Starter Visibility, Growth Engine, or Local Domination — all include the free website build.</p></div>
+      <div class="how-step" data-r><span class="num">Step 03</span><h3>We launch &amp; grow</h3><p>Site goes live and monthly SEO, Google posts, content, and reporting begin right away.</p></div>
+      <div class="how-step" data-r><span class="num">Step 04</span><h3>After 12 months, it's yours</h3><p>Complete 12 paid months and the website files are yours to keep forever — no release fee.</p></div>
+      <div class="how-step" data-r><span class="num">Step 05</span><h3>Stay subscribed for support</h3><p>Hosting, edits, SEO, reporting, and marketing support continue while your plan is active. Cancel early and the free-build benefit doesn't apply.</p></div>
     </div>
   </div>
 </section>
@@ -393,45 +452,82 @@ footer{border-top:1px solid var(--line-dark);padding:3.5rem 2rem 2rem;background
 <section class="sec" id="pricing">
   <div class="sec-inner">
     <div class="sec-head" data-r>
-      <span class="coord">Pricing</span>
-      <h2 class="sec-h2">Clear packages. No surprises.</h2>
-      <p class="sec-lead">Every package includes mobile-first design, SSL, analytics, and SEO fundamentals. You'll know the full cost before we start.</p>
+      <span class="coord">Packages</span>
+      <h2 class="sec-h2">Free website + monthly marketing.</h2>
+      <p class="sec-lead">Every plan includes a free custom website, hosting, and a 12-month minimum. Transparent pricing — you know exactly what you're paying each month.</p>
     </div>
+
+    <div class="offer-banner" data-r>
+      <div>
+        <span class="coord">Featured offer</span>
+        <h3>Free Website + Growth Plan</h3>
+        <p class="term">12-month minimum · Most popular for contractors, dentists, HVAC, and local service businesses</p>
+        <div class="price">$500<span class="mo">/month</span></div>
+      </div>
+      <ul>
+        <li>Free 5–7 page website</li>
+        <li>Hosting included</li>
+        <li>Basic SEO setup + Google Business optimization</li>
+        <li>4 Google Business posts per month</li>
+        <li>2 SEO/service pages per month</li>
+        <li>Monthly performance report</li>
+        <li>1 hour of updates &amp; support</li>
+        <li>Review response templates + lead tracking setup</li>
+      </ul>
+    </div>
+
     <div class="tiers">
       <div class="tier" data-r>
-        <h3>Basic</h3>
-        <div class="range">$1,499–2,499</div>
-        <p class="for">For small businesses getting online on a budget</p>
-        <ul><li>3–5 pages</li><li>Mobile responsive</li><li>Contact form</li><li>Basic SEO setup</li><li>1 year hosting</li></ul>
-        <a class="btn btn-line" href="#contact">Start here</a>
-      </div>
-      <div class="tier" data-r>
-        <h3>Starter</h3>
-        <div class="range">$3,500–5,500</div>
-        <p class="for">For new businesses building a real foundation</p>
-        <ul><li>5–7 pages</li><li>Custom design</li><li>On-page SEO</li><li>Analytics setup</li><li>1 year hosting</li></ul>
-        <a class="btn btn-line" href="#contact">Get a quote</a>
+        <h3>Starter Visibility</h3>
+        <div class="range">$300<span class="mo">/mo</span></div>
+        <p class="term">12-month minimum</p>
+        <p class="for">Small service businesses that need to look legit and show up online</p>
+        <ul>
+          <li>Free 3–5 page website</li>
+          <li>Basic local SEO setup</li>
+          <li>Google Business Profile help</li>
+          <li>1 monthly website update</li>
+          <li>2 Google Business posts/month</li>
+          <li>Monthly performance snapshot</li>
+        </ul>
+        <a class="btn btn-line" href="#contact">Get started</a>
       </div>
       <div class="tier hot" data-r>
-        <h3>Professional</h3>
-        <div class="range">$7,500–12,000</div>
-        <p class="for">For growing businesses that want results now</p>
-        <ul><li>10–15 pages</li><li>Advanced SEO</li><li>Blog + content strategy</li><li>Lead capture &amp; CRO</li><li>Speed optimization</li><li>3 months SEO support</li></ul>
+        <h3>Growth Engine</h3>
+        <div class="range">$500<span class="mo">/mo</span></div>
+        <p class="term">12-month minimum</p>
+        <p class="for">Growing businesses that want steady leads — our main package</p>
+        <ul>
+          <li>Everything in Starter, plus:</li>
+          <li>Free 5–7 page website</li>
+          <li>2 SEO/service pages per month</li>
+          <li>4 Google Business posts/month</li>
+          <li>Review response help</li>
+          <li>Lead tracking (forms, calls, clicks)</li>
+          <li>Monthly AI marketing report</li>
+          <li>1 landing page per quarter</li>
+        </ul>
         <a class="btn btn-glow" href="#contact">Most popular</a>
       </div>
       <div class="tier" data-r>
-        <h3>Premium</h3>
-        <div class="range">$15,000+</div>
-        <p class="for">For market leaders ready to dominate</p>
-        <ul><li>Unlimited pages</li><li>Full SEO strategy</li><li>6 months support</li><li>Content calendar</li><li>Monthly reporting</li><li>Priority access</li></ul>
+        <h3>Local Domination</h3>
+        <div class="range">$700<span class="mo">/mo</span></div>
+        <p class="term">12-month minimum</p>
+        <p class="for">High-ticket businesses where one new customer pays for the plan</p>
+        <ul>
+          <li>Everything in Growth, plus:</li>
+          <li>Free 8–12 page website</li>
+          <li>4 SEO pages or blogs/month</li>
+          <li>Weekly Google Business posts</li>
+          <li>Monthly campaign &amp; offer ideas</li>
+          <li>Email/SMS campaign copy</li>
+          <li>Simple AI chatbot or FAQ assistant</li>
+          <li>Competitor content check + priority edits</li>
+        </ul>
         <a class="btn btn-line" href="#contact">Talk to us</a>
       </div>
     </div>
-    <div class="addons">
-      <div class="addon" data-r><div><b>Website redesign</b><small>Modernize without losing rankings</small></div><span class="p">$8k–20k</span></div>
-      <div class="addon" data-r><div><b>SEO only</b><small>Improve your existing site</small></div><span class="p">$500–3k/mo</span></div>
-      <div class="addon" data-r><div><b>Enterprise</b><small>Multi-site, dedicated manager</small></div><span class="p">$30k+</span></div>
-    </div>
+    <p style="margin-top:2rem;font-size:.82rem;color:var(--dim);text-align:center;max-width:62ch;margin-inline:auto" data-r>Best for: landscapers, roofers, plumbers, HVAC, dentists, med spas, towing, auto shops, and other local service businesses across Bend, Redmond, and Central Oregon.</p>
   </div>
 </section>
 
@@ -440,74 +536,74 @@ footer{border-top:1px solid var(--line-dark);padding:3.5rem 2rem 2rem;background
   <div class="sec-inner">
     <div class="sec-head" data-r>
       <span class="coord">The route</span>
-      <h2 class="sec-h2">Six switchbacks to the summit.</h2>
-      <p class="sec-lead">A clear, proven trail from first call to a site that performs. You'll always know where we are on the map.</p>
+      <h2 class="sec-h2">From audit to active marketing.</h2>
+      <p class="sec-lead">A clear path from first conversation to a site that's working for you every month.</p>
     </div>
     <div class="trail">
       <div class="trail-line" aria-hidden="true"></div>
       <div class="steps">
-        <div class="step" data-r><div class="dot">01</div><h3>Listen</h3><p>Your goals, your customers, your market. Questions first, assumptions never.</p><span class="elev">TRAILHEAD</span></div>
-        <div class="step" data-r><div class="dot">02</div><h3>Strategy</h3><p>Site structure, keyword research, and a content roadmap.</p><span class="elev">+1,200 FT</span></div>
-        <div class="step" data-r><div class="dot">03</div><h3>Design &amp; build</h3><p>Custom design, clean code, SEO baked in from line one.</p><span class="elev">+2,800 FT</span></div>
-        <div class="step" data-r><div class="dot">04</div><h3>Test</h3><p>Every device, every speed check, every conversion path.</p><span class="elev">+4,100 FT</span></div>
-        <div class="step" data-r><div class="dot">05</div><h3>Launch</h3><p>Deploy, monitor, and start generating leads.</p><span class="elev">+5,500 FT</span></div>
-        <div class="step" data-r><div class="dot">06</div><h3>Grow</h3><p>Ongoing SEO and optimization so results compound.</p><span class="elev">SUMMIT</span></div>
+        <div class="step" data-r><div class="dot">01</div><h3>Free audit</h3><p>We review your current site, Google presence, and competitors. No obligation.</p><span class="elev">TRAILHEAD</span></div>
+        <div class="step" data-r><div class="dot">02</div><h3>Pick your plan</h3><p>Choose the monthly package that fits your business and budget.</p><span class="elev">+1,200 FT</span></div>
+        <div class="step" data-r><div class="dot">03</div><h3>Build your site</h3><p>Custom design, clean code, SEO baked in — at no upfront cost.</p><span class="elev">+2,800 FT</span></div>
+        <div class="step" data-r><div class="dot">04</div><h3>Launch</h3><p>Site goes live with hosting, analytics, and lead tracking set up.</p><span class="elev">+4,100 FT</span></div>
+        <div class="step" data-r><div class="dot">05</div><h3>Monthly growth</h3><p>SEO pages, Google posts, reports, and updates delivered every month.</p><span class="elev">+5,500 FT</span></div>
+        <div class="step" data-r><div class="dot">06</div><h3>Yours to keep</h3><p>After 12 paid months, website files are yours forever.</p><span class="elev">SUMMIT</span></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- RESULTS — on sand -->
-<section class="sec on-sand" id="results">
+<!-- OUTCOMES — on sand -->
+<section class="sec on-sand" id="outcomes">
   <div class="sec-inner">
     <div class="sec-head" data-r>
-      <span class="coord">Results</span>
-      <h2 class="sec-h2">Work that pays for itself.</h2>
-      <p class="sec-lead">Real outcomes for real Central Oregon businesses.</p>
+      <span class="coord">Outcomes</span>
+      <h2 class="sec-h2">What we work toward for every client.</h2>
+      <p class="sec-lead">These are the results our monthly marketing system is built to deliver — not cherry-picked case studies.</p>
     </div>
-    <div class="results">
-      <div class="result" data-r>
-        <div class="result-top"><span class="kind">Contractor — website + SEO</span><h3>From invisible to fully booked</h3><p>A local contracting company needed residential leads. We built the site and owned the local rankings.</p></div>
-        <div class="result-stat"><b>+150%</b><span>leads in 6 months</span></div>
+    <div class="outcomes">
+      <div class="outcome" data-r>
+        <span class="coord">Visibility</span>
+        <h3>Show up when locals search</h3>
+        <p>Rank for service + city searches like "roofer Bend OR" or "emergency plumber Redmond" with targeted pages and Google Business optimization.</p>
       </div>
-      <div class="result" data-r>
-        <div class="result-top"><span class="kind">E-commerce — redesign</span><h3>A store that finally converts</h3><p>An outdated shop was bleeding customers at checkout. We redesigned for conversion and speed.</p></div>
-        <div class="result-stat"><b>+45%</b><span>conversion rate</span></div>
+      <div class="outcome" data-r>
+        <span class="coord">Trust</span>
+        <h3>Look legit before the first call</h3>
+        <p>A professional, fast website with real service info, reviews, and clear contact paths so customers choose you over competitors.</p>
       </div>
-      <div class="result" data-r>
-        <div class="result-top"><span class="kind">Dental practice — launch</span><h3>New practice, page-one presence</h3><p>A new dental office needed credibility and patients fast. Local SEO did the heavy lifting.</p></div>
-        <div class="result-stat"><b>#1</b><span>for local searches</span></div>
+      <div class="outcome" data-r>
+        <span class="coord">Leads</span>
+        <h3>More calls and form fills</h3>
+        <p>Lead tracking, monthly reporting, and ongoing content so you can see what's working and double down on it.</p>
       </div>
-      <div class="result" data-r>
-        <div class="result-top"><span class="kind">Manufacturing — B2B</span><h3>Qualified leads on autopilot</h3><p>A manufacturer with zero online visibility became the obvious choice in their category.</p></div>
-        <div class="result-stat"><b>+200%</b><span>qualified leads</span></div>
+      <div class="outcome" data-r>
+        <span class="coord">Reviews</span>
+        <h3>Stronger Google presence</h3>
+        <p>Consistent Google Business posts, review response help, and profile optimization to build social proof over time.</p>
       </div>
-      <div class="result" data-r>
-        <div class="result-top"><span class="kind">Professional services</span><h3>Traffic that builds trust</h3><p>A consulting firm's new site and content strategy turned search traffic into signed clients.</p></div>
-        <div class="result-stat"><b>+89%</b><span>website traffic</span></div>
+      <div class="outcome" data-r>
+        <span class="coord">Time</span>
+        <h3>Less marketing work for you</h3>
+        <p>We handle the website updates, SEO pages, and Google posts — you focus on running your business.</p>
       </div>
-      <div class="result" data-r>
-        <div class="result-top"><span class="kind">Nonprofit</span><h3>A mission people can find</h3><p>A community nonprofit needed donations, not just visits. We designed for giving.</p></div>
-        <div class="result-stat"><b>+60%</b><span>online donations</span></div>
+      <div class="outcome" data-r>
+        <span class="coord">Ownership</span>
+        <h3>A website you actually own</h3>
+        <p>After 12 paid months, your website files are yours forever. No hostage situations, no surprise release fees.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- TESTIMONIALS -->
-<section class="sec" id="testimonials">
+<!-- EARLY CLIENT OFFER -->
+<section class="sec" id="early-offer">
   <div class="sec-inner">
-    <div class="sec-head" data-r>
-      <span class="coord">Client words</span>
-      <h2 class="sec-h2">Don't take our word for it.</h2>
-    </div>
-    <div class="quotes">
-      <div class="quote" data-r><span class="stars">★★★★★</span><p>"They understood our vision immediately and delivered a website that exceeded expectations. Our leads tripled within three months."</p><footer><b>Sarah Johnson</b><span>Owner, Bend Home Services</span></footer></div>
-      <div class="quote" data-r><span class="stars">★★★★★</span><p>"They didn't just build us a website — they built us a sales tool. Highly recommended for any Central Oregon business."</p><footer><b>Mike Chen</b><span>CEO, Tech Solutions Inc.</span></footer></div>
-      <div class="quote" data-r><span class="stars">★★★★★</span><p>"Finally, a local web designer who gets it. Our site ranks on Google and customers tell us they had no problem finding us."</p><footer><b>Jennifer Martinez</b><span>Manager, Central Oregon Dental</span></footer></div>
-      <div class="quote" data-r><span class="stars">★★★★★</span><p>"We went from struggling to find customers to consistent leads every week. Their SEO strategy actually works."</p><footer><b>David Thompson</b><span>Founder, Local Contracting Co.</span></footer></div>
-      <div class="quote" data-r><span class="stars">★★★★★</span><p>"Transparent communication, fair pricing, excellent results. They treated our small business like their only client."</p><footer><b>Rachel Green</b><span>Owner, Bend Boutique</span></footer></div>
-      <div class="quote" data-r><span class="stars">★★★★★</span><p>"As a nonprofit, budget is tight. They created something beautiful that actually brought in donations."</p><footer><b>Tom Wilson</b><span>Director, Community Nonprofit</span></footer></div>
+    <div class="early-offer" data-r>
+      <span class="coord">Early clients</span>
+      <h3>We're building our first client roster in Central Oregon.</h3>
+      <p>Be one of our founding clients and get priority onboarding, extra attention during launch, and a partner who's invested in making your business succeed. Real testimonials come from real results — we're earning ours now.</p>
+      <a class="btn btn-glow" href="#contact">Claim your free website audit</a>
     </div>
   </div>
 </section>
@@ -517,13 +613,13 @@ footer{border-top:1px solid var(--line-dark);padding:3.5rem 2rem 2rem;background
   <div class="sec-inner ai-wrap">
     <div data-r>
       <span class="coord">The new search</span>
-      <h2 class="sec-h2">When customers ask AI, you're the answer.</h2>
-      <p class="sec-lead">ChatGPT, Claude, and Perplexity now answer "who should I hire?" directly. We structure your site so AI systems can read it, trust it, and recommend you by name.</p>
+      <h2 class="sec-h2">Built for how people search today.</h2>
+      <p class="sec-lead">Customers still search Google — but they also ask AI tools for recommendations. We structure your site so search engines and AI can understand your business clearly.</p>
       <ul class="ai-list">
-        <li><span class="tick">✓</span><span><b>Schema &amp; structured data</b> — so AI understands exactly what you do and where</span></li>
+        <li><span class="tick">✓</span><span><b>Schema &amp; structured data</b> — so search engines understand exactly what you do and where</span></li>
         <li><span class="tick">✓</span><span><b>Question-shaped content</b> — pages that answer what people actually ask</span></li>
-        <li><span class="tick">✓</span><span><b>FAQ extraction format</b> — built for AI citation, not just keywords</span></li>
-        <li><span class="tick">✓</span><span><b>Authority signals</b> — the trusted citations AI prefers to quote</span></li>
+        <li><span class="tick">✓</span><span><b>Clear service pages</b> — built to be easier for search engines and AI tools to read and cite</span></li>
+        <li><span class="tick">✓</span><span><b>Authority signals</b> — reviews, local presence, and content that builds trust over time</span></li>
       </ul>
     </div>
     <div class="ai-chat" data-r aria-label="Example AI chat recommending a local business">
@@ -544,36 +640,36 @@ footer{border-top:1px solid var(--line-dark);padding:3.5rem 2rem 2rem;background
     </div>
     <div class="faq" data-r>
       <details open>
-        <summary>How much does a website cost?</summary>
-        <p class="a">Packages run from $1,499 for a basic site to $25,000+ for premium builds, with most growing businesses landing in the $7,500–12,000 Professional range. Every quote is fixed and itemized before we start — no hidden fees, ever.</p>
+        <summary>Is the website really free?</summary>
+        <p class="a">Yes — there's no upfront design fee. Your custom website is included when you join any monthly marketing package. After 12 paid months, the website files are yours to keep forever. If you cancel before 12 months, the free-build benefit doesn't apply.</p>
       </details>
       <details>
-        <summary>How long does it take to build?</summary>
-        <p class="a">Starter sites take 6–8 weeks; Professional and Premium builds run 8–12. We start development in a staging environment as soon as your homepage is approved, and you'll see progress at every step.</p>
+        <summary>What's included in the monthly fee?</summary>
+        <p class="a">Hosting, website updates, SEO work, Google Business posts, reporting, and ongoing marketing support — everything listed in your package. The monthly fee covers active service, not just hosting.</p>
       </details>
       <details>
-        <summary>Why do I need SEO?</summary>
-        <p class="a">A beautiful site nobody finds is a brochure in a locked drawer. SEO is how customers searching "near me" actually reach you — more qualified visitors, more leads, no ad spend required.</p>
+        <summary>What happens if I cancel early?</summary>
+        <p class="a">All plans require a 12-month commitment. If you cancel before completing 12 paid months, you either pay a website release fee to keep the site files or forfeit the free-build benefit. Hosting, edits, and marketing support stop when your subscription ends.</p>
       </details>
       <details>
-        <summary>Can you redesign my existing website?</summary>
-        <p class="a">Yes — redesigns are a specialty. We modernize the design, improve speed and UX, and migrate your content carefully so you keep the search authority you've already earned.</p>
+        <summary>Which package should I choose?</summary>
+        <p class="a">Starter Visibility ($300/mo) is great for small businesses getting online. Growth Engine ($500/mo) is our most popular — best for contractors, dentists, HVAC, and local service businesses. Local Domination ($700/mo) is for high-ticket businesses where one new customer pays for the plan.</p>
       </details>
       <details>
-        <summary>Do you offer SEO without a new website?</summary>
-        <p class="a">Yes. Standalone SEO starts at $500/month and covers keyword research, technical audits, on-page optimization, and monthly reporting on your existing site.</p>
+        <summary>How long does it take to launch?</summary>
+        <p class="a">Most sites launch within 3–4 weeks of signing up. We start building as soon as you approve the plan, and monthly marketing work begins at launch.</p>
       </details>
       <details>
-        <summary>Can AI chatbots really recommend my business?</summary>
-        <p class="a">They already recommend someone — the question is whether it's you. We add the structured data, FAQ formatting, and authority signals that make AI systems cite your business when customers ask.</p>
+        <summary>Do you use templates?</summary>
+        <p class="a">Every site looks custom to your brand. Behind the scenes we use proven layouts and AI-assisted workflows — that's how we deliver a free website and ongoing marketing at a monthly price that makes sense.</p>
+      </details>
+      <details>
+        <summary>Can you help with my existing website?</summary>
+        <p class="a">If you already have a site, we'll review it during your free audit and recommend whether a rebuild or refresh makes more sense. Many clients start fresh to get the full free-website benefit.</p>
       </details>
       <details>
         <summary>Are you actually local?</summary>
         <p class="a">Yes — based in Bend, serving Redmond, Sisters, La Pine, and all of Central Oregon. We know this market because we operate in it.</p>
-      </details>
-      <details>
-        <summary>Do you guarantee #1 rankings?</summary>
-        <p class="a">No legitimate agency can. What we do guarantee: a proven process, transparent monthly reporting, and the track record above. Our clients consistently see significant ranking and traffic gains.</p>
       </details>
     </div>
   </div>
@@ -588,13 +684,39 @@ footer{border-top:1px solid var(--line-dark);padding:3.5rem 2rem 2rem;background
     <path d="M-50,300 Q320,220 540,290 T940,230 T1380,300 T1500,240" class="glow"/>
     <path d="M-50,160 Q360,90 580,150 T980,100 T1420,160 T1500,110"/>
   </svg>
-  <span class="coord" style="position:relative">Free 30-minute discovery call</span>
-  <h2 class="cta-h">Ready to be the business<br>customers find first?</h2>
-  <p class="cta-sub">No obligation, no pressure — just honest advice about what your business actually needs.</p>
-  <a class="btn btn-glow" href="tel:+15415551234" style="position:relative">Book your free consultation</a>
+  <span class="coord" style="position:relative">Free website audit</span>
+  <h2 class="cta-h">Ready for a free website<br>and monthly growth?</h2>
+  <p class="cta-sub">Tell us about your business and we'll send a quick audit of your current online presence — no obligation, no pressure.</p>
+
+  <form class="lead-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" data-r>
+    <div class="row">
+      <div><label for="name">Your name</label><input type="text" id="name" name="name" required autocomplete="name"></div>
+      <div><label for="business">Business name</label><input type="text" id="business" name="business" required></div>
+    </div>
+    <div class="row">
+      <div><label for="email">Email</label><input type="email" id="email" name="email" required autocomplete="email"></div>
+      <div><label for="phone">Phone</label><input type="tel" id="phone" name="phone" autocomplete="tel"></div>
+    </div>
+    <div style="margin-bottom:.8rem">
+      <label for="package">Interested in</label>
+      <select id="package" name="package">
+        <option value="">Select a package (optional)</option>
+        <option value="starter">Starter Visibility — $300/mo</option>
+        <option value="growth">Growth Engine — $500/mo</option>
+        <option value="domination">Local Domination — $700/mo</option>
+        <option value="unsure">Not sure yet</option>
+      </select>
+    </div>
+    <div style="margin-bottom:.8rem">
+      <label for="message">Tell us about your business</label>
+      <textarea id="message" name="message" placeholder="What do you do? What's your biggest challenge online?"></textarea>
+    </div>
+    <button type="submit" class="btn btn-glow">Request my free audit</button>
+  </form>
+
   <div class="cta-cards">
     <a class="cta-card" href="tel:+15415551234"><span class="lbl">Call</span><b>(541) 555-1234</b></a>
-    <a class="cta-card" href="mailto:hello@yourwebsite.com"><span class="lbl">Email</span><b>hello@yourwebsite.com</b></a>
+    <a class="cta-card" href="mailto:hello@cascadelocal.com"><span class="lbl">Email</span><b>hello@cascadelocal.com</b></a>
     <div class="cta-card"><span class="lbl">Based in</span><b>Bend, Oregon</b></div>
   </div>
 </section>
@@ -602,28 +724,28 @@ footer{border-top:1px solid var(--line-dark);padding:3.5rem 2rem 2rem;background
 <footer>
   <div class="ft">
     <div>
-      <a class="nav-logo" href="#"><span class="pin" aria-hidden="true"></span>CO&nbsp;Web&nbsp;Design</a>
-      <p>Custom websites and SEO for businesses across Central Oregon. Built in Bend since 2024.</p>
+      <a class="nav-logo" href="#"><span class="pin" aria-hidden="true"></span>Cascade&nbsp;Local</a>
+      <p>Free websites and monthly AI-powered marketing for businesses across Central Oregon. Built in Bend.</p>
     </div>
     <div class="ft-links">
       <div>
         <h4>Services</h4>
-        <a href="#services">Web design</a>
-        <a href="#services">SEO</a>
-        <a href="#services">Redesigns</a>
+        <a href="#services">Free websites</a>
         <a href="#services">Local SEO</a>
+        <a href="#services">Google Business</a>
+        <a href="#services">Monthly marketing</a>
       </div>
       <div>
         <h4>Company</h4>
-        <a href="#results">Results</a>
-        <a href="#testimonials">Testimonials</a>
+        <a href="#how-it-works">How it works</a>
+        <a href="#pricing">Packages</a>
         <a href="#faq">FAQ</a>
         <a href="#contact">Contact</a>
       </div>
     </div>
   </div>
   <div class="ft-base">
-    <span>© 2026 Central Oregon Web Design. All rights reserved.</span>
+    <span>© 2026 Cascade Local Marketing. All rights reserved.</span>
     <span class="mono">44.0582° N, 121.3153° W</span>
   </div>
 </footer>
@@ -638,20 +760,6 @@ const io = new IntersectionObserver(es => es.forEach(e => {
   if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
 }), {threshold:.12});
 document.querySelectorAll('[data-r]').forEach(el => io.observe(el));
-
-/* hero counters */
-const cio = new IntersectionObserver(es => es.forEach(e => {
-  if (!e.isIntersecting) return;
-  const el = e.target, end = +el.dataset.count, t0 = performance.now();
-  const tick = now => {
-    const p = Math.min((now - t0)/1400, 1);
-    el.textContent = '+' + Math.round(end * (1-Math.pow(1-p,3)));
-    if (p < 1) requestAnimationFrame(tick);
-  };
-  requestAnimationFrame(tick);
-  cio.unobserve(el);
-}), {threshold:.5});
-document.querySelectorAll('[data-count]').forEach(el => cio.observe(el));
 
 /* search demo: type query, then promote "you" to #1 */
 const queries = ['plumber near bend oregon','best dentist redmond or','contractor central oregon'];
