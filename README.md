@@ -21,9 +21,10 @@ A marketing website for free websites + monthly AI-powered marketing services ac
 
 ## Design System
 
-- **Colors:** Dark modern theme with coral accents (Alpenglow) and desert sage
-- **Typography:** Bricolage Grotesque (display), Schibsted Grotesk (body), Spline Sans Mono (code)
-- **Performance:** Google Fonts preconnect, CSS variables, scroll-triggered animations
+- **Colors:** Warm paper tones, forest green, and rust accents — editorial Pacific Northwest feel
+- **Typography:** Fraunces (display), Source Sans 3 (body), IBM Plex Mono (labels)
+- **Layout:** Print-inspired rows, rule lines, and asymmetric sections — no card-grid template look
+- **Performance:** Google Fonts preconnect, CSS variables, subtle scroll reveals
 
 ## Sections
 
