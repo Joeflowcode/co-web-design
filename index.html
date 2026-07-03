@@ -379,8 +379,8 @@ footer{border-top:1px solid var(--line-dark);padding:3rem 2rem 2rem;background:v
 
 <div class="marquee" aria-hidden="true">
   <div class="marquee-track">
-    <span>Garage floors</span><span>Speckled flake epoxy</span><span>Lyons OR</span><span>North Santiam Valley</span><span>Free estimates</span><span>1–2 day install</span><span>Slip resistant</span><span>Chemical resistant</span><span>Stayton</span><span>Mill City</span><span>Scio</span>
-    <span>Garage floors</span><span>Speckled flake epoxy</span><span>Lyons OR</span><span>North Santiam Valley</span><span>Free estimates</span><span>1–2 day install</span><span>Slip resistant</span><span>Chemical resistant</span><span>Stayton</span><span>Mill City</span><span>Scio</span>
+    <span>Garage floors</span><span>$7 per sq ft</span><span>Price calculator</span><span>Speckled flake epoxy</span><span>Lyons OR</span><span>North Santiam Valley</span><span>Free estimates</span><span>1–2 day install</span><span>Slip resistant</span><span>Chemical resistant</span><span>Stayton</span><span>Mill City</span><span>Scio</span>
+    <span>Garage floors</span><span>$7 per sq ft</span><span>Price calculator</span><span>Speckled flake epoxy</span><span>Lyons OR</span><span>North Santiam Valley</span><span>Free estimates</span><span>1–2 day install</span><span>Slip resistant</span><span>Chemical resistant</span><span>Stayton</span><span>Mill City</span><span>Scio</span>
   </div>
 </div>
 
@@ -497,11 +497,11 @@ footer{border-top:1px solid var(--line-dark);padding:3rem 2rem 2rem;background:v
         <div class="calc-rate">$7 <small>/ sq ft</small></div>
         <p class="calc-note">Full flake epoxy system · prep included</p>
 
-        <p class="calc-note" style="margin-bottom:.75rem">Quick select:</p>
+        <p class="calc-note" style="margin-bottom:.75rem">Quick select (average U.S. garage sizes):</p>
         <div class="calc-presets" role="group" aria-label="Common garage sizes">
-          <button type="button" class="calc-preset" data-sqft="250">1-car · 250 sq ft</button>
-          <button type="button" class="calc-preset active" data-sqft="450">2-car · 450 sq ft</button>
-          <button type="button" class="calc-preset" data-sqft="650">3-car · 650 sq ft</button>
+          <button type="button" class="calc-preset" data-sqft="264" data-length="12" data-width="22">1-car · 264 sq ft</button>
+          <button type="button" class="calc-preset active" data-sqft="480" data-length="20" data-width="24">2-car · 480 sq ft</button>
+          <button type="button" class="calc-preset" data-sqft="704" data-length="32" data-width="22">3-car · 704 sq ft</button>
         </div>
 
         <div class="calc-tabs" role="tablist" aria-label="Calculator input mode">
@@ -513,7 +513,7 @@ footer{border-top:1px solid var(--line-dark);padding:3rem 2rem 2rem;background:v
           <div class="calc-fields">
             <div class="calc-field" style="grid-column:1/-1">
               <label for="calc-sqft">Total square footage</label>
-              <input type="number" id="calc-sqft" min="1" max="10000" step="1" value="450" inputmode="numeric" aria-describedby="calc-result-math">
+              <input type="number" id="calc-sqft" min="1" max="10000" step="1" value="480" inputmode="numeric" aria-describedby="calc-result-math">
             </div>
           </div>
         </div>
@@ -522,26 +522,26 @@ footer{border-top:1px solid var(--line-dark);padding:3rem 2rem 2rem;background:v
           <div class="calc-fields">
             <div class="calc-field">
               <label for="calc-length">Length (ft)</label>
-              <input type="number" id="calc-length" min="1" max="200" step="0.5" value="22.5" inputmode="decimal">
+              <input type="number" id="calc-length" min="1" max="200" step="0.5" value="20" inputmode="decimal">
             </div>
             <div class="calc-field">
               <label for="calc-width">Width (ft)</label>
-              <input type="number" id="calc-width" min="1" max="200" step="0.5" value="20" inputmode="decimal">
+              <input type="number" id="calc-width" min="1" max="200" step="0.5" value="24" inputmode="decimal">
             </div>
           </div>
         </div>
 
         <div class="calc-result" aria-live="polite" aria-atomic="true">
           <div class="lbl">Estimated total</div>
-          <div class="total" id="calc-total">$3,150</div>
-          <div class="math" id="calc-result-math">450 sq ft × $7/sq ft</div>
+          <div class="total" id="calc-total">$3,360</div>
+          <div class="math" id="calc-result-math">480 sq ft × $7/sq ft</div>
           <button type="button" class="btn btn-primary" id="calc-quote-btn">Request quote for this estimate</button>
         </div>
 
         <div class="calc-examples">
-          <div class="calc-ex"><b>$1,750</b><span>250 sq ft · 1-car</span></div>
-          <div class="calc-ex"><b>$3,150</b><span>450 sq ft · 2-car</span></div>
-          <div class="calc-ex"><b>$4,550</b><span>650 sq ft · 3-car</span></div>
+          <div class="calc-ex"><b>$1,848</b><span>264 sq ft · 1-car avg (12×22)</span></div>
+          <div class="calc-ex"><b>$3,360</b><span>480 sq ft · 2-car avg (20×24)</span></div>
+          <div class="calc-ex"><b>$4,928</b><span>704 sq ft · 3-car avg (32×22)</span></div>
         </div>
       </div>
 
@@ -592,7 +592,7 @@ footer{border-top:1px solid var(--line-dark);padding:3rem 2rem 2rem;background:v
     <div class="faq" data-r>
       <details open>
         <summary>How much does it cost?</summary>
-        <p class="a">Our full flake epoxy system is <strong>$7 per square foot</strong>, including surface prep, base coat, flake broadcast, and polyaspartic top coat. Use the <a href="#calculator" style="color:var(--accent);text-decoration:underline">price calculator</a> on this page to estimate your project — a typical 2-car garage (about 450 sq ft) runs around $3,150. Final price is confirmed after a free on-site visit.</p>
+        <p class="a">Our full flake epoxy system is <strong>$7 per square foot</strong>, including surface prep, base coat, flake broadcast, and polyaspartic top coat. Use the <a href="#calculator" style="color:var(--accent);text-decoration:underline">price calculator</a> on this page to estimate your project — a typical 2-car garage (about 480 sq ft on average) runs around $3,360. Final price is confirmed after a free on-site visit.</p>
       </details>
       <details>
         <summary>How long does installation take?</summary>
@@ -646,9 +646,9 @@ footer{border-top:1px solid var(--line-dark);padding:3rem 2rem 2rem;background:v
         <label for="size">Garage size</label>
         <select id="size" name="size">
           <option value="">Select size (optional)</option>
-          <option value="1-car">1-car garage</option>
-          <option value="2-car">2-car garage</option>
-          <option value="3-car">3-car garage</option>
+          <option value="1-car">1-car garage (~264 sq ft avg)</option>
+          <option value="2-car">2-car garage (~480 sq ft avg)</option>
+          <option value="3-car">3-car garage (~704 sq ft avg)</option>
           <option value="shop">Shop / workshop</option>
           <option value="basement">Basement</option>
           <option value="other">Other</option>
@@ -734,7 +734,7 @@ function getSqft(){
 }
 
 function syncDimsFromSqft(){
-  const sqft = Math.max(1, parseFloat(calcSqft.value) || 450);
+  const sqft = Math.max(1, parseFloat(calcSqft.value) || 480);
   const w = parseFloat(calcWidth.value) || 20;
   calcLength.value = (sqft / w).toFixed(1);
 }
@@ -755,7 +755,8 @@ function updateCalc(){
 presets.forEach(btn => btn.addEventListener('click', () => {
   const sqft = parseInt(btn.dataset.sqft, 10);
   calcSqft.value = sqft;
-  syncDimsFromSqft();
+  if (btn.dataset.length) calcLength.value = btn.dataset.length;
+  if (btn.dataset.width) calcWidth.value = btn.dataset.width;
   mode = 'sqft';
   tabs.forEach(t => t.classList.toggle('active', t.dataset.mode === 'sqft'));
   panelSqft.classList.add('active');
