@@ -68,9 +68,10 @@ Do **not** add fake testimonials or unverified performance metrics. Add real cli
 ## File Structure
 
 ```
-index.html         — Complete website (single file)
-images/            — Central Oregon photography (see images/CREDITS.md)
-README.md          — This file
+index.html                  — Main website
+images/                     — Central Oregon photography (see images/CREDITS.md)
+sales/                      — One-pager, audit template, outreach emails
+README.md                   — This file
 ```
 
 ## Performance Notes

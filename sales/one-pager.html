@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cascade Local — One Pager</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,800&family=IBM+Plex+Mono:wght@500&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F5F0E6;--ink:#1A1714;--ink-soft:#5A534C;--forest:#2B4339;
+  --forest-deep:#1C2E27;--rust:#B5492F;--line:rgba(26,23,20,.18);
+  --ff-d:'Fraunces',Georgia,serif;--ff-b:'Source Sans 3',sans-serif;--ff-m:'IBM Plex Mono',monospace;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--ff-b);background:#888;color:var(--ink);line-height:1.45;font-size:10.5pt}
+.sheet{
+  width:8.5in;min-height:11in;margin:1rem auto;background:var(--paper);
+  padding:.55in .6in;display:grid;grid-template-rows:auto auto 1fr auto;
+  gap:.45in;box-shadow:0 8px 40px rgba(0,0,0,.2);
+}
+
+/* header */
+.hdr{display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;border-bottom:2px solid var(--forest);padding-bottom:.35in}
+.brand{font-family:var(--ff-d);font-size:22pt;font-weight:800;letter-spacing:-.02em;line-height:1}
+.brand em{font-style:normal;font-family:var(--ff-m);font-size:7pt;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--rust);display:block;margin-top:.15rem}
+.hdr-contact{text-align:right;font-size:8.5pt;color:var(--ink-soft)}
+.hdr-contact b{display:block;font-size:10pt;color:var(--ink);font-weight:700;margin-bottom:.1rem}
+
+/* hook */
+.hook h1{font-family:var(--ff-d);font-size:26pt;font-weight:800;line-height:1.05;letter-spacing:-.02em;margin-bottom:.2in}
+.hook h1 span{color:var(--rust)}
+.hook .sub{font-size:11pt;color:var(--ink-soft);max-width:6.5in}
+.hook .sub strong{color:var(--ink);font-weight:600}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:.15in;margin-top:.28in;border-top:1px solid var(--line);padding-top:.2in}
+.stat strong{font-family:var(--ff-d);font-size:16pt;display:block;line-height:1}
+.stat span{font-family:var(--ff-m);font-size:6.5pt;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft)}
+
+/* main grid */
+.main{display:grid;grid-template-columns:1.15fr .85fr;gap:.4in}
+.col h2{font-family:var(--ff-m);font-size:7pt;letter-spacing:.16em;text-transform:uppercase;color:var(--rust);margin-bottom:.12in}
+.col h3{font-family:var(--ff-d);font-size:12pt;font-weight:700;margin-bottom:.08in}
+.col p,.col li{font-size:9pt;color:var(--ink-soft)}
+.col ul{list-style:none;display:flex;flex-direction:column;gap:.06in;margin-bottom:.2in}
+.col li{padding-left:.14in;position:relative}
+.col li::before{content:'—';position:absolute;left:0;color:var(--rust);font-size:8pt}
+
+.steps{counter-reset:step}
+.step{display:grid;grid-template-columns:1.1rem 1fr;gap:.12in;margin-bottom:.1in;align-items:baseline}
+.step::before{counter-increment:step;content:counter(step,decimal-leading-zero);font-family:var(--ff-m);font-size:7pt;color:var(--rust)}
+.step b{font-size:9pt;color:var(--ink);font-weight:600;display:block}
+.step span{font-size:8.5pt;color:var(--ink-soft)}
+
+/* packages */
+.pkgs{display:flex;flex-direction:column;gap:.1in}
+.pkg{border:1px solid var(--line);padding:.14in .16in;position:relative}
+.pkg.featured{background:var(--forest-deep);color:var(--paper);border-color:var(--forest-deep)}
+.pkg.featured p,.pkg.featured li{color:rgba(245,240,230,.75)}
+.pkg.featured .tag{color:#E8A090}
+.pkg .tag{font-family:var(--ff-m);font-size:6pt;letter-spacing:.12em;text-transform:uppercase;color:var(--rust)}
+.pkg-top{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.04in}
+.pkg h3{font-family:var(--ff-d);font-size:10.5pt;font-weight:700}
+.pkg .price{font-family:var(--ff-d);font-size:14pt;font-weight:800;letter-spacing:-.02em}
+.pkg .price small{font-size:7pt;font-weight:400;opacity:.7}
+.pkg p{font-size:7.5pt;margin-bottom:.06in}
+.pkg ul{gap:.03in;margin:0}
+.pkg li{font-size:7.5pt}
+.pkg.featured li::before{color:#E8A090}
+
+/* footer */
+.ftr{border-top:1px solid var(--line);padding-top:.2in;display:flex;justify-content:space-between;align-items:flex-end;gap:.3in}
+.cta-box{background:var(--rust);color:var(--paper);padding:.18in .22in;flex:1}
+.cta-box h2{font-family:var(--ff-d);font-size:13pt;font-weight:700;margin-bottom:.06in}
+.cta-box p{font-size:8.5pt;opacity:.9}
+.ftr-note{font-size:7pt;color:var(--ink-soft);max-width:2.2in;line-height:1.4}
+.ftr-note b{color:var(--ink)}
+
+/* print */
+@media print{
+  body{background:none}
+  .sheet{margin:0;box-shadow:none;width:100%;min-height:auto;padding:.5in .55in}
+  .no-print{display:none}
+}
+@page{size:letter;margin:0}
+</style>
+</head>
+<body>
+
+<p class="no-print" style="text-align:center;padding:1rem;font-family:sans-serif;font-size:14px;color:#fff">
+  Print this page (Ctrl/Cmd+P) → Save as PDF. Update phone/email below before printing.
+</p>
+
+<article class="sheet">
+  <header class="hdr">
+    <div>
+      <div class="brand">Cascade Local<em>Bend, Oregon</em></div>
+    </div>
+    <div class="hdr-contact">
+      <b>Free website audit</b>
+      (541) 555-1234<br>
+      hello@cascadelocal.com<br>
+      cascadelocal.com
+    </div>
+  </header>
+
+  <section class="hook">
+    <h1>Free website + <span>monthly marketing</span> for Central Oregon businesses.</h1>
+    <p class="sub">We build your business a clean, mobile-friendly website at <strong>no upfront design fee</strong> when you join a monthly marketing plan. SEO, Google Business posts, review help, and lead tracking — handled for you every month.</p>
+    <div class="stats">
+      <div class="stat"><strong>$0</strong><span>upfront website</span></div>
+      <div class="stat"><strong>12 mo</strong><span>then yours forever</span></div>
+      <div class="stat"><strong>Local</strong><span>based in Bend</span></div>
+    </div>
+  </section>
+
+  <div class="main">
+    <div class="col">
+      <h2>How it works</h2>
+      <div class="steps">
+        <div class="step"><div><b>Free audit</b><span>We review your site, Google presence, and competitors.</span></div></div>
+        <div class="step"><div><b>Pick a plan</b><span>Choose the monthly package that fits your business.</span></div></div>
+        <div class="step"><div><b>We build &amp; launch</b><span>Custom website at no upfront cost. SEO starts day one.</span></div></div>
+        <div class="step"><div><b>Monthly growth</b><span>Google posts, SEO pages, reports, and updates every month.</span></div></div>
+        <div class="step"><div><b>Yours to keep</b><span>After 12 paid months, the website files are yours forever.</span></div></div>
+      </div>
+
+      <h2 style="margin-top:.15in">Best for</h2>
+      <p>Contractors, roofers, plumbers, HVAC, landscapers, dentists, med spas, auto shops, and local service businesses across Bend, Redmond, Sisters, and Central Oregon.</p>
+    </div>
+
+    <div class="col">
+      <h2>Monthly packages</h2>
+      <div class="pkgs">
+        <div class="pkg">
+          <span class="tag">Starter</span>
+          <div class="pkg-top"><h3>Starter Visibility</h3><div class="price">$300<small>/mo</small></div></div>
+          <p>Look legit and show up online.</p>
+          <ul>
+            <li>Free 3–5 page website</li>
+            <li>Basic SEO + Google Business help</li>
+            <li>2 Google posts/month</li>
+          </ul>
+        </div>
+        <div class="pkg featured">
+          <span class="tag">Most popular</span>
+          <div class="pkg-top"><h3>Growth Engine</h3><div class="price">$500<small>/mo</small></div></div>
+          <p>Steady leads for growing businesses.</p>
+          <ul>
+            <li>Free 5–7 page website + hosting</li>
+            <li>2 SEO pages + 4 Google posts/month</li>
+            <li>Lead tracking + monthly report</li>
+          </ul>
+        </div>
+        <div class="pkg">
+          <span class="tag">Premium</span>
+          <div class="pkg-top"><h3>Local Domination</h3><div class="price">$700<small>/mo</small></div></div>
+          <p>High-ticket businesses that need velocity.</p>
+          <ul>
+            <li>Free 8–12 page website</li>
+            <li>4 SEO pages + weekly Google posts</li>
+            <li>Priority support + campaign ideas</li>
+          </ul>
+        </div>
+      </div>
+      <p style="font-size:7pt;margin-top:.1in;color:var(--ink-soft)">All plans: 12-month minimum. Hosting, edits &amp; marketing support continue while subscribed.</p>
+    </div>
+  </div>
+
+  <footer class="ftr">
+    <div class="cta-box">
+      <h2>Get your free website audit.</h2>
+      <p>No obligation. We'll show you what's working, what's not, and what we'd fix first.</p>
+    </div>
+    <p class="ftr-note"><b>Founding clients:</b> Priority onboarding for our first Central Oregon businesses. Ask about founding-client pricing.</p>
+  </footer>
+</article>
+
+</body>
+</html>
