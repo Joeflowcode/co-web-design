@@ -1,0 +1,29 @@
+name: Publish to flip-finder repo
+
+on:
+  workflow_dispatch:
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout flip-finder-main
+        uses: actions/checkout@v4
+        with:
+          ref: flip-finder-main
+          fetch-depth: 0
+
+      - name: Push to flip-finder repository
+        env:
+          FLIP_FINDER_PAT: ${{ secrets.FLIP_FINDER_PAT }}
+        run: |
+          if [ -z "$FLIP_FINDER_PAT" ]; then
+            echo "::error::Missing FLIP_FINDER_PAT secret."
+            echo "Create a token at https://github.com/settings/tokens/new"
+            echo "Then add it in repo Settings → Secrets → Actions as FLIP_FINDER_PAT"
+            exit 1
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git remote add target "https://x-access-token:${FLIP_FINDER_PAT}@github.com/Joeflowcode/flip-finder.git"
+          git push target HEAD:main --force
