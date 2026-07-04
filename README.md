@@ -4,14 +4,6 @@ A professional marketing website for a speckled epoxy garage floor coating busin
 
 **Live:** [Your site URL will go here]
 
----
-
-## Flip Finder (new)
-
-A separate app in [`flip-finder/`](flip-finder/) searches Facebook Marketplace and eBay, compares prices, and scores flip opportunities. See [`flip-finder/README.md`](flip-finder/README.md) for setup.
-
----
-
 ## Business
 
 - **Service:** Full flake epoxy garage floor coatings (residential & light commercial)
