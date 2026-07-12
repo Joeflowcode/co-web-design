@@ -3,629 +3,166 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Curated local guide to Lyons, Oregon and Detroit Lake — bounce house rentals, boat concierge, Oregon Mobile Tire, parks, swimming, and weekend plans.">
+<title>Things to Do Near Lyons &amp; Detroit Lake, Oregon | Santiam Nearby</title>
+<meta name="description" content="Local vacation guide to Lyons and Detroit Lake, Oregon: things to do, hidden spots, canyon restaurants Google Maps often misses, weekend plans, and local services.">
 <meta name="robots" content="index, follow, max-image-preview:large">
-<meta property="og:title" content="Santiam Nearby | Lyons & Detroit Lake Guide">
-<meta property="og:description" content="Local services and places near Lyons and Detroit Lake — bounce houses, boat concierge, oregonmobiletire.com, and outdoor picks.">
+<meta name="geo.region" content="US-OR">
+<meta name="geo.placename" content="Lyons, Detroit Lake, Santiam Canyon">
+<link rel="canonical" href="https://joeflowcode.github.io/co-web-design/">
+<meta property="og:title" content="Things to Do Near Lyons &amp; Detroit Lake, Oregon | Santiam Nearby">
+<meta property="og:description" content="Curated things to do, local restaurants, and hidden Santiam Canyon spots for Detroit Lake vacations.">
 <meta property="og:type" content="website">
-<title>Santiam Nearby | Lyons & Detroit Lake Guide</title>
+<meta property="og:url" content="https://joeflowcode.github.io/co-web-design/">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Things to Do Near Lyons &amp; Detroit Lake, Oregon">
+<meta name="twitter:description" content="Vacation guide for Detroit Lake and Lyons — local restaurants, hidden spots, and weekend plans.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "Santiam Nearby",
-  "description": "Curated local directory for Lyons, Oregon and Detroit Lake.",
-  "url": "https://santiamnearby.example",
-  "about": [
-    {"@type": "City", "name": "Lyons", "containedInPlace": {"@type": "State", "name": "Oregon"}},
-    {"@type": "TouristAttraction", "name": "Detroit Lake"}
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://joeflowcode.github.io/co-web-design/#website",
+      "name": "Santiam Nearby",
+      "url": "https://joeflowcode.github.io/co-web-design/",
+      "description": "Local vacation guide for Lyons, Oregon and Detroit Lake — things to do, restaurants, and hidden spots.",
+      "inLanguage": "en-US",
+      "publisher": {"@id": "https://joeflowcode.github.io/co-web-design/#org"}
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://joeflowcode.github.io/co-web-design/#org",
+      "name": "Santiam Nearby",
+      "url": "https://joeflowcode.github.io/co-web-design/",
+      "areaServed": ["Lyons, OR", "Detroit Lake, OR", "Mill City, OR", "Gates, OR", "Stayton, OR"]
+    },
+    {
+      "@type": "TouristDestination",
+      "name": "Detroit Lake and North Santiam Canyon",
+      "description": "Cascade mountain lake and river-town corridor east of Salem, Oregon — popular for swimming, camping, boating, and small-town food stops.",
+      "touristType": ["Family travelers", "Campers", "Boat owners", "Weekend road-trippers"],
+      "includesAttraction": [
+        {"@type": "TouristAttraction", "name": "Detroit Lake"},
+        {"@type": "TouristAttraction", "name": "Mongold Day-Use Area"},
+        {"@type": "TouristAttraction", "name": "John Neal Memorial Park"},
+        {"@type": "City", "name": "Lyons", "address": {"@type": "PostalAddress", "addressRegion": "OR", "addressCountry": "US"}}
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "name": "Things to do near Lyons and Detroit Lake",
+      "itemListOrder": "https://schema.org/ItemListUnordered",
+      "numberOfItems": 6,
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Swim and boat at Detroit Lake", "url": "https://joeflowcode.github.io/co-web-design/things-to-do-detroit-lake-oregon.html"},
+        {"@type": "ListItem", "position": 2, "name": "Explore Lyons and river towns", "url": "https://joeflowcode.github.io/co-web-design/things-to-do-lyons-oregon.html"},
+        {"@type": "ListItem", "position": 3, "name": "Eat at Santiam Canyon restaurants", "url": "https://joeflowcode.github.io/co-web-design/restaurants-near-detroit-lake.html"},
+        {"@type": "ListItem", "position": 4, "name": "Bounce house rentals", "url": "https://joeflowcode.github.io/co-web-design/#businesses"},
+        {"@type": "ListItem", "position": 5, "name": "Boat Concierge at Detroit Lake", "url": "https://joeflowcode.github.io/co-web-design/#businesses"},
+        {"@type": "ListItem", "position": 6, "name": "Oregon Mobile Tire roadside help", "url": "https://oregonmobiletire.com"}
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is there to do near Detroit Lake, Oregon on vacation?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most visitors swim or boat at Mongold and Detroit Flats, camp at Detroit Lake State Recreation Area, hike Stahlman Point for views, explore calm coves like the Breitenbush Arm, and stop for food in Detroit, Gates, Mill City, or Stayton on Highway 22."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where should I eat near Detroit Lake if I want local restaurants?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Canyon travelers often stop at Sierra Mexican in Gates, The Get-A-Way or Rosie's Mountain Coffee House in Mill City, and pizza or town stops in Mill City and Stayton. Detroit itself has marina and town food options in season. Check our restaurants guide for local notes Google Maps blurbs usually skip."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are good things to do in Lyons, Oregon?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Lyons is a quiet North Santiam river town. Locals use John Neal Memorial Park, river access, and short drives to Stayton, Mill City, and Roaring River County Park when they want shade without lake crowds."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are there hidden spots near Detroit Lake that are not obvious on Google Maps?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Locals often mention Kinney Creek waterfall as a scenic lunch stop, calm water in the Breitenbush Arm and Blowout area, Stahlman Point for a short viewpoint hike, and Highway 22 pullouts for photos. Always verify access, parking, and lake levels before you go."
+          }
+        }
+      ]
+    }
   ]
 }
 </script>
-
-<style>
-:root {
-  --fir: #163528;
-  --fir-deep: #0f241c;
-  --moss: #2f5c45;
-  --lake: #2a6f84;
-  --lake-bright: #3d8fa6;
-  --mist: #eef3f2;
-  --fog: #d7e3df;
-  --foam: #f7faf9;
-  --cedar: #9a6b3f;
-  --ink: #15231d;
-  --muted: #5a6d64;
-  --line: rgba(22, 53, 40, 0.12);
-  --ff-display: "Bricolage Grotesque", system-ui, sans-serif;
-  --ff-body: "Source Sans 3", system-ui, sans-serif;
-  --ease: cubic-bezier(.22, 1, .36, 1);
-  --mw: 1120px;
-}
-
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
-body {
-  font-family: var(--ff-body);
-  color: var(--ink);
-  background: var(--foam);
-  line-height: 1.55;
-  overflow-x: clip;
-}
-img { display: block; max-width: 100%; }
-a { color: inherit; text-decoration: none; }
-button { font: inherit; color: inherit; background: none; border: none; cursor: pointer; }
-ul { list-style: none; }
-:focus-visible { outline: 2px solid var(--lake); outline-offset: 3px; }
-::selection { background: var(--lake); color: #fff; }
-
-.wrap {
-  width: min(100% - 2.5rem, var(--mw));
-  margin-inline: auto;
-}
-
-/* Atmospheric backdrop texture */
-.grain {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 200;
-  opacity: 0.035;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-}
-
-/* Nav */
-#nav {
-  position: fixed;
-  inset: 0 0 auto;
-  z-index: 100;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1rem 1.5rem;
-  transition: background 0.35s var(--ease), backdrop-filter 0.35s;
-}
-#nav.scrolled {
-  background: rgba(247, 250, 249, 0.88);
-  backdrop-filter: blur(14px);
-  border-bottom: 1px solid var(--line);
-}
-.brand {
-  font-family: var(--ff-display);
-  font-weight: 800;
-  font-size: 1.15rem;
-  letter-spacing: -0.03em;
-  display: flex;
-  align-items: center;
-  gap: 0.65rem;
-}
-.brand-mark {
-  width: 1.65rem;
-  height: 1.65rem;
-  border-radius: 0.35rem;
-  background:
-    linear-gradient(160deg, var(--lake-bright), var(--fir) 55%, var(--moss));
-  box-shadow: inset 0 -8px 12px rgba(255,255,255,0.12);
-}
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-}
-.nav-links a {
-  font-size: 0.92rem;
-  font-weight: 600;
-  color: var(--muted);
-  transition: color 0.2s;
-}
-.nav-links a:hover { color: var(--fir); }
-.nav-cta {
-  padding: 0.55rem 1rem;
-  border-radius: 0.45rem;
-  background: var(--fir);
-  color: var(--foam) !important;
-}
-.nav-cta:hover { background: var(--moss); color: #fff !important; }
-@media (max-width: 720px) {
-  .nav-links a:not(.nav-cta) { display: none; }
-}
-
-/* Hero */
-#hero {
-  position: relative;
-  min-height: 100svh;
-  display: grid;
-  align-items: end;
-  color: var(--foam);
-  overflow: clip;
-}
-.hero-media {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  background:
-    linear-gradient(180deg, rgba(15,36,28,0.15) 0%, rgba(15,36,28,0.35) 40%, rgba(15,36,28,0.88) 100%),
-    url("https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=2000&q=80") center/cover no-repeat;
-  transform: scale(1.04);
-  animation: heroDrift 28s ease-in-out infinite alternate;
-}
-@keyframes heroDrift {
-  from { transform: scale(1.04) translate3d(0, 0, 0); }
-  to { transform: scale(1.1) translate3d(-1.5%, -1%, 0); }
-}
-.hero-content {
-  position: relative;
-  z-index: 1;
-  width: min(100% - 2.5rem, var(--mw));
-  margin: 0 auto;
-  padding: 7.5rem 0 4.5rem;
-}
-.hero-brand {
-  font-family: var(--ff-display);
-  font-weight: 800;
-  font-size: clamp(3.2rem, 10vw, 6.4rem);
-  line-height: 0.92;
-  letter-spacing: -0.045em;
-  max-width: 12ch;
-  margin-bottom: 1.25rem;
-  opacity: 0;
-  transform: translateY(24px);
-  animation: riseIn 0.9s var(--ease) 0.15s forwards;
-}
-.hero-lead {
-  font-size: clamp(1.05rem, 2.2vw, 1.25rem);
-  max-width: 34ch;
-  color: rgba(247,250,249,0.86);
-  margin-bottom: 1.75rem;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: riseIn 0.9s var(--ease) 0.35s forwards;
-}
-.hero-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  opacity: 0;
-  transform: translateY(16px);
-  animation: riseIn 0.9s var(--ease) 0.5s forwards;
-}
-@keyframes riseIn {
-  to { opacity: 1; transform: none; }
-}
-.btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.45rem;
-  font-weight: 700;
-  font-size: 0.95rem;
-  padding: 0.85rem 1.35rem;
-  border-radius: 0.5rem;
-  transition: transform 0.25s var(--ease), background 0.25s, color 0.25s;
-}
-.btn:hover { transform: translateY(-2px); }
-.btn-primary { background: var(--foam); color: var(--fir-deep); }
-.btn-primary:hover { background: #fff; }
-.btn-ghost {
-  border: 1px solid rgba(247,250,249,0.35);
-  color: var(--foam);
-  background: rgba(247,250,249,0.06);
-}
-.btn-ghost:hover { background: rgba(247,250,249,0.14); }
-
-/* Section shared */
-.section {
-  padding: 5rem 0;
-}
-.section-head {
-  margin-bottom: 2rem;
-  max-width: 40rem;
-}
-.kicker {
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--lake);
-  margin-bottom: 0.65rem;
-}
-.section-head h2 {
-  font-family: var(--ff-display);
-  font-weight: 800;
-  font-size: clamp(1.85rem, 4vw, 2.75rem);
-  letter-spacing: -0.035em;
-  line-height: 1.05;
-  color: var(--fir-deep);
-  margin-bottom: 0.75rem;
-}
-.section-head p {
-  color: var(--muted);
-  font-size: 1.05rem;
-  max-width: 48ch;
-}
-
-/* Regions */
-#regions {
-  background:
-    radial-gradient(ellipse at 10% 0%, rgba(61,143,166,0.12), transparent 45%),
-    radial-gradient(ellipse at 90% 20%, rgba(47,92,69,0.12), transparent 40%),
-    linear-gradient(180deg, var(--mist), var(--foam));
-}
-.region-grid {
-  display: grid;
-  grid-template-columns: 1.15fr 1fr;
-  gap: 1.25rem;
-}
-@media (max-width: 860px) {
-  .region-grid { grid-template-columns: 1fr; }
-}
-.region-panel {
-  position: relative;
-  min-height: 280px;
-  border-radius: 1rem;
-  overflow: hidden;
-  isolation: isolate;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding: 1.75rem;
-  color: var(--foam);
-  transition: transform 0.35s var(--ease);
-}
-.region-panel:hover { transform: translateY(-3px); }
-.region-panel::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  background-size: cover;
-  background-position: center;
-  transition: transform 0.7s var(--ease);
-}
-.region-panel:hover::before { transform: scale(1.05); }
-.region-panel::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  background: linear-gradient(180deg, rgba(15,36,28,0.1), rgba(15,36,28,0.82));
-}
-.region-lyons::before {
-  background-image: url("https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1400&q=80");
-}
-.region-detroit::before {
-  background-image: url("https://images.unsplash.com/photo-1439066615861-d1af74d74000?auto=format&fit=crop&w=1400&q=80");
-}
-.region-panel h3 {
-  font-family: var(--ff-display);
-  font-size: 1.85rem;
-  letter-spacing: -0.03em;
-  margin-bottom: 0.4rem;
-}
-.region-panel p {
-  color: rgba(247,250,249,0.82);
-  max-width: 36ch;
-  margin-bottom: 1rem;
-}
-.region-link {
-  font-weight: 700;
-  font-size: 0.92rem;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-}
-.region-link span { transition: transform 0.25s var(--ease); }
-.region-panel:hover .region-link span { transform: translateX(4px); }
-
-/* Local businesses */
-#businesses {
-  background:
-    linear-gradient(180deg, var(--foam) 0%, #e4efeb 48%, var(--mist) 100%);
-}
-.biz-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
-}
-@media (max-width: 900px) {
-  .biz-grid { grid-template-columns: 1fr; }
-}
-.biz {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  min-height: 100%;
-  padding: 1.45rem 1.35rem 1.4rem;
-  border-radius: 0.9rem;
-  background:
-    linear-gradient(165deg, rgba(255,255,255,0.92), rgba(238,243,242,0.88));
-  border: 1px solid var(--line);
-  transition: transform 0.3s var(--ease), border-color 0.25s;
-}
-.biz:hover {
-  transform: translateY(-3px);
-  border-color: rgba(42,111,132,0.28);
-}
-.biz-tag {
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--cedar);
-  margin-bottom: 0.7rem;
-}
-.biz h3 {
-  font-family: var(--ff-display);
-  font-size: 1.35rem;
-  letter-spacing: -0.03em;
-  color: var(--fir-deep);
-  margin-bottom: 0.55rem;
-  line-height: 1.15;
-}
-.biz p {
-  color: var(--muted);
-  font-size: 0.96rem;
-  flex: 1;
-  margin-bottom: 1.15rem;
-}
-.biz-cta {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-  font-weight: 700;
-  font-size: 0.92rem;
-  color: var(--lake);
-}
-.biz-cta span { transition: transform 0.25s var(--ease); }
-.biz:hover .biz-cta span { transform: translateX(4px); }
-.biz-muted-cta {
-  color: var(--moss);
-}
-
-/* Filters + directory */
-#directory {
-  background:
-    linear-gradient(180deg, var(--foam), #e9f1ee 50%, var(--foam));
-}
-.filters {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.55rem;
-  margin-bottom: 1.75rem;
-}
-.filter-btn {
-  padding: 0.55rem 0.95rem;
-  border-radius: 0.45rem;
-  border: 1px solid var(--line);
-  background: rgba(255,255,255,0.7);
-  color: var(--muted);
-  font-weight: 650;
-  font-size: 0.9rem;
-  transition: background 0.2s, color 0.2s, border-color 0.2s;
-}
-.filter-btn:hover { border-color: var(--moss); color: var(--fir); }
-.filter-btn.active {
-  background: var(--fir);
-  border-color: var(--fir);
-  color: var(--foam);
-}
-.place-count {
-  font-size: 0.88rem;
-  color: var(--muted);
-  margin-bottom: 1.25rem;
-}
-.place-list {
-  display: grid;
-  gap: 0.85rem;
-}
-.place {
-  display: grid;
-  grid-template-columns: 7.5rem 1fr auto;
-  gap: 1.1rem;
-  align-items: center;
-  padding: 1rem 1.15rem;
-  border-radius: 0.85rem;
-  background: rgba(255,255,255,0.72);
-  border: 1px solid var(--line);
-  transition: border-color 0.25s, transform 0.25s var(--ease), background 0.25s;
-  opacity: 0;
-  transform: translateY(18px);
-}
-.place.is-visible {
-  opacity: 1;
-  transform: none;
-  transition: opacity 0.5s var(--ease), transform 0.5s var(--ease), border-color 0.25s, background 0.25s;
-}
-.place:hover {
-  border-color: rgba(42,111,132,0.35);
-  background: #fff;
-  transform: translateY(-2px);
-}
-.place.hidden { display: none; }
-.place-thumb {
-  width: 7.5rem;
-  height: 5.4rem;
-  border-radius: 0.55rem;
-  background-size: cover;
-  background-position: center;
-}
-.place-body h3 {
-  font-family: var(--ff-display);
-  font-size: 1.15rem;
-  letter-spacing: -0.02em;
-  margin-bottom: 0.2rem;
-}
-.place-meta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.45rem 0.85rem;
-  font-size: 0.82rem;
-  color: var(--muted);
-  margin-bottom: 0.4rem;
-}
-.place-meta b {
-  font-weight: 700;
-  color: var(--moss);
-}
-.place-body p {
-  color: var(--muted);
-  font-size: 0.95rem;
-  max-width: 58ch;
-}
-.place-map {
-  font-size: 0.85rem;
-  font-weight: 700;
-  color: var(--lake);
-  white-space: nowrap;
-  padding: 0.45rem 0.7rem;
-  border-radius: 0.4rem;
-  transition: background 0.2s;
-}
-.place-map:hover { background: rgba(42,111,132,0.1); }
-@media (max-width: 720px) {
-  .place {
-    grid-template-columns: 1fr;
-    gap: 0.85rem;
-  }
-  .place-thumb {
-    width: 100%;
-    height: 10rem;
-  }
-  .place-map { justify-self: start; }
-}
-
-/* Weekend */
-#weekends {
-  background:
-    linear-gradient(135deg, var(--fir-deep), var(--moss) 55%, var(--lake) 120%);
-  color: var(--foam);
-}
-#weekends .kicker { color: rgba(247,250,249,0.7); }
-#weekends .section-head h2 { color: var(--foam); }
-#weekends .section-head p { color: rgba(247,250,249,0.78); }
-.weekend-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
-}
-@media (max-width: 900px) {
-  .weekend-grid { grid-template-columns: 1fr; }
-}
-.weekend {
-  padding: 1.4rem 1.35rem 1.5rem;
-  border-radius: 0.9rem;
-  background: rgba(247,250,249,0.08);
-  border: 1px solid rgba(247,250,249,0.14);
-  transition: background 0.25s, transform 0.3s var(--ease);
-}
-.weekend:hover {
-  background: rgba(247,250,249,0.12);
-  transform: translateY(-3px);
-}
-.weekend h3 {
-  font-family: var(--ff-display);
-  font-size: 1.25rem;
-  letter-spacing: -0.02em;
-  margin-bottom: 0.55rem;
-}
-.weekend p {
-  color: rgba(247,250,249,0.78);
-  font-size: 0.96rem;
-  margin-bottom: 1rem;
-}
-.weekend ol {
-  padding-left: 1.1rem;
-  display: grid;
-  gap: 0.35rem;
-  color: rgba(247,250,249,0.9);
-  font-size: 0.92rem;
-}
-
-/* About strip */
-#about {
-  background:
-    radial-gradient(circle at 80% 20%, rgba(154,107,63,0.12), transparent 35%),
-    var(--mist);
-}
-.about-row {
-  display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: 2rem;
-  align-items: end;
-}
-@media (max-width: 800px) {
-  .about-row { grid-template-columns: 1fr; }
-}
-.about-note {
-  font-size: 1.02rem;
-  color: var(--muted);
-  max-width: 48ch;
-}
-.about-note strong { color: var(--fir); font-weight: 700; }
-
-/* Footer */
-footer {
-  padding: 2rem 0 2.5rem;
-  border-top: 1px solid var(--line);
-  background: var(--foam);
-}
-.footer-row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 1rem;
-  align-items: center;
-}
-.footer-row p {
-  color: var(--muted);
-  font-size: 0.9rem;
-}
-.footer-brand {
-  font-family: var(--ff-display);
-  font-weight: 800;
-  letter-spacing: -0.03em;
-  color: var(--fir);
-}
-
-/* Reveal */
-.reveal {
-  opacity: 0;
-  transform: translateY(22px);
-  transition: opacity 0.7s var(--ease), transform 0.7s var(--ease);
-}
-.reveal.in { opacity: 1; transform: none; }
-</style>
 </head>
 <body>
 <div class="grain" aria-hidden="true"></div>
 
 <header id="nav">
-  <a class="brand" href="#hero">
+  <a class="brand" href="index.html">
     <span class="brand-mark" aria-hidden="true"></span>
     Santiam Nearby
   </a>
   <nav class="nav-links" aria-label="Primary">
-    <a href="#regions">Regions</a>
+    <a href="#guides">Guides</a>
     <a href="#businesses">Local services</a>
     <a href="#directory">Places</a>
-    <a href="#weekends">Weekends</a>
-    <a class="nav-cta" href="#businesses">Our businesses</a>
+    <a href="#faq">FAQ</a>
+    <a class="nav-cta" href="restaurants-near-detroit-lake.html">Where to eat</a>
   </nav>
 </header>
 
 <main>
   <section id="hero">
-    <div class="hero-media" role="img" aria-label="Mountain lake surrounded by forest, Oregon Cascades atmosphere"></div>
+    <div class="hero-media" role="img" aria-label="Forest and mountain lake scenery near Detroit Lake, Oregon"></div>
     <div class="hero-content">
       <h1 class="hero-brand">Santiam Nearby</h1>
-      <p class="hero-lead">A local guide to Lyons and Detroit Lake — plus bounce houses, boat concierge, and mobile tire help from people who live here.</p>
+      <p class="hero-lead">The local vacation guide for Lyons and Detroit Lake — things to do, canyon restaurants, and spots that do not always show up clearly on Google Maps.</p>
       <div class="hero-actions">
-        <a class="btn btn-primary" href="#businesses">Local services</a>
-        <a class="btn btn-ghost" href="#directory">Browse places</a>
+        <a class="btn btn-primary" href="#guides">Vacation guides</a>
+        <a class="btn btn-ghost" href="restaurants-near-detroit-lake.html">Local restaurants</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="guides" class="section" style="background:linear-gradient(180deg,var(--mist),var(--foam))">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="kicker">Vacation search guides</p>
+        <h2>Built for “what should we do here?”</h2>
+        <p>Deep pages for the searches travelers actually type — then filter the directory for the day you have.</p>
+      </div>
+      <div class="guide-cards">
+        <a class="guide-card reveal" href="things-to-do-detroit-lake-oregon.html">
+          <h3>Things to do at Detroit Lake</h3>
+          <p>Swim beaches, boat days, campgrounds, viewpoint hikes, and calm-cove tips for vacation weeks.</p>
+          <span class="biz-cta">Read the lake guide <span aria-hidden="true">→</span></span>
+        </a>
+        <a class="guide-card reveal" href="things-to-do-lyons-oregon.html">
+          <h3>Things to do in Lyons</h3>
+          <p>River parks, quiet town pacing, and easy side trips toward Stayton, Mill City, and Roaring River.</p>
+          <span class="biz-cta">Read the Lyons guide <span aria-hidden="true">→</span></span>
+        </a>
+        <a class="guide-card reveal" href="restaurants-near-detroit-lake.html">
+          <h3>Restaurants &amp; food stops</h3>
+          <p>Local canyon eats in Gates, Mill City, Stayton, and Detroit — with notes about timing, crowds, and why locals stop there.</p>
+          <span class="biz-cta">See where to eat <span aria-hidden="true">→</span></span>
+        </a>
       </div>
     </div>
   </section>
@@ -638,15 +175,15 @@ footer {
         <p>Base in Lyons for river towns and valley parks. Drive up Highway 22 for Detroit Lake swimming, camping, and Cascade day trips.</p>
       </div>
       <div class="region-grid">
-        <a class="region-panel region-lyons reveal" href="#directory" data-jump-filter="lyons">
+        <a class="region-panel region-lyons reveal" href="things-to-do-lyons-oregon.html">
           <h3>Lyons</h3>
           <p>River parks, quiet town energy, and North Santiam access — plus Stayton and Mill City just down the road.</p>
-          <span class="region-link">Explore Lyons places <span aria-hidden="true">→</span></span>
+          <span class="region-link">Lyons vacation guide <span aria-hidden="true">→</span></span>
         </a>
-        <a class="region-panel region-detroit reveal" href="#directory" data-jump-filter="detroit">
+        <a class="region-panel region-detroit reveal" href="things-to-do-detroit-lake-oregon.html">
           <h3>Detroit Lake</h3>
           <p>Boat launches, day-use beaches, campgrounds, and forest trailheads around the reservoir.</p>
-          <span class="region-link">Explore lake places <span aria-hidden="true">→</span></span>
+          <span class="region-link">Detroit Lake guide <span aria-hidden="true">→</span></span>
         </a>
       </div>
     </div>
@@ -682,28 +219,218 @@ footer {
     </div>
   </section>
 
+  <section id="eat" class="section prose-section">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="kicker">Where to eat</p>
+        <h2>Local restaurants near Detroit Lake &amp; Lyons</h2>
+        <p>Vacationers searching “restaurants near Detroit Lake” usually need canyon stops on Highway 22 — not only pins inside the tiny town of Detroit.</p>
+      </div>
+      <div class="spot-block reveal">
+        <article class="spot">
+          <h3>Sierra Mexican Restaurant</h3>
+          <p class="where">Gates, OR · on Highway 22</p>
+          <p>A long-running canyon favorite for travelers headed to or from the lake. Expect family-run Mexican food and a convenient pull-off before the last climb into Detroit.</p>
+        </article>
+        <article class="spot">
+          <h3>The Get-A-Way</h3>
+          <p class="where">Mill City, OR</p>
+          <p>Burgers, sandwiches, and breakfast energy that locals and Bend-bound drivers talk about. Useful when you want a real sit-down stop without driving all the way back to Salem.</p>
+        </article>
+        <article class="spot">
+          <h3>Rosie’s Mountain Coffee House</h3>
+          <p class="where">Mill City, OR · Highway 22</p>
+          <p>Espresso, scones, and a classic canyon coffee stop before a lake day. Better for an early launch than waiting until Detroit for caffeine.</p>
+        </article>
+      </div>
+      <p class="related-links reveal">
+        <a href="restaurants-near-detroit-lake.html">Full restaurants guide →</a>
+        <a href="#directory" data-jump-filter="food">Filter food in the directory →</a>
+      </p>
+    </div>
+  </section>
+
   <section id="directory" class="section">
     <div class="wrap">
       <div class="section-head reveal">
         <p class="kicker">Directory</p>
         <h2>Things near Lyons &amp; Detroit Lake</h2>
-        <p>Curated, not endless. Filter by region or vibe, then open maps when you’re ready to go.</p>
+        <p>Curated places with local notes — including restaurants, parks, lake spots, and services travelers actually need.</p>
       </div>
 
       <div class="filters reveal" role="toolbar" aria-label="Filter places">
         <button class="filter-btn active" type="button" data-filter="all">All</button>
         <button class="filter-btn" type="button" data-filter="services">Local services</button>
+        <button class="filter-btn" type="button" data-filter="food">Restaurants &amp; coffee</button>
+        <button class="filter-btn" type="button" data-filter="hidden">Hidden / local tips</button>
         <button class="filter-btn" type="button" data-filter="lyons">Lyons area</button>
         <button class="filter-btn" type="button" data-filter="detroit">Detroit Lake</button>
         <button class="filter-btn" type="button" data-filter="outdoors">Outdoors</button>
         <button class="filter-btn" type="button" data-filter="swim">Swim &amp; boat</button>
-        <button class="filter-btn" type="button" data-filter="food">Food &amp; coffee</button>
         <button class="filter-btn" type="button" data-filter="free">Free / cheap</button>
       </div>
       <p class="place-count" id="place-count" aria-live="polite"></p>
 
       <div class="place-list" id="place-list">
-        <!-- Places injected by JS for clean filtering -->
+        <article class="place is-visible" data-tags="services lyons">
+          <div class="place-thumb" style="background-image:url('https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&amp;fit=crop&amp;w=600&amp;q=80')" role="img" aria-hidden="true"></div>
+          <div class="place-body">
+            <h3>Bounce House Rentals</h3>
+            <div class="place-meta"><span><b>Lyons area</b></span><span>Party rentals</span></div>
+            <p>Local bounce house delivery for birthdays and backyard parties around Lyons, Stayton, and the Santiam Canyon.</p>
+          </div>
+          <a class="place-map" href="#businesses">Local service</a>
+        </article>
+
+        <article class="place is-visible" data-tags="services detroit swim">
+          <div class="place-thumb" style="background-image:url('https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?auto=format&amp;fit=crop&amp;w=600&amp;q=80')" role="img" aria-hidden="true"></div>
+          <div class="place-body">
+            <h3>Boat Concierge</h3>
+            <div class="place-meta"><span><b>Detroit Lake</b></span><span>Boat delivery &amp; launch</span></div>
+            <p>Concierge-style boat help for Detroit Lake — delivery, launch support, and lake-day logistics so you get on the water faster.</p>
+          </div>
+          <a class="place-map" href="#businesses">Local service</a>
+        </article>
+
+        <article class="place is-visible" data-tags="services lyons detroit">
+          <div class="place-thumb" style="background-image:url('https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&amp;fit=crop&amp;w=600&amp;q=80')" role="img" aria-hidden="true"></div>
+          <div class="place-body">
+            <h3>Oregon Mobile Tire</h3>
+            <div class="place-meta"><span><b>Lyons · Detroit Lake · Hwy 22</b></span><span>24/7 roadside</span></div>
+            <p>Mobile tire service, flat changes, jump starts, lockouts, and fuel delivery for canyon drivers, campers, trailers, and rural Oregon routes.</p>
+          </div>
+          <a class="place-map" href="https://oregonmobiletire.com" target="_blank" rel="noopener noreferrer">Visit website</a>
+        </article>
+
+        <article class="place is-visible" data-tags="food lyons">
+          <div class="place-thumb" style="background-image:url('https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&amp;fit=crop&amp;w=600&amp;q=80')" role="img" aria-hidden="true"></div>
+          <div class="place-body">
+            <h3>Sierra Mexican Restaurant</h3>
+            <div class="place-meta"><span><b>Gates</b></span><span>Local restaurant</span></div>
+            <p>One of the most useful Highway 22 food stops between the valley and Detroit Lake — family Mexican food travelers actually plan around.</p>
+          </div>
+          <a class="place-map" href="https://www.google.com/maps/search/?api=1&amp;query=Sierra+Mexican+Gates+OR" target="_blank" rel="noopener noreferrer">Open map</a>
+        </article>
+
+        <article class="place is-visible" data-tags="food lyons">
+          <div class="place-thumb" style="background-image:url('https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&amp;fit=crop&amp;w=600&amp;q=80')" role="img" aria-hidden="true"></div>
+          <div class="place-body">
+            <h3>The Get-A-Way</h3>
+            <div class="place-meta"><span><b>Mill City</b></span><span>Burgers &amp; comfort food</span></div>
+            <p>Local Mill City restaurant known for burgers and sandwiches — a stronger “real meal” option than hoping Detroit has an open table on a peak Saturday.</p>
+          </div>
+          <a class="place-map" href="https://www.google.com/maps/search/?api=1&amp;query=The+Get-A-Way+Mill+City+OR" target="_blank" rel="noopener noreferrer">Open map</a>
+        </article>
+
+        <article class="place is-visible" data-tags="food lyons">
+          <div class="place-thumb" style="background-image:url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&amp;fit=crop&amp;w=600&amp;q=80')" role="img" aria-hidden="true"></div>
+          <div class="place-body">
+            <h3>Rosie’s Mountain Coffee House</h3>
+            <div class="place-meta"><span><b>Mill City</b></span><span>Coffee &amp; pastries</span></div>
+            <p>Highway 22 coffee stop with espresso and homemade scones — ideal before a lake day when you want fuel without backtracking to Salem.</p>
+          </div>
+          <a class="place-map" href="https://www.google.com/maps/search/?api=1&amp;query=Rosie%27s+Mountain+Coffee+House+Mill+City+OR" target="_blank" rel="noopener noreferrer">Open map</a>
+        </article>
+
+        <article class="place is-visible" data-tags="food lyons">
+          <div class="place-thumb" style="background-image:url('https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&amp;fit=crop&amp;w=600&amp;q=80')" role="img" aria-hidden="true"></div>
+          <div class="place-body">
+            <h3>Giovanni’s Mountain Pizza</h3>
+            <div class="place-meta"><span><b>Mill City</b></span><span>Pizza</span></div>
+            <p>Handy canyon pizza stop when the group wants something easy after swimming or before heading back down Highway 22.</p>
+          </div>
+          <a class="place-map" href="https://www.google.com/maps/search/?api=1&amp;query=Giovanni%27s+Mountain+Pizza+Mill+City+OR" target="_blank" rel="noopener noreferrer">Open map</a>
+        </article>
+
+        <article class="place is-visible" data-tags="hidden detroit outdoors free">
+          <div class="place-thumb" style="background-image:url('https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?auto=format&amp;fit=crop&amp;w=600&amp;q=80')" role="img" aria-hidden="true"></div>
+          <div class="place-body">
+            <h3>Kinney Creek waterfall stop</h3>
+            <div class="place-meta"><span><b>Near Detroit</b></span><span>Local tip</span></div>
+            <p>Scenic lunch / photo stop locals mention more than chain travel roundups do. Confirm current access and parking — conditions change with seasons and lake use.</p>
+          </div>
+          <a class="place-map" href="https://www.google.com/maps/search/?api=1&amp;query=Kinney+Creek+Detroit+Lake+Oregon" target="_blank" rel="noopener noreferrer">Open map</a>
+        </article>
+
+        <article class="place is-visible" data-tags="hidden detroit swim outdoors free">
+          <div class="place-thumb" style="background-image:url('https://images.unsplash.com/photo-1439066615861-d1af74d74000?auto=format&amp;fit=crop&amp;w=600&amp;q=80')" role="img" aria-hidden="true"></div>
+          <div class="place-body">
+            <h3>Breitenbush Arm calm water</h3>
+            <div class="place-meta"><span><b>Detroit Lake</b></span><span>Local tip</span></div>
+            <p>When the main lake feels choppy or crowded, this arm is often calmer for floating, tie-ups, and slower afternoons near Detroit Lake Marina.</p>
+          </div>
+          <a class="place-map" href="https://www.google.com/maps/search/?api=1&amp;query=Breitenbush+Arm+Detroit+Lake+OR" target="_blank" rel="noopener noreferrer">Open map</a>
+        </article>
+
+        <article class="place is-visible" data-tags="lyons outdoors free">
+          <div class="place-thumb" style="background-image:url('https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&amp;fit=crop&amp;w=600&amp;q=80')" role="img" aria-hidden="true"></div>
+          <div class="place-body">
+            <h3>John Neal Memorial Park</h3>
+            <div class="place-meta"><span><b>Lyons</b></span><span>River park</span></div>
+            <p>Local go-to for picnic tables, river access, and an easy afternoon without leaving town.</p>
+          </div>
+          <a class="place-map" href="https://www.google.com/maps/search/?api=1&amp;query=John+Neal+Memorial+Park+Lyons+OR" target="_blank" rel="noopener noreferrer">Open map</a>
+        </article>
+
+        <article class="place is-visible" data-tags="detroit outdoors swim free">
+          <div class="place-thumb" style="background-image:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&amp;fit=crop&amp;w=600&amp;q=80')" role="img" aria-hidden="true"></div>
+          <div class="place-body">
+            <h3>Mongold Day-Use Area</h3>
+            <div class="place-meta"><span><b>Detroit Lake</b></span><span>Swim &amp; picnic</span></div>
+            <p>Classic Detroit Lake beach energy — arrive early on hot weekends; parking and shoreline fill fast.</p>
+          </div>
+          <a class="place-map" href="https://www.google.com/maps/search/?api=1&amp;query=Mongold+Day+Use+Area+Detroit+Lake+OR" target="_blank" rel="noopener noreferrer">Open map</a>
+        </article>
+
+        <article class="place is-visible" data-tags="detroit outdoors swim free">
+          <div class="place-thumb" style="background-image:url('https://images.unsplash.com/photo-1473496169904-658ba7c44d8a?auto=format&amp;fit=crop&amp;w=600&amp;q=80')" role="img" aria-hidden="true"></div>
+          <div class="place-body">
+            <h3>Detroit Flats Day Use</h3>
+            <div class="place-meta"><span><b>Detroit Lake</b></span><span>Open shoreline</span></div>
+            <p>Another strong day-use option when you want space to spread out and keep the day simple.</p>
+          </div>
+          <a class="place-map" href="https://www.google.com/maps/search/?api=1&amp;query=Detroit+Flats+Day+Use+Detroit+Lake+Oregon" target="_blank" rel="noopener noreferrer">Open map</a>
+        </article>
+
+        <article class="place is-visible" data-tags="detroit outdoors">
+          <div class="place-thumb" style="background-image:url('https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?auto=format&amp;fit=crop&amp;w=600&amp;q=80')" role="img" aria-hidden="true"></div>
+          <div class="place-body">
+            <h3>Detroit Lake State Recreation Area</h3>
+            <div class="place-meta"><span><b>Detroit Lake</b></span><span>Camp &amp; recreate</span></div>
+            <p>Main camping hub near the water — reserve ahead in summer; shoulder seasons feel completely different.</p>
+          </div>
+          <a class="place-map" href="https://www.google.com/maps/search/?api=1&amp;query=Detroit+Lake+State+Recreation+Area" target="_blank" rel="noopener noreferrer">Open map</a>
+        </article>
+
+        <article class="place is-visible" data-tags="detroit outdoors free">
+          <div class="place-thumb" style="background-image:url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&amp;fit=crop&amp;w=600&amp;q=80')" role="img" aria-hidden="true"></div>
+          <div class="place-body">
+            <h3>Stahlman Point Trail</h3>
+            <div class="place-meta"><span><b>Near Detroit</b></span><span>Viewpoint hike</span></div>
+            <p>Short effort, big payoff — lake and Cascade views when you want a hike without a full wilderness day.</p>
+          </div>
+          <a class="place-map" href="https://www.google.com/maps/search/?api=1&amp;query=Stahlman+Point+Trail+Oregon" target="_blank" rel="noopener noreferrer">Open map</a>
+        </article>
+
+        <article class="place is-visible" data-tags="lyons outdoors free hidden">
+          <div class="place-thumb" style="background-image:url('https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&amp;fit=crop&amp;w=600&amp;q=80')" role="img" aria-hidden="true"></div>
+          <div class="place-body">
+            <h3>Roaring River County Park</h3>
+            <div class="place-meta"><span><b>Near Scio</b></span><span>Day-use park</span></div>
+            <p>Local alternative when Detroit Lake is slammed — shade, picnic space, and a calmer water day without canyon traffic.</p>
+          </div>
+          <a class="place-map" href="https://www.google.com/maps/search/?api=1&amp;query=Roaring+River+County+Park+Oregon" target="_blank" rel="noopener noreferrer">Open map</a>
+        </article>
+
+        <article class="place is-visible" data-tags="lyons outdoors free">
+          <div class="place-thumb" style="background-image:url('https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&amp;fit=crop&amp;w=600&amp;q=80')" role="img" aria-hidden="true"></div>
+          <div class="place-body">
+            <h3>Stayton Riverfront Park</h3>
+            <div class="place-meta"><span><b>Stayton</b></span><span>Town park</span></div>
+            <p>Short hop from Lyons with paths and open grass — easy add-on when you are already running errands before a canyon drive.</p>
+          </div>
+          <a class="place-map" href="https://www.google.com/maps/search/?api=1&amp;query=Stayton+Riverfront+Park+Stayton+OR" target="_blank" rel="noopener noreferrer">Open map</a>
+        </article>
       </div>
     </div>
   </section>
@@ -720,9 +447,9 @@ footer {
           <h3>Lake day</h3>
           <p>Detroit Lake when the weather’s warm and you want water first.</p>
           <ol>
+            <li>Coffee at Rosie’s or breakfast in Mill City</li>
             <li>Book Boat Concierge if you want delivery / launch help</li>
-            <li>Mongold or Detroit Flats for swim / picnic</li>
-            <li>Save oregonmobiletire.com before the Hwy 22 drive</li>
+            <li>Mongold or Detroit Flats, then Sierra Mexican on the way home</li>
           </ol>
         </article>
         <article class="weekend reveal">
@@ -739,10 +466,38 @@ footer {
           <p>Highway 22 as the main event — views, stops, and a lake finish.</p>
           <ol>
             <li>Roll out early toward Detroit</li>
-            <li>Viewpoint / trailhead stop along the corridor</li>
-            <li>Lake loop, then back down-canyon with roadside help on call</li>
+            <li>Stahlman Point or a quiet cove if the beach is packed</li>
+            <li>Save oregonmobiletire.com before the drive home</li>
           </ol>
         </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" class="section">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="kicker">Vacation FAQ</p>
+        <h2>Questions travelers ask before they arrive</h2>
+        <p>Straight answers for Detroit Lake and Lyons trips — written for real search questions.</p>
+      </div>
+      <div class="faq-list reveal">
+        <details class="faq-item">
+          <summary>What is there to do near Detroit Lake, Oregon on vacation?</summary>
+          <p>Swim or boat at Mongold and Detroit Flats, camp at Detroit Lake State Recreation Area, hike Stahlman Point, explore calmer water in the Breitenbush Arm, and stop for food in Detroit, Gates, Mill City, or Stayton. Start with our <a href="things-to-do-detroit-lake-oregon.html">Detroit Lake guide</a>.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Where should I eat near Detroit Lake?</summary>
+          <p>Plan canyon stops, not only Detroit town pins. Sierra Mexican in Gates, The Get-A-Way and Rosie’s in Mill City, plus Stayton options on the valley side. See the <a href="restaurants-near-detroit-lake.html">restaurants guide</a>.</p>
+        </details>
+        <details class="faq-item">
+          <summary>What are good things to do in Lyons, Oregon?</summary>
+          <p>Use John Neal Memorial Park and river access in town, then branch to Stayton, Mill City, or Roaring River County Park. Full write-up: <a href="things-to-do-lyons-oregon.html">things to do in Lyons</a>.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Are there spots that are not obvious on Google Maps?</summary>
+          <p>Yes — Kinney Creek waterfall, Breitenbush Arm calm water, Stahlman Point timing tips, and “go to Mill City/Gates for food when Detroit is slammed” advice. Filter the directory for <button type="button" class="filter-btn" data-filter="hidden" style="display:inline;padding:0.2rem 0.5rem;margin:0 0.15rem">Hidden / local tips</button>.</p>
+        </details>
       </div>
     </div>
   </section>
@@ -751,10 +506,10 @@ footer {
     <div class="wrap about-row">
       <div class="section-head reveal" style="margin-bottom:0">
         <p class="kicker">About this guide</p>
-        <h2>Built for people who already live nearby</h2>
-        <p class="about-note">Santiam Nearby is a starter directory for the Lyons–Detroit Lake stretch of the North Santiam — including local bounce house rentals, Detroit Lake boat concierge, and <a href="https://oregonmobiletire.com" target="_blank" rel="noopener noreferrer" style="color:var(--lake);font-weight:700">Oregon Mobile Tire</a>. Always check lake levels, fire restrictions, and road conditions before you go.</p>
+        <h2>Written like a local text thread, structured for search</h2>
+        <p class="about-note">Santiam Nearby is a living vacation directory for the Lyons–Detroit Lake stretch of the North Santiam — including bounce house rentals, boat concierge, and <a href="https://oregonmobiletire.com" target="_blank" rel="noopener noreferrer" style="color:var(--lake);font-weight:700">Oregon Mobile Tire</a>. Hours and lake levels change, so verify before you go.</p>
       </div>
-      <p class="about-note reveal"><strong>Need a service?</strong> Start with Local services above, or visit oregonmobiletire.com for 24/7 roadside help.</p>
+      <p class="about-note reveal"><strong>Need roadside help?</strong> Visit <a href="https://oregonmobiletire.com" target="_blank" rel="noopener noreferrer" style="color:var(--lake);font-weight:700">oregonmobiletire.com</a> for 24/7 mobile tire and roadside assistance.</p>
     </div>
   </section>
 </main>
@@ -762,290 +517,57 @@ footer {
 <footer>
   <div class="wrap footer-row">
     <p class="footer-brand">Santiam Nearby</p>
-    <p>Lyons · Detroit Lake · oregonmobiletire.com</p>
+    <p>
+      <a href="things-to-do-detroit-lake-oregon.html" style="color:var(--lake);font-weight:600">Detroit Lake</a>
+      ·
+      <a href="things-to-do-lyons-oregon.html" style="color:var(--lake);font-weight:600">Lyons</a>
+      ·
+      <a href="restaurants-near-detroit-lake.html" style="color:var(--lake);font-weight:600">Restaurants</a>
+      ·
+      <a href="https://oregonmobiletire.com" style="color:var(--lake);font-weight:600">oregonmobiletire.com</a>
+    </p>
   </div>
 </footer>
 
 <script>
-const places = [
-  {
-    id: "bounce-houses",
-    name: "Bounce House Rentals",
-    region: "lyons",
-    tags: ["services", "lyons"],
-    town: "Lyons area",
-    vibe: "Party rentals",
-    note: "Local bounce house delivery for birthdays and backyard parties around Lyons, Stayton, and the Santiam Canyon.",
-    url: "#businesses",
-    cta: "Local service",
-    image: "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=600&q=80"
-  },
-  {
-    id: "boat-concierge",
-    name: "Boat Concierge",
-    region: "detroit",
-    tags: ["services", "detroit", "swim"],
-    town: "Detroit Lake",
-    vibe: "Boat delivery & launch",
-    note: "Concierge-style boat help for Detroit Lake — delivery, launch support, and lake-day logistics so you get on the water faster.",
-    url: "#businesses",
-    cta: "Local service",
-    image: "https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?auto=format&fit=crop&w=600&q=80"
-  },
-  {
-    id: "oregon-mobile-tire",
-    name: "Oregon Mobile Tire",
-    region: "lyons",
-    tags: ["services", "lyons", "detroit"],
-    town: "Lyons · Detroit Lake · Hwy 22",
-    vibe: "24/7 roadside",
-    note: "Mobile tire service, flat changes, jump starts, lockouts, and fuel delivery for canyon drivers, campers, trailers, and rural Oregon routes.",
-    url: "https://oregonmobiletire.com",
-    cta: "Visit website",
-    image: "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=600&q=80"
-  },
-  {
-    id: "john-neal",
-    name: "John Neal Memorial Park",
-    region: "lyons",
-    tags: ["lyons", "outdoors", "free"],
-    town: "Lyons",
-    vibe: "River park",
-    note: "Local go-to for picnic tables, river access, and an easy afternoon without leaving town.",
-    map: "https://www.google.com/maps/search/?api=1&query=John+Neal+Memorial+Park+Lyons+OR",
-    image: "https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=600&q=80"
-  },
-  {
-    id: "north-santiam-lyons",
-    name: "North Santiam River (Lyons)",
-    region: "lyons",
-    tags: ["lyons", "outdoors", "free"],
-    town: "Lyons",
-    vibe: "Fishing & walk",
-    note: "The river is the town’s backbone — cool air, rock bars, and a quieter alternative to the lake crowds.",
-    map: "https://www.google.com/maps/search/?api=1&query=North+Santiam+River+Lyons+OR",
-    image: "https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?auto=format&fit=crop&w=600&q=80"
-  },
-  {
-    id: "stayton-riverfront",
-    name: "Stayton Riverfront Park",
-    region: "lyons",
-    tags: ["lyons", "outdoors", "free"],
-    town: "Stayton",
-    vibe: "Town park",
-    note: "A short hop from Lyons with paths, open grass, and an easy add-on when you’re already running errands.",
-    map: "https://www.google.com/maps/search/?api=1&query=Stayton+Riverfront+Park+Stayton+OR",
-    image: "https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=600&q=80"
-  },
-  {
-    id: "mill-city-falls",
-    name: "Mill City riverfront & falls views",
-    region: "lyons",
-    tags: ["lyons", "outdoors", "free"],
-    town: "Mill City",
-    vibe: "Quick stop",
-    note: "Worth a pull-over on the way up-canyon — river drama without committing to a full lake day.",
-    map: "https://www.google.com/maps/search/?api=1&query=Mill+City+Oregon+North+Santiam",
-    image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=600&q=80"
-  },
-  {
-    id: "roaring-river",
-    name: "Roaring River County Park",
-    region: "lyons",
-    tags: ["lyons", "outdoors", "free"],
-    town: "Near Scio",
-    vibe: "Day-use park",
-    note: "A valley favorite for shade, picnic space, and a calmer water day when Detroit Lake is slammed.",
-    map: "https://www.google.com/maps/search/?api=1&query=Roaring+River+County+Park+Oregon",
-    image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=600&q=80"
-  },
-  {
-    id: "stayton-coffee",
-    name: "Stayton coffee & bakery crawl",
-    region: "lyons",
-    tags: ["lyons", "food"],
-    town: "Stayton",
-    vibe: "Fuel stop",
-    note: "Best launch pad before Highway 22 — grab coffee and a pastry, then decide lake vs. river.",
-    map: "https://www.google.com/maps/search/?api=1&query=coffee+Stayton+OR",
-    image: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=600&q=80"
-  },
-  {
-    id: "mill-city-eats",
-    name: "Mill City / Gates food stops",
-    region: "lyons",
-    tags: ["lyons", "food"],
-    town: "Mill City",
-    vibe: "Small-town eats",
-    note: "Handy midway points for burgers, cafe food, or a reset before the last climb to Detroit.",
-    map: "https://www.google.com/maps/search/?api=1&query=restaurants+Mill+City+OR",
-    image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=600&q=80"
-  },
-  {
-    id: "mongold",
-    name: "Mongold Day-Use Area",
-    region: "detroit",
-    tags: ["detroit", "outdoors", "swim", "free"],
-    town: "Detroit Lake",
-    vibe: "Swim & picnic",
-    note: "Classic Detroit Lake beach energy — arrive early on hot weekends; parking and shoreline fill fast.",
-    map: "https://www.google.com/maps/search/?api=1&query=Mongold+Day+Use+Area+Detroit+Lake+OR",
-    image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80"
-  },
-  {
-    id: "detroit-flats",
-    name: "Detroit Flats Day Use",
-    region: "detroit",
-    tags: ["detroit", "outdoors", "swim", "free"],
-    town: "Detroit Lake",
-    vibe: "Open shoreline",
-    note: "Another strong day-use option when you want space to spread out and keep the day simple.",
-    map: "https://www.google.com/maps/search/?api=1&query=Detroit+Flats+Day+Use+Detroit+Lake+Oregon",
-    image: "https://images.unsplash.com/photo-1439066615861-d1af74d74000?auto=format&fit=crop&w=600&q=80"
-  },
-  {
-    id: "detroit-sra",
-    name: "Detroit Lake State Recreation Area",
-    region: "detroit",
-    tags: ["detroit", "outdoors", "swim"],
-    town: "Detroit Lake",
-    vibe: "Camp & recreate",
-    note: "The main hub for camping near the water — reserve ahead in summer; shoulder seasons feel completely different.",
-    map: "https://www.google.com/maps/search/?api=1&query=Detroit+Lake+State+Recreation+Area",
-    image: "https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?auto=format&fit=crop&w=600&q=80"
-  },
-  {
-    id: "cove-creek",
-    name: "Cove Creek Campground",
-    region: "detroit",
-    tags: ["detroit", "outdoors"],
-    town: "Detroit Lake",
-    vibe: "Forest camp",
-    note: "A reliable base for lake mornings and cooler overnight temps under the trees.",
-    map: "https://www.google.com/maps/search/?api=1&query=Cove+Creek+Campground+Detroit+Lake+OR",
-    image: "https://images.unsplash.com/photo-1504851149312-7a075b496cc7?auto=format&fit=crop&w=600&q=80"
-  },
-  {
-    id: "hoover",
-    name: "Hoover Campground",
-    region: "detroit",
-    tags: ["detroit", "outdoors"],
-    town: "Detroit Lake",
-    vibe: "Lakeside camp",
-    note: "Good pick when you want to wake up close to the water and skip a long morning shuffle.",
-    map: "https://www.google.com/maps/search/?api=1&query=Hoover+Campground+Detroit+Lake+OR",
-    image: "https://images.unsplash.com/photo-1537905569824-f89f14cceb68?auto=format&fit=crop&w=600&q=80"
-  },
-  {
-    id: "packsaddle",
-    name: "Packsaddle Park",
-    region: "detroit",
-    tags: ["detroit", "outdoors", "swim", "free"],
-    town: "Detroit Lake",
-    vibe: "Boat & day use",
-    note: "Useful launch / hang spot on the lake circuit — check seasonal access and water levels.",
-    map: "https://www.google.com/maps/search/?api=1&query=Packsaddle+Park+Detroit+Lake+OR",
-    image: "https://images.unsplash.com/photo-1473496169904-658ba7c44d8a?auto=format&fit=crop&w=600&q=80"
-  },
-  {
-    id: "stahlman",
-    name: "Stahlman Point Trail",
-    region: "detroit",
-    tags: ["detroit", "outdoors", "free"],
-    town: "Near Detroit",
-    vibe: "Viewpoint hike",
-    note: "Short effort, big payoff — lake and Cascade views when you want a hike without a full wilderness day.",
-    map: "https://www.google.com/maps/search/?api=1&query=Stahlman+Point+Trail+Oregon",
-    image: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=600&q=80"
-  },
-  {
-    id: "detroit-town",
-    name: "Detroit town & marina stops",
-    region: "detroit",
-    tags: ["detroit", "food", "swim"],
-    town: "Detroit",
-    vibe: "Supplies & food",
-    note: "Grab snacks, browse the marina energy, and reset before another swim or the drive home.",
-    map: "https://www.google.com/maps/search/?api=1&query=Detroit+Oregon+marina",
-    image: "https://images.unsplash.com/photo-1527004013197-933c4bb611b3?auto=format&fit=crop&w=600&q=80"
-  },
-  {
-    id: "hwy22-corridor",
-    name: "Highway 22 canyon pullouts",
-    region: "detroit",
-    tags: ["detroit", "outdoors", "free"],
-    town: "Hwy 22",
-    vibe: "Scenic drive",
-    note: "The corridor itself is part of the experience — misty mornings, river bends, and spontaneous photo stops.",
-    map: "https://www.google.com/maps/search/?api=1&query=Highway+22+Detroit+Lake+Oregon",
-    image: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=600&q=80"
-  }
-];
-
-const listEl = document.getElementById("place-list");
+const places = [...document.querySelectorAll("#place-list .place")];
 const countEl = document.getElementById("place-count");
 const filterBtns = [...document.querySelectorAll(".filter-btn")];
 let activeFilter = "all";
 
-function renderPlaces() {
-  const filtered = places.filter((p) =>
-    activeFilter === "all" ? true : p.tags.includes(activeFilter)
-  );
-
-  countEl.textContent = `${filtered.length} place${filtered.length === 1 ? "" : "s"}`;
-
-  listEl.innerHTML = filtered.map((p, i) => {
-    const href = p.url || p.map || "#";
-    const label = p.cta || "Open map";
-    const external = href.startsWith("http");
-    const rel = external ? ' target="_blank" rel="noopener noreferrer"' : "";
-    return `
-    <article class="place" style="transition-delay:${Math.min(i, 8) * 40}ms" data-id="${p.id}">
-      <div class="place-thumb" style="background-image:url('${p.image}')" role="img" aria-label=""></div>
-      <div class="place-body">
-        <h3>${p.name}</h3>
-        <div class="place-meta">
-          <span><b>${p.town}</b></span>
-          <span>${p.vibe}</span>
-        </div>
-        <p>${p.note}</p>
-      </div>
-      <a class="place-map" href="${href}"${rel}>${label}</a>
-    </article>
-  `;
-  }).join("");
-
-  requestAnimationFrame(() => {
-    listEl.querySelectorAll(".place").forEach((el) => el.classList.add("is-visible"));
+function applyFilter(filter) {
+  activeFilter = filter;
+  filterBtns.forEach((b) => b.classList.toggle("active", b.dataset.filter === filter));
+  let shown = 0;
+  places.forEach((el) => {
+    const tags = (el.dataset.tags || "").split(/\s+/);
+    const match = filter === "all" || tags.includes(filter);
+    el.classList.toggle("hidden", !match);
+    if (match) shown += 1;
   });
+  countEl.textContent = `${shown} place${shown === 1 ? "" : "s"}`;
 }
 
 filterBtns.forEach((btn) => {
   btn.addEventListener("click", () => {
-    activeFilter = btn.dataset.filter;
-    filterBtns.forEach((b) => b.classList.toggle("active", b === btn));
-    renderPlaces();
+    applyFilter(btn.dataset.filter);
+    if (btn.closest("#faq")) {
+      document.getElementById("directory").scrollIntoView({ behavior: "smooth" });
+    }
   });
 });
 
 document.querySelectorAll("[data-jump-filter]").forEach((el) => {
-  el.addEventListener("click", () => {
-    const filter = el.dataset.jumpFilter;
-    activeFilter = filter;
-    filterBtns.forEach((b) => b.classList.toggle("active", b.dataset.filter === filter));
-    renderPlaces();
-  });
+  el.addEventListener("click", () => applyFilter(el.dataset.jumpFilter));
 });
 
-renderPlaces();
+applyFilter("all");
 
-/* Nav scroll state */
 const nav = document.getElementById("nav");
 const onScroll = () => nav.classList.toggle("scrolled", window.scrollY > 24);
 onScroll();
 window.addEventListener("scroll", onScroll, { passive: true });
 
-/* Reveal on scroll */
 const io = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
