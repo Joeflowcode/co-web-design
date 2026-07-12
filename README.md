@@ -47,6 +47,18 @@ A curated local vacation guide to **Lyons, Oregon** and **Detroit Lake** — thi
 - Weekend plans that route people through local food + services
 - Mobile-friendly layout
 
+## Monetization setup (do this next)
+
+1. Open `leads.js`
+2. Add **call-tracking numbers** for bounce + boat (`phone` / `phoneDisplay`)
+3. Create free Formspree forms and paste IDs into `formAction` for bounce, boat, and general
+4. Optional: set `emailFallback` so requests still email you before Formspree is ready
+5. Oregon Mobile Tire already uses **(541) 507-8401** + oregonmobiletire.com
+
+Offer pages:
+- `bounce-houses-lyons-oregon.html`
+- `detroit-lake-boat-concierge.html`
+
 ## Blog starter posts
 
 1. Best weekend itinerary: Lyons → Detroit Lake

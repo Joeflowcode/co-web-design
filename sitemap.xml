@@ -50,4 +50,14 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://joeflowcode.github.io/co-web-design/bounce-houses-lyons-oregon.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://joeflowcode.github.io/co-web-design/detroit-lake-boat-concierge.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
 </urlset>

@@ -850,3 +850,191 @@ footer {
   color: var(--lake);
   font-weight: 700;
 }
+
+/* Monetization / leads */
+.urgency-bar {
+  position: sticky;
+  top: 0;
+  z-index: 120;
+  background: var(--fir-deep);
+  color: var(--foam);
+  border-bottom: 1px solid rgba(247,250,249,0.12);
+}
+.urgency-bar .wrap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.65rem 1rem;
+  padding: 0.55rem 0;
+  font-size: 0.88rem;
+}
+.urgency-bar strong { font-weight: 750; }
+.urgency-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+.urgency-actions a {
+  font-weight: 700;
+  font-size: 0.8rem;
+  padding: 0.4rem 0.7rem;
+  border-radius: 0.4rem;
+  background: rgba(247,250,249,0.1);
+  border: 1px solid rgba(247,250,249,0.18);
+  transition: background 0.2s;
+}
+.urgency-actions a:hover { background: rgba(247,250,249,0.18); }
+.urgency-actions a.hot {
+  background: var(--foam);
+  color: var(--fir-deep);
+  border-color: var(--foam);
+}
+body.has-urgency-bar #nav { top: 2.6rem; }
+@media (max-width: 720px) {
+  body.has-urgency-bar #nav { top: 0; }
+  .urgency-bar { position: relative; }
+}
+
+.lead-panel {
+  margin-top: 1.5rem;
+  padding: 1.35rem 1.3rem;
+  border-radius: 0.95rem;
+  border: 1px solid var(--line);
+  background:
+    linear-gradient(165deg, rgba(255,255,255,0.96), rgba(228,239,235,0.92));
+}
+.lead-panel h3 {
+  font-family: var(--ff-display);
+  font-size: 1.25rem;
+  letter-spacing: -0.02em;
+  color: var(--fir-deep);
+  margin-bottom: 0.35rem;
+}
+.lead-panel .lead-note {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+.urgency-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.72rem;
+  font-weight: 750;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #8a4b18;
+  background: rgba(212, 146, 58, 0.16);
+  border: 1px solid rgba(154, 107, 63, 0.28);
+  border-radius: 0.35rem;
+  padding: 0.28rem 0.55rem;
+  margin-bottom: 0.7rem;
+}
+.lead-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin-bottom: 1rem;
+}
+.lead-actions .btn {
+  padding: 0.7rem 1.05rem;
+  font-size: 0.88rem;
+}
+.btn-fir {
+  background: var(--fir);
+  color: var(--foam);
+}
+.btn-fir:hover { background: var(--moss); color: #fff; }
+.btn-lake {
+  background: var(--lake);
+  color: #fff;
+}
+.btn-lake:hover { background: var(--lake-bright); }
+.btn-soft {
+  background: #fff;
+  color: var(--fir);
+  border: 1px solid var(--line);
+}
+.btn-soft:hover { border-color: var(--lake); }
+
+.lead-form {
+  display: grid;
+  gap: 0.65rem;
+}
+.lead-form .row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.65rem;
+}
+@media (max-width: 640px) {
+  .lead-form .row { grid-template-columns: 1fr; }
+}
+.lead-form label {
+  display: grid;
+  gap: 0.28rem;
+  font-size: 0.82rem;
+  font-weight: 650;
+  color: var(--fir);
+}
+.lead-form input,
+.lead-form select,
+.lead-form textarea {
+  font: inherit;
+  color: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: 0.45rem;
+  padding: 0.7rem 0.75rem;
+  background: #fff;
+}
+.lead-form textarea { min-height: 88px; resize: vertical; }
+.lead-form button[type="submit"] {
+  justify-self: start;
+  margin-top: 0.2rem;
+}
+.lead-form .form-status {
+  font-size: 0.9rem;
+  color: var(--moss);
+  min-height: 1.2em;
+}
+.lead-form .form-status.error { color: #9b3b2e; }
+
+.biz .lead-mini {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-top: auto;
+}
+.biz .lead-mini a {
+  font-size: 0.82rem;
+  font-weight: 750;
+  padding: 0.45rem 0.7rem;
+  border-radius: 0.4rem;
+  background: var(--fir);
+  color: var(--foam);
+}
+.biz .lead-mini a.secondary {
+  background: transparent;
+  color: var(--lake);
+  border: 1px solid rgba(42,111,132,0.28);
+}
+.biz p { margin-bottom: 0.85rem; }
+
+.offer-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 1.25rem;
+  align-items: start;
+}
+@media (max-width: 900px) {
+  .offer-grid { grid-template-columns: 1fr; }
+}
+.offer-points {
+  list-style: disc;
+  padding-left: 1.15rem;
+  display: grid;
+  gap: 0.45rem;
+  color: var(--muted);
+  margin: 1rem 0 1.25rem;
+}
+.offer-points li::marker { color: var(--moss); }

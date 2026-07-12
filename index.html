@@ -110,8 +110,19 @@
 }
 </script>
 </head>
-<body>
+<body class="has-urgency-bar">
 <div class="grain" aria-hidden="true"></div>
+
+<div class="urgency-bar">
+  <div class="wrap">
+    <p><strong>This weekend:</strong> bounce houses · lake-day boat delivery · Hwy 22 roadside</p>
+    <div class="urgency-actions">
+      <a class="hot" href="bounce-houses-lyons-oregon.html#book">Book bounce house</a>
+      <a href="detroit-lake-boat-concierge.html#book">Boat Concierge</a>
+      <a href="tel:+15415078401">(541) 507-8401 tire help</a>
+    </div>
+  </div>
+</div>
 
 <header id="nav">
   <a class="brand" href="index.html">
@@ -121,9 +132,9 @@
   <nav class="nav-links" aria-label="Primary">
     <a href="#guides">Guides</a>
     <a href="blog/">Blog</a>
-    <a href="#businesses">Local services</a>
+    <a href="#businesses">Book services</a>
     <a href="#directory">Places</a>
-    <a class="nav-cta" href="restaurants-near-detroit-lake.html">Where to eat</a>
+    <a class="nav-cta" href="bounce-houses-lyons-oregon.html#book">Get a quote</a>
   </nav>
 </header>
 
@@ -134,8 +145,8 @@
       <h1 class="hero-brand">Santiam Nearby</h1>
       <p class="hero-lead">The local vacation guide for Lyons and Detroit Lake — things to do, canyon restaurants, and spots that do not always show up clearly on Google Maps.</p>
       <div class="hero-actions">
-        <a class="btn btn-primary" href="#guides">Vacation guides</a>
-        <a class="btn btn-ghost" href="restaurants-near-detroit-lake.html">Local restaurants</a>
+        <a class="btn btn-primary" href="detroit-lake-boat-concierge.html#book">Lake-day boat help</a>
+        <a class="btn btn-ghost" href="bounce-houses-lyons-oregon.html#book">Book a bounce house</a>
       </div>
     </div>
   </section>
@@ -195,29 +206,72 @@
   <section id="businesses" class="section">
     <div class="wrap">
       <div class="section-head reveal">
-        <p class="kicker">Local services</p>
-        <h2>Businesses from around here</h2>
-        <p>Party rentals, Detroit Lake boat help, and 24/7 mobile tire &amp; roadside service for the canyon corridor.</p>
+        <p class="kicker">Book local services</p>
+        <h2>Make money-time moves this weekend</h2>
+        <p>Bounce houses for Lyons parties, Boat Concierge for Detroit Lake days, and 24/7 Oregon Mobile Tire on Highway 22.</p>
       </div>
       <div class="biz-grid">
         <article class="biz reveal">
           <p class="biz-tag">Parties · Lyons area</p>
+          <p class="urgency-chip">This weekend bookings open</p>
           <h3>Bounce House Rentals</h3>
           <p>Inflatable bounce houses delivered for birthdays, backyard parties, and family gatherings around Lyons, Stayton, and the Santiam Canyon.</p>
-          <a class="biz-cta biz-muted-cta" href="#directory" data-jump-filter="services">See in directory <span aria-hidden="true">→</span></a>
+          <div class="lead-mini">
+            <a href="bounce-houses-lyons-oregon.html#book">Get a quote</a>
+            <a class="secondary" data-lead-call="bounce" href="bounce-houses-lyons-oregon.html#book">Call</a>
+          </div>
         </article>
         <article class="biz reveal">
           <p class="biz-tag">Detroit Lake</p>
+          <p class="urgency-chip">Lake-day delivery still available</p>
           <h3>Boat Concierge</h3>
           <p>Lake-day help at Detroit Lake — boat delivery, launch support, and concierge-style service so you spend more time on the water.</p>
-          <a class="biz-cta biz-muted-cta" href="#directory" data-jump-filter="services">See in directory <span aria-hidden="true">→</span></a>
+          <div class="lead-mini">
+            <a href="detroit-lake-boat-concierge.html#book">Request lake help</a>
+            <a class="secondary" data-lead-call="boat" href="detroit-lake-boat-concierge.html#book">Call</a>
+          </div>
         </article>
         <article class="biz reveal">
           <p class="biz-tag">24/7 roadside</p>
+          <p class="urgency-chip">Highway 22 help now</p>
           <h3>Oregon Mobile Tire</h3>
           <p>Flat tires, jump starts, lockouts, fuel delivery, and mobile tire help for Highway 22, Detroit Lake, Lyons, and rural Oregon routes.</p>
-          <a class="biz-cta" href="https://oregonmobiletire.com" target="_blank" rel="noopener noreferrer">oregonmobiletire.com <span aria-hidden="true">→</span></a>
+          <div class="lead-mini">
+            <a href="tel:+15415078401">(541) 507-8401</a>
+            <a class="secondary" href="https://oregonmobiletire.com" target="_blank" rel="noopener noreferrer">Website</a>
+          </div>
         </article>
+      </div>
+
+      <div class="lead-panel reveal" id="quick-lead" style="margin-top:1.5rem">
+        <p class="urgency-chip">Fast request</p>
+        <h3>Not sure which service you need?</h3>
+        <p class="lead-note">Send one note — bounce house, boat day, or roadside — and we’ll route it.</p>
+        <form class="lead-form" data-lead-form="general">
+          <input type="hidden" name="_subject" value="Santiam Nearby general service request">
+          <div class="row">
+            <label>Name<input name="name" required autocomplete="name"></label>
+            <label>Phone<input name="phone" required autocomplete="tel"></label>
+          </div>
+          <div class="row">
+            <label>Service needed
+              <select name="service_needed" required>
+                <option value="">Select</option>
+                <option>Bounce house rental</option>
+                <option>Boat Concierge / lake day</option>
+                <option>Mobile tire / roadside</option>
+                <option>Not sure yet</option>
+              </select>
+            </label>
+            <label>When<input name="when" placeholder="This Saturday / tonight / etc." required></label>
+          </div>
+          <label>Details<textarea name="message" placeholder="Town, group size, or where you’re stranded"></textarea></label>
+          <div class="lead-actions" style="margin:0">
+            <button class="btn btn-lake" type="submit">Send request</button>
+            <a class="btn btn-soft" href="tel:+15415078401">Roadside now: (541) 507-8401</a>
+          </div>
+          <p class="form-status" aria-live="polite"></p>
+        </form>
       </div>
     </div>
   </section>
@@ -285,7 +339,7 @@
             <div class="place-meta"><span><b>Lyons area</b></span><span>Party rentals</span></div>
             <p>Local bounce house delivery for birthdays and backyard parties around Lyons, Stayton, and the Santiam Canyon.</p>
           </div>
-          <a class="place-map" href="#businesses">Local service</a>
+          <a class="place-map" href="bounce-houses-lyons-oregon.html#book">Get a quote</a>
         </article>
 
         <article class="place is-visible" data-tags="services detroit swim">
@@ -295,7 +349,7 @@
             <div class="place-meta"><span><b>Detroit Lake</b></span><span>Boat delivery &amp; launch</span></div>
             <p>Concierge-style boat help for Detroit Lake — delivery, launch support, and lake-day logistics so you get on the water faster.</p>
           </div>
-          <a class="place-map" href="#businesses">Local service</a>
+          <a class="place-map" href="detroit-lake-boat-concierge.html#book">Request lake help</a>
         </article>
 
         <article class="place is-visible" data-tags="services lyons detroit">
@@ -303,9 +357,9 @@
           <div class="place-body">
             <h3>Oregon Mobile Tire</h3>
             <div class="place-meta"><span><b>Lyons · Detroit Lake · Hwy 22</b></span><span>24/7 roadside</span></div>
-            <p>Mobile tire service, flat changes, jump starts, lockouts, and fuel delivery for canyon drivers, campers, trailers, and rural Oregon routes.</p>
+            <p>Mobile tire service, flat changes, jump starts, lockouts, and fuel delivery for canyon drivers, campers, trailers, and rural Oregon routes. Call (541) 507-8401.</p>
           </div>
-          <a class="place-map" href="https://oregonmobiletire.com" target="_blank" rel="noopener noreferrer">Visit website</a>
+          <a class="place-map" href="tel:+15415078401">Call (541) 507-8401</a>
         </article>
 
         <article class="place is-visible" data-tags="food lyons">
@@ -750,5 +804,7 @@ document.querySelectorAll(".reveal").forEach((el, i) => {
   io.observe(el);
 });
 </script>
+<script src="leads.js"></script>
+<script src="leads-ui.js"></script>
 </body>
 </html>
