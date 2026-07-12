@@ -1,71 +1,54 @@
-# SpeckleCraft Epoxy Floors
+# Santiam Nearby
 
-A professional marketing website for a speckled epoxy garage floor coating business serving **Lyons, Oregon** and the North Santiam Valley.
+A curated local guide to **Lyons, Oregon** and **Detroit Lake** — parks, swimming, trails, food stops, and easy weekend plans along the North Santiam / Highway 22 corridor.
 
 **Live:** [Your site URL will go here]
 
-## Business
+## What’s included
 
-- **Service:** Full flake epoxy garage floor coatings (residential & light commercial)
-- **Area:** Lyons, Mehama, Mill City, Stayton, Scio, Sublimity, and surrounding Linn/Marion County communities
-- **Model:** $7/sq ft flat rate · free on-site estimates · 1–2 day install
+- **Hero** — Brand-first landing focused on Lyons & Detroit Lake
+- **Regions** — Quick jump into Lyons-area vs Detroit Lake places
+- **Directory** — Filterable listings (region, outdoors, swim/boat, food, free/cheap)
+- **Weekend plans** — Three simple loops: lake day, river towns, canyon drive
+- **Maps links** — Each place opens in Google Maps
+
+## Focus area
+
+| Hub | Nearby |
+|---|---|
+| **Lyons** | Stayton, Mill City, Scio / Roaring River |
+| **Detroit Lake** | Mongold, Detroit Flats, campgrounds, Stahlman Point, town/marina |
 
 ## Features
 
-- **Modern, responsive design** with CSS speckle texture previews
-- **SEO optimized** with LocalBusiness structured data for Lyons, OR
-- **No dependencies** — single HTML file, no build step
-- **Lead capture form** ready for Formspree (or swap for Tally/Google Forms)
-- **Accessible** with semantic HTML and ARIA labels
+- Single `index.html` — no build step or dependencies
+- Responsive layout for phone and desktop
+- Local SEO basics (`WebSite` structured data)
+- Subtle motion: hero drift, scroll reveals, filter transitions
 
-## Sections
+## File structure
 
-1. **Hero** — Value proposition + interactive floor preview card
-2. **Why Epoxy Flake** — Durability, slip resistance, easy cleaning
-3. **Services** — Garages, shops, basements, commercial
-4. **Color Options** — Four sample flake blends (custom available)
-5. **Process** — 4-step install from estimate to top coat
-6. **Pricing & Calculator** — $7/sq ft with interactive estimate calculator
-7. **Service Area** — North Santiam Valley coverage map
-8. **FAQ** — Common customer questions
-9. **Contact** — Lead form + phone/email
-
-## Before Going Live
-
-Update these placeholders:
-
-| Placeholder | Replace with |
-|---|---|
-| `(541) 555-0100` | Your actual phone number |
-| `hello@specklecraftepoxy.com` | Your actual email |
-| `https://formspree.io/f/YOUR_FORM_ID` | Your Formspree (or Tally) form endpoint |
-| `SpeckleCraft` | Your final brand name (if different) |
-| Pricing | Your actual $/sq ft rate (currently $7/sq ft) |
-
-Also consider:
-- Adding real before/after photos once you complete jobs
-- Registering a Google Business Profile for Lyons, OR
-- Getting an Oregon CCB license number if required for your work
+```
+index.html           — Full directory site
+README.md            — This file
+GITHUB_SETUP_GUIDE.md — Deploy to GitHub Pages or Netlify
+```
 
 ## Deployment
 
-### GitHub Pages (Free)
+### GitHub Pages
 1. Push to GitHub
-2. Enable Pages in Settings → Source: main branch
-3. Live at `https://yourusername.github.io/your-repo-name`
+2. Settings → Pages → Deploy from branch (`main` or this feature branch)
+3. Site live at `https://yourusername.github.io/co-web-design`
 
-### Netlify (Recommended)
-1. Connect GitHub repo
-2. Auto-deploys on push
-3. Add custom domain in settings
+### Netlify
+1. Connect the GitHub repo
+2. Publish directory: `/` (root)
+3. Add a custom domain when ready
 
-## File Structure
+## Next ideas
 
-```
-index.html    — Complete website (single file)
-README.md     — This file
-```
-
-## License
-
-© 2026 SpeckleCraft Epoxy Floors. All rights reserved.
+- Add real local photos instead of stock imagery
+- Expand food listings with named cafes/restaurants you trust
+- Add seasonal notes (reservoir levels, snow, peak weekends)
+- Optional “submit a place” form (Formspree / Tally)
