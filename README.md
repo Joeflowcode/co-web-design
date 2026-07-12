@@ -10,6 +10,7 @@ A curated local vacation guide to **Lyons, Oregon** and **Detroit Lake** — thi
 | `things-to-do-detroit-lake-oregon.html` | “things to do at Detroit Lake Oregon” |
 | `things-to-do-lyons-oregon.html` | “things to do in Lyons Oregon” |
 | `restaurants-near-detroit-lake.html` | “restaurants near Detroit Lake” / Lyons food stops |
+| `blog/` | Lightweight local tips blog + 5 starter posts |
 | `robots.txt` + `sitemap.xml` | Crawl / discovery |
 
 ## Local businesses featured
@@ -46,6 +47,14 @@ A curated local vacation guide to **Lyons, Oregon** and **Detroit Lake** — thi
 - Weekend plans that route people through local food + services
 - Mobile-friendly layout
 
+## Blog starter posts
+
+1. Best weekend itinerary: Lyons → Detroit Lake
+2. Where to eat on the drive to Detroit Lake
+3. Quiet alternatives when Mongold is packed
+4. Detroit Lake packing list + lake level tips
+5. Family day near Lyons
+
 ## File structure
 
 ```
@@ -53,6 +62,8 @@ index.html
 things-to-do-detroit-lake-oregon.html
 things-to-do-lyons-oregon.html
 restaurants-near-detroit-lake.html
+blog/index.html
+blog/*.html
 styles.css
 robots.txt
 sitemap.xml
