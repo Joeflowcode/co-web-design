@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="A curated local guide to things near Lyons, Oregon and Detroit Lake — hiking, swimming, parks, food stops, and weekend plans along the North Santiam.">
+<meta name="description" content="Curated local guide to Lyons, Oregon and Detroit Lake — bounce house rentals, boat concierge, Oregon Mobile Tire, parks, swimming, and weekend plans.">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta property="og:title" content="Santiam Nearby | Lyons & Detroit Lake Guide">
-<meta property="og:description" content="Curated places near Lyons, Oregon and Detroit Lake — outdoors, food, and easy weekend plans.">
+<meta property="og:description" content="Local services and places near Lyons and Detroit Lake — bounce houses, boat concierge, oregonmobiletire.com, and outdoor picks.">
 <meta property="og:type" content="website">
 <title>Santiam Nearby | Lyons & Detroit Lake Guide</title>
 
@@ -321,6 +321,71 @@ ul { list-style: none; }
 .region-link span { transition: transform 0.25s var(--ease); }
 .region-panel:hover .region-link span { transform: translateX(4px); }
 
+/* Local businesses */
+#businesses {
+  background:
+    linear-gradient(180deg, var(--foam) 0%, #e4efeb 48%, var(--mist) 100%);
+}
+.biz-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+@media (max-width: 900px) {
+  .biz-grid { grid-template-columns: 1fr; }
+}
+.biz {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  padding: 1.45rem 1.35rem 1.4rem;
+  border-radius: 0.9rem;
+  background:
+    linear-gradient(165deg, rgba(255,255,255,0.92), rgba(238,243,242,0.88));
+  border: 1px solid var(--line);
+  transition: transform 0.3s var(--ease), border-color 0.25s;
+}
+.biz:hover {
+  transform: translateY(-3px);
+  border-color: rgba(42,111,132,0.28);
+}
+.biz-tag {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--cedar);
+  margin-bottom: 0.7rem;
+}
+.biz h3 {
+  font-family: var(--ff-display);
+  font-size: 1.35rem;
+  letter-spacing: -0.03em;
+  color: var(--fir-deep);
+  margin-bottom: 0.55rem;
+  line-height: 1.15;
+}
+.biz p {
+  color: var(--muted);
+  font-size: 0.96rem;
+  flex: 1;
+  margin-bottom: 1.15rem;
+}
+.biz-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-weight: 700;
+  font-size: 0.92rem;
+  color: var(--lake);
+}
+.biz-cta span { transition: transform 0.25s var(--ease); }
+.biz:hover .biz-cta span { transform: translateX(4px); }
+.biz-muted-cta {
+  color: var(--moss);
+}
+
 /* Filters + directory */
 #directory {
   background:
@@ -545,9 +610,10 @@ footer {
   </a>
   <nav class="nav-links" aria-label="Primary">
     <a href="#regions">Regions</a>
+    <a href="#businesses">Local services</a>
     <a href="#directory">Places</a>
     <a href="#weekends">Weekends</a>
-    <a class="nav-cta" href="#directory">Browse nearby</a>
+    <a class="nav-cta" href="#businesses">Our businesses</a>
   </nav>
 </header>
 
@@ -556,10 +622,10 @@ footer {
     <div class="hero-media" role="img" aria-label="Mountain lake surrounded by forest, Oregon Cascades atmosphere"></div>
     <div class="hero-content">
       <h1 class="hero-brand">Santiam Nearby</h1>
-      <p class="hero-lead">A local guide to Lyons and Detroit Lake — parks, swimming, trails, and the best easy stops along Highway 22.</p>
+      <p class="hero-lead">A local guide to Lyons and Detroit Lake — plus bounce houses, boat concierge, and mobile tire help from people who live here.</p>
       <div class="hero-actions">
-        <a class="btn btn-primary" href="#directory">See places nearby</a>
-        <a class="btn btn-ghost" href="#weekends">Weekend plans</a>
+        <a class="btn btn-primary" href="#businesses">Local services</a>
+        <a class="btn btn-ghost" href="#directory">Browse places</a>
       </div>
     </div>
   </section>
@@ -586,6 +652,36 @@ footer {
     </div>
   </section>
 
+  <section id="businesses" class="section">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="kicker">Local services</p>
+        <h2>Businesses from around here</h2>
+        <p>Party rentals, Detroit Lake boat help, and 24/7 mobile tire &amp; roadside service for the canyon corridor.</p>
+      </div>
+      <div class="biz-grid">
+        <article class="biz reveal">
+          <p class="biz-tag">Parties · Lyons area</p>
+          <h3>Bounce House Rentals</h3>
+          <p>Inflatable bounce houses delivered for birthdays, backyard parties, and family gatherings around Lyons, Stayton, and the Santiam Canyon.</p>
+          <a class="biz-cta biz-muted-cta" href="#directory" data-jump-filter="services">See in directory <span aria-hidden="true">→</span></a>
+        </article>
+        <article class="biz reveal">
+          <p class="biz-tag">Detroit Lake</p>
+          <h3>Boat Concierge</h3>
+          <p>Lake-day help at Detroit Lake — boat delivery, launch support, and concierge-style service so you spend more time on the water.</p>
+          <a class="biz-cta biz-muted-cta" href="#directory" data-jump-filter="services">See in directory <span aria-hidden="true">→</span></a>
+        </article>
+        <article class="biz reveal">
+          <p class="biz-tag">24/7 roadside</p>
+          <h3>Oregon Mobile Tire</h3>
+          <p>Flat tires, jump starts, lockouts, fuel delivery, and mobile tire help for Highway 22, Detroit Lake, Lyons, and rural Oregon routes.</p>
+          <a class="biz-cta" href="https://oregonmobiletire.com" target="_blank" rel="noopener noreferrer">oregonmobiletire.com <span aria-hidden="true">→</span></a>
+        </article>
+      </div>
+    </div>
+  </section>
+
   <section id="directory" class="section">
     <div class="wrap">
       <div class="section-head reveal">
@@ -596,6 +692,7 @@ footer {
 
       <div class="filters reveal" role="toolbar" aria-label="Filter places">
         <button class="filter-btn active" type="button" data-filter="all">All</button>
+        <button class="filter-btn" type="button" data-filter="services">Local services</button>
         <button class="filter-btn" type="button" data-filter="lyons">Lyons area</button>
         <button class="filter-btn" type="button" data-filter="detroit">Detroit Lake</button>
         <button class="filter-btn" type="button" data-filter="outdoors">Outdoors</button>
@@ -623,9 +720,9 @@ footer {
           <h3>Lake day</h3>
           <p>Detroit Lake when the weather’s warm and you want water first.</p>
           <ol>
-            <li>Coffee stop in Stayton or Mill City</li>
+            <li>Book Boat Concierge if you want delivery / launch help</li>
             <li>Mongold or Detroit Flats for swim / picnic</li>
-            <li>Optional short forest walk before heading home</li>
+            <li>Save oregonmobiletire.com before the Hwy 22 drive</li>
           </ol>
         </article>
         <article class="weekend reveal">
@@ -633,7 +730,7 @@ footer {
           <p>Stay closer to Lyons and keep it low-mileage.</p>
           <ol>
             <li>Morning at John Neal Memorial Park</li>
-            <li>Wander Stayton for lunch</li>
+            <li>Bounce house day for a birthday or backyard hang</li>
             <li>Evening river stretch near Mill City</li>
           </ol>
         </article>
@@ -643,7 +740,7 @@ footer {
           <ol>
             <li>Roll out early toward Detroit</li>
             <li>Viewpoint / trailhead stop along the corridor</li>
-            <li>Campground loop or marina browse, then back down-canyon</li>
+            <li>Lake loop, then back down-canyon with roadside help on call</li>
           </ol>
         </article>
       </div>
@@ -655,9 +752,9 @@ footer {
       <div class="section-head reveal" style="margin-bottom:0">
         <p class="kicker">About this guide</p>
         <h2>Built for people who already live nearby</h2>
-        <p class="about-note">Santiam Nearby is a starter directory for the Lyons–Detroit Lake stretch of the North Santiam. Listings are curated for usefulness — seasons change, so always check conditions, fire restrictions, and reservoir levels before you go.</p>
+        <p class="about-note">Santiam Nearby is a starter directory for the Lyons–Detroit Lake stretch of the North Santiam — including local bounce house rentals, Detroit Lake boat concierge, and <a href="https://oregonmobiletire.com" target="_blank" rel="noopener noreferrer" style="color:var(--lake);font-weight:700">Oregon Mobile Tire</a>. Always check lake levels, fire restrictions, and road conditions before you go.</p>
       </div>
-      <p class="about-note reveal"><strong>Want a spot added?</strong> This is a living local list. The best next entries are the ones locals actually send friends to.</p>
+      <p class="about-note reveal"><strong>Need a service?</strong> Start with Local services above, or visit oregonmobiletire.com for 24/7 roadside help.</p>
     </div>
   </section>
 </main>
@@ -665,12 +762,48 @@ footer {
 <footer>
   <div class="wrap footer-row">
     <p class="footer-brand">Santiam Nearby</p>
-    <p>Lyons · Detroit Lake · Highway 22 corridor</p>
+    <p>Lyons · Detroit Lake · oregonmobiletire.com</p>
   </div>
 </footer>
 
 <script>
 const places = [
+  {
+    id: "bounce-houses",
+    name: "Bounce House Rentals",
+    region: "lyons",
+    tags: ["services", "lyons"],
+    town: "Lyons area",
+    vibe: "Party rentals",
+    note: "Local bounce house delivery for birthdays and backyard parties around Lyons, Stayton, and the Santiam Canyon.",
+    url: "#businesses",
+    cta: "Local service",
+    image: "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    id: "boat-concierge",
+    name: "Boat Concierge",
+    region: "detroit",
+    tags: ["services", "detroit", "swim"],
+    town: "Detroit Lake",
+    vibe: "Boat delivery & launch",
+    note: "Concierge-style boat help for Detroit Lake — delivery, launch support, and lake-day logistics so you get on the water faster.",
+    url: "#businesses",
+    cta: "Local service",
+    image: "https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    id: "oregon-mobile-tire",
+    name: "Oregon Mobile Tire",
+    region: "lyons",
+    tags: ["services", "lyons", "detroit"],
+    town: "Lyons · Detroit Lake · Hwy 22",
+    vibe: "24/7 roadside",
+    note: "Mobile tire service, flat changes, jump starts, lockouts, and fuel delivery for canyon drivers, campers, trailers, and rural Oregon routes.",
+    url: "https://oregonmobiletire.com",
+    cta: "Visit website",
+    image: "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=600&q=80"
+  },
   {
     id: "john-neal",
     name: "John Neal Memorial Park",
@@ -861,7 +994,12 @@ function renderPlaces() {
 
   countEl.textContent = `${filtered.length} place${filtered.length === 1 ? "" : "s"}`;
 
-  listEl.innerHTML = filtered.map((p, i) => `
+  listEl.innerHTML = filtered.map((p, i) => {
+    const href = p.url || p.map || "#";
+    const label = p.cta || "Open map";
+    const external = href.startsWith("http");
+    const rel = external ? ' target="_blank" rel="noopener noreferrer"' : "";
+    return `
     <article class="place" style="transition-delay:${Math.min(i, 8) * 40}ms" data-id="${p.id}">
       <div class="place-thumb" style="background-image:url('${p.image}')" role="img" aria-label=""></div>
       <div class="place-body">
@@ -872,9 +1010,10 @@ function renderPlaces() {
         </div>
         <p>${p.note}</p>
       </div>
-      <a class="place-map" href="${p.map}" target="_blank" rel="noopener noreferrer">Open map</a>
+      <a class="place-map" href="${href}"${rel}>${label}</a>
     </article>
-  `).join("");
+  `;
+  }).join("");
 
   requestAnimationFrame(() => {
     listEl.querySelectorAll(".place").forEach((el) => el.classList.add("is-visible"));
