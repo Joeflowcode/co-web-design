@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://joeflowcode.github.io/co-web-design/mckenzie/sitemap.xml
