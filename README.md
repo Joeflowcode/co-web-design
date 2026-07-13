@@ -1,47 +1,65 @@
-# Santiam Nearby
+# Cascadia Cinema Co.
 
-A curated local guide to **Lyons, Oregon** and **Detroit Lake** — parks, swimming, trails, food stops, weekend plans, and local services along the North Santiam / Highway 22 corridor.
+Professional **outdoor movie night rentals** across **Lyons, Detroit Lake, Salem, Sisters, and Bend**, Oregon.
 
 **Live:** [Your site URL will go here]
 
-## Local businesses featured
+## Packages
 
-| Business | What it is | Link |
+| Package | What’s included | Starting at |
 |---|---|---|
-| **Bounce House Rentals** | Inflatable party rentals around Lyons / Santiam Canyon | Listed on site |
-| **Boat Concierge** | Detroit Lake boat delivery & launch help | Listed on site |
-| **Oregon Mobile Tire** | 24/7 mobile tire & roadside assistance | [oregonmobiletire.com](https://oregonmobiletire.com) |
+| **Basic Cinema** | Screen, speakers, projector setup, delivery & pack-up, any movie you choose | $275 |
+| **Cinema + Popcorn** | Basic + popcorn machine & serving supplies | $375 |
+| **Full Night Out** | Cinema + popcorn + bouncy house | $525 |
 
-## What’s included
+À la carte add-ons: popcorn machine (from $95) and bouncy house (from $175).
 
-- **Hero** — Brand-first landing focused on Lyons & Detroit Lake
-- **Local services** — Bounce houses, boat concierge, and Oregon Mobile Tire
-- **Regions** — Quick jump into Lyons-area vs Detroit Lake places
-- **Directory** — Filterable listings (services, region, outdoors, swim/boat, food, free/cheap)
-- **Weekend plans** — Three simple loops: lake day, river towns, canyon drive
-- **Maps / website links** — Places open in Maps; services link to the business
+## What’s on the site
 
-## Focus area
+- **Hero** — Brand-first PNW outdoor cinema landing
+- **Trust strip** — Service towns, delivery & setup, you pick the movie
+- **Packages** — Three clear tiers with quote CTAs that preselect the booking form
+- **How it works** — Book → We deliver & set up → You press play
+- **The night** — Full-bleed atmospheric PNW visual
+- **Occasions** — Birthday, campground, HOA, wedding welcome, and more
+- **Included / site needs** — Power, space, weather, movie notes
+- **FAQ** — Rain, setup time, licensing, travel, deposit
+- **Booking form** — Quote request with Formspree-ready action + mailto fallback
+- **Sticky mobile CTA** — Always-visible “Book your night” on phones
 
-| Hub | Nearby |
+## Service area
+
+| Hub | Corridor |
 |---|---|
-| **Lyons** | Stayton, Mill City, Scio / Roaring River |
-| **Detroit Lake** | Mongold, Detroit Flats, campgrounds, Stahlman Point, town/marina |
+| **Lyons / Detroit Lake** | Santiam Canyon & reservoir weekends |
+| **Salem** | Willamette Valley backyards & community nights |
+| **Sisters / Bend** | Cascades high-desert evenings |
+
+Outside this corridor? The site invites travel quotes.
 
 ## Features
 
 - Single `index.html` — no build step or dependencies
 - Responsive layout for phone and desktop
-- Local SEO basics (`WebSite` structured data)
-- Subtle motion: hero drift, scroll reveals, filter transitions
+- LocalBusiness structured data + Open Graph meta
+- Conversion UX: package preselect, form validation, sticky CTA
+- Subtle motion: hero drift, scroll reveals, button/package hover
 
 ## File structure
 
 ```
-index.html           — Full directory site
+index.html           — Full marketing + booking site
 README.md            — This file
 GITHUB_SETUP_GUIDE.md — Deploy to GitHub Pages or Netlify
 ```
+
+## Before you go live
+
+1. Replace placeholder phone `(503) 555-0192` and email `hello@cascadiacinema.example` with your real contact info.
+2. Connect the quote form: replace `YOUR_FORM_ID` in the form `action` with your [Formspree](https://formspree.io) form ID (or keep the mailto fallback).
+3. Swap Unsplash hero/night images for your own PNW outdoor cinema photos (marked with comments in `index.html`).
+4. Adjust “starting at” prices to match your real rates.
+5. Rename **Cascadia Cinema Co.** if you have a final business name.
 
 ## Deployment
 
@@ -54,10 +72,3 @@ GITHUB_SETUP_GUIDE.md — Deploy to GitHub Pages or Netlify
 1. Connect the GitHub repo
 2. Publish directory: `/` (root)
 3. Add a custom domain when ready
-
-## Next ideas
-
-- Add booking links / phone numbers for bounce houses and boat concierge
-- Add real local photos instead of stock imagery
-- Expand food listings with named cafes/restaurants you trust
-- Add seasonal notes (reservoir levels, snow, peak weekends)

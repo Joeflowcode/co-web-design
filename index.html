@@ -3,12 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Curated local guide to Lyons, Oregon and Detroit Lake — bounce house rentals, boat concierge, Oregon Mobile Tire, parks, swimming, and weekend plans.">
+<meta name="description" content="Cascadia Cinema Co. — outdoor movie night rentals across Lyons, Detroit Lake, Salem, Sisters, and Bend. Screen, speakers, popcorn, and bouncy house packages. You pick the movie.">
 <meta name="robots" content="index, follow, max-image-preview:large">
-<meta property="og:title" content="Santiam Nearby | Lyons & Detroit Lake Guide">
-<meta property="og:description" content="Local services and places near Lyons and Detroit Lake — bounce houses, boat concierge, oregonmobiletire.com, and outdoor picks.">
+<meta name="theme-color" content="#0f241c">
+<meta property="og:title" content="Cascadia Cinema Co. | Outdoor Movie Night Rentals">
+<meta property="og:description" content="Professional outdoor cinema delivered to your yard, campground, or community night — Lyons to Bend. Screen, sound, popcorn, and full-night packages.">
 <meta property="og:type" content="website">
-<title>Santiam Nearby | Lyons & Detroit Lake Guide</title>
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Cascadia Cinema Co. | Outdoor Movie Night Rentals">
+<meta name="twitter:description" content="Outdoor movie nights across Lyons, Detroit Lake, Salem, Sisters, and Bend. You pick the movie — we bring the cinema.">
+<title>Cascadia Cinema Co. | Outdoor Movie Night Rentals — Lyons to Bend</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,14 +22,26 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "Santiam Nearby",
-  "description": "Curated local directory for Lyons, Oregon and Detroit Lake.",
-  "url": "https://santiamnearby.example",
-  "about": [
+  "@type": "LocalBusiness",
+  "name": "Cascadia Cinema Co.",
+  "description": "Outdoor movie night rentals with screen, speakers, popcorn machine, and bouncy house packages serving Lyons, Detroit Lake, Salem, Sisters, and Bend, Oregon.",
+  "url": "https://cascadiacinema.example",
+  "telephone": "+1-503-555-0192",
+  "email": "hello@cascadiacinema.example",
+  "areaServed": [
     {"@type": "City", "name": "Lyons", "containedInPlace": {"@type": "State", "name": "Oregon"}},
-    {"@type": "TouristAttraction", "name": "Detroit Lake"}
-  ]
+    {"@type": "City", "name": "Detroit", "containedInPlace": {"@type": "State", "name": "Oregon"}},
+    {"@type": "City", "name": "Salem", "containedInPlace": {"@type": "State", "name": "Oregon"}},
+    {"@type": "City", "name": "Sisters", "containedInPlace": {"@type": "State", "name": "Oregon"}},
+    {"@type": "City", "name": "Bend", "containedInPlace": {"@type": "State", "name": "Oregon"}}
+  ],
+  "priceRange": "$$",
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens": "09:00",
+    "closes": "20:00"
+  }
 }
 </script>
 
@@ -39,6 +56,7 @@
   --fog: #d7e3df;
   --foam: #f7faf9;
   --cedar: #9a6b3f;
+  --amber: #c4893a;
   --ink: #15231d;
   --muted: #5a6d64;
   --line: rgba(22, 53, 40, 0.12);
@@ -59,7 +77,8 @@ body {
 }
 img { display: block; max-width: 100%; }
 a { color: inherit; text-decoration: none; }
-button { font: inherit; color: inherit; background: none; border: none; cursor: pointer; }
+button, input, select, textarea { font: inherit; color: inherit; }
+button { background: none; border: none; cursor: pointer; }
 ul { list-style: none; }
 :focus-visible { outline: 2px solid var(--lake); outline-offset: 3px; }
 ::selection { background: var(--lake); color: #fff; }
@@ -69,7 +88,6 @@ ul { list-style: none; }
   margin-inline: auto;
 }
 
-/* Atmospheric backdrop texture */
 .grain {
   position: fixed;
   inset: 0;
@@ -79,986 +97,1210 @@ ul { list-style: none; }
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
-/* Nav */
-#nav {
-  position: fixed;
-  inset: 0 0 auto;
-  z-index: 100;
+/* Header */
+.site-header {
+  position: absolute;
+  inset-inline: 0;
+  top: 0;
+  z-index: 40;
+  padding: 1.25rem 0;
+}
+.site-header .wrap {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 1.5rem;
-  transition: background 0.35s var(--ease), backdrop-filter 0.35s;
+  gap: 1rem;
 }
-#nav.scrolled {
-  background: rgba(247, 250, 249, 0.88);
-  backdrop-filter: blur(14px);
-  border-bottom: 1px solid var(--line);
-}
-.brand {
+.logo {
   font-family: var(--ff-display);
   font-weight: 800;
-  font-size: 1.15rem;
-  letter-spacing: -0.03em;
-  display: flex;
-  align-items: center;
-  gap: 0.65rem;
+  font-size: 1.05rem;
+  letter-spacing: -0.02em;
+  color: #f3f7f5;
 }
-.brand-mark {
-  width: 1.65rem;
-  height: 1.65rem;
-  border-radius: 0.35rem;
-  background:
-    linear-gradient(160deg, var(--lake-bright), var(--fir) 55%, var(--moss));
-  box-shadow: inset 0 -8px 12px rgba(255,255,255,0.12);
-}
-.nav-links {
-  display: flex;
+.logo span { color: var(--amber); }
+.nav {
+  display: none;
   align-items: center;
   gap: 1.5rem;
 }
-.nav-links a {
-  font-size: 0.92rem;
+.nav a {
+  color: rgba(243, 247, 245, 0.82);
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.2s var(--ease);
+}
+.nav a:hover { color: #fff; }
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  padding: 0.85rem 1.35rem;
+  border-radius: 0.4rem;
   font-weight: 600;
-  color: var(--muted);
-  transition: color 0.2s;
+  font-size: 0.98rem;
+  transition: transform 0.25s var(--ease), background 0.25s var(--ease), color 0.25s var(--ease), box-shadow 0.25s var(--ease);
 }
-.nav-links a:hover { color: var(--fir); }
-.nav-cta {
-  padding: 0.55rem 1rem;
-  border-radius: 0.45rem;
+.btn:hover { transform: translateY(-2px); }
+.btn-amber {
+  background: var(--amber);
+  color: var(--fir-deep);
+}
+.btn-amber:hover { background: #d49a48; }
+.btn-ghost {
+  background: transparent;
+  color: #f3f7f5;
+  border: 1px solid rgba(243, 247, 245, 0.35);
+}
+.btn-ghost:hover { background: rgba(243, 247, 245, 0.08); border-color: rgba(243, 247, 245, 0.55); }
+.btn-fir {
   background: var(--fir);
-  color: var(--foam) !important;
+  color: #f3f7f5;
 }
-.nav-cta:hover { background: var(--moss); color: #fff !important; }
-@media (max-width: 720px) {
-  .nav-links a:not(.nav-cta) { display: none; }
+.btn-fir:hover { background: var(--moss); }
+.btn-outline {
+  background: transparent;
+  color: var(--fir);
+  border: 1px solid var(--line);
+}
+.btn-outline:hover { border-color: var(--moss); background: rgba(47, 92, 69, 0.06); }
+.header-cta { display: none; }
+
+@media (min-width: 800px) {
+  .nav { display: flex; }
+  .header-cta { display: inline-flex; }
 }
 
 /* Hero */
-#hero {
+.hero {
   position: relative;
   min-height: 100svh;
   display: grid;
   align-items: end;
-  color: var(--foam);
-  overflow: clip;
+  color: #f3f7f5;
+  overflow: hidden;
 }
 .hero-media {
   position: absolute;
   inset: 0;
   z-index: 0;
+}
+.hero-media::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
   background:
-    linear-gradient(180deg, rgba(15,36,28,0.15) 0%, rgba(15,36,28,0.35) 40%, rgba(15,36,28,0.88) 100%),
-    url("https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=2000&q=80") center/cover no-repeat;
-  transform: scale(1.04);
-  animation: heroDrift 28s ease-in-out infinite alternate;
+    linear-gradient(180deg, rgba(15, 36, 28, 0.45) 0%, rgba(15, 36, 28, 0.25) 35%, rgba(15, 36, 28, 0.78) 100%),
+    linear-gradient(90deg, rgba(15, 36, 28, 0.55) 0%, transparent 55%);
+}
+.hero-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.06);
+  animation: heroDrift 28s var(--ease) infinite alternate;
 }
 @keyframes heroDrift {
-  from { transform: scale(1.04) translate3d(0, 0, 0); }
-  to { transform: scale(1.1) translate3d(-1.5%, -1%, 0); }
+  from { transform: scale(1.06) translate3d(0, 0, 0); }
+  to { transform: scale(1.12) translate3d(-1.5%, -1%, 0); }
 }
 .hero-content {
   position: relative;
-  z-index: 1;
-  width: min(100% - 2.5rem, var(--mw));
-  margin: 0 auto;
-  padding: 7.5rem 0 4.5rem;
+  z-index: 2;
+  padding: 7.5rem 0 5.5rem;
+  max-width: 38rem;
 }
-.hero-brand {
+.brand-mark {
   font-family: var(--ff-display);
   font-weight: 800;
-  font-size: clamp(3.2rem, 10vw, 6.4rem);
-  line-height: 0.92;
-  letter-spacing: -0.045em;
-  max-width: 12ch;
-  margin-bottom: 1.25rem;
-  opacity: 0;
-  transform: translateY(24px);
-  animation: riseIn 0.9s var(--ease) 0.15s forwards;
+  font-size: clamp(2.6rem, 7vw, 4.4rem);
+  line-height: 0.95;
+  letter-spacing: -0.035em;
+  margin-bottom: 1.1rem;
 }
-.hero-lead {
-  font-size: clamp(1.05rem, 2.2vw, 1.25rem);
-  max-width: 34ch;
-  color: rgba(247,250,249,0.86);
+.brand-mark em {
+  font-style: normal;
+  color: var(--amber);
+}
+.hero h1 {
+  font-family: var(--ff-display);
+  font-weight: 700;
+  font-size: clamp(1.35rem, 2.8vw, 1.75rem);
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.85rem;
+  max-width: 22ch;
+}
+.hero p {
+  color: rgba(243, 247, 245, 0.88);
+  font-size: 1.08rem;
+  max-width: 36ch;
   margin-bottom: 1.75rem;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: riseIn 0.9s var(--ease) 0.35s forwards;
 }
-.hero-actions {
+.hero-ctas {
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
-  opacity: 0;
-  transform: translateY(16px);
-  animation: riseIn 0.9s var(--ease) 0.5s forwards;
-}
-@keyframes riseIn {
-  to { opacity: 1; transform: none; }
-}
-.btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.45rem;
-  font-weight: 700;
-  font-size: 0.95rem;
-  padding: 0.85rem 1.35rem;
-  border-radius: 0.5rem;
-  transition: transform 0.25s var(--ease), background 0.25s, color 0.25s;
-}
-.btn:hover { transform: translateY(-2px); }
-.btn-primary { background: var(--foam); color: var(--fir-deep); }
-.btn-primary:hover { background: #fff; }
-.btn-ghost {
-  border: 1px solid rgba(247,250,249,0.35);
-  color: var(--foam);
-  background: rgba(247,250,249,0.06);
-}
-.btn-ghost:hover { background: rgba(247,250,249,0.14); }
-
-/* Section shared */
-.section {
-  padding: 5rem 0;
-}
-.section-head {
-  margin-bottom: 2rem;
-  max-width: 40rem;
-}
-.kicker {
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--lake);
-  margin-bottom: 0.65rem;
-}
-.section-head h2 {
-  font-family: var(--ff-display);
-  font-weight: 800;
-  font-size: clamp(1.85rem, 4vw, 2.75rem);
-  letter-spacing: -0.035em;
-  line-height: 1.05;
-  color: var(--fir-deep);
-  margin-bottom: 0.75rem;
-}
-.section-head p {
-  color: var(--muted);
-  font-size: 1.05rem;
-  max-width: 48ch;
 }
 
-/* Regions */
-#regions {
-  background:
-    radial-gradient(ellipse at 10% 0%, rgba(61,143,166,0.12), transparent 45%),
-    radial-gradient(ellipse at 90% 20%, rgba(47,92,69,0.12), transparent 40%),
-    linear-gradient(180deg, var(--mist), var(--foam));
+/* Trust */
+.trust {
+  background: var(--fir-deep);
+  color: rgba(243, 247, 245, 0.88);
+  padding: 1.35rem 0;
+  border-bottom: 1px solid rgba(243, 247, 245, 0.08);
 }
-.region-grid {
+.trust-grid {
   display: grid;
-  grid-template-columns: 1.15fr 1fr;
-  gap: 1.25rem;
-}
-@media (max-width: 860px) {
-  .region-grid { grid-template-columns: 1fr; }
-}
-.region-panel {
-  position: relative;
-  min-height: 280px;
-  border-radius: 1rem;
-  overflow: hidden;
-  isolation: isolate;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding: 1.75rem;
-  color: var(--foam);
-  transition: transform 0.35s var(--ease);
-}
-.region-panel:hover { transform: translateY(-3px); }
-.region-panel::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  background-size: cover;
-  background-position: center;
-  transition: transform 0.7s var(--ease);
-}
-.region-panel:hover::before { transform: scale(1.05); }
-.region-panel::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  background: linear-gradient(180deg, rgba(15,36,28,0.1), rgba(15,36,28,0.82));
-}
-.region-lyons::before {
-  background-image: url("https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1400&q=80");
-}
-.region-detroit::before {
-  background-image: url("https://images.unsplash.com/photo-1439066615861-d1af74d74000?auto=format&fit=crop&w=1400&q=80");
-}
-.region-panel h3 {
-  font-family: var(--ff-display);
-  font-size: 1.85rem;
-  letter-spacing: -0.03em;
-  margin-bottom: 0.4rem;
-}
-.region-panel p {
-  color: rgba(247,250,249,0.82);
-  max-width: 36ch;
-  margin-bottom: 1rem;
-}
-.region-link {
-  font-weight: 700;
-  font-size: 0.92rem;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-}
-.region-link span { transition: transform 0.25s var(--ease); }
-.region-panel:hover .region-link span { transform: translateX(4px); }
-
-/* Local businesses */
-#businesses {
-  background:
-    linear-gradient(180deg, var(--foam) 0%, #e4efeb 48%, var(--mist) 100%);
-}
-.biz-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
 }
-@media (max-width: 900px) {
-  .biz-grid { grid-template-columns: 1fr; }
+@media (min-width: 720px) {
+  .trust-grid {
+    grid-template-columns: 1.4fr 1fr 1fr 1fr;
+    align-items: center;
+    gap: 1.5rem;
+  }
 }
-.biz {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  min-height: 100%;
-  padding: 1.45rem 1.35rem 1.4rem;
-  border-radius: 0.9rem;
-  background:
-    linear-gradient(165deg, rgba(255,255,255,0.92), rgba(238,243,242,0.88));
-  border: 1px solid var(--line);
-  transition: transform 0.3s var(--ease), border-color 0.25s;
-}
-.biz:hover {
-  transform: translateY(-3px);
-  border-color: rgba(42,111,132,0.28);
-}
-.biz-tag {
-  font-size: 0.72rem;
+.trust-towns {
+  font-family: var(--ff-display);
   font-weight: 700;
-  letter-spacing: 0.1em;
+  font-size: 1.05rem;
+  color: #fff;
+  letter-spacing: -0.02em;
+}
+.trust-towns small {
+  display: block;
+  margin-top: 0.25rem;
+  font-family: var(--ff-body);
+  font-weight: 400;
+  font-size: 0.88rem;
+  color: rgba(243, 247, 245, 0.65);
+}
+.trust-item strong {
+  display: block;
+  color: var(--amber);
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.2rem;
+}
+.trust-item span { font-size: 0.95rem; }
+
+/* Sections */
+.section {
+  padding: clamp(3.5rem, 8vw, 5.5rem) 0;
+}
+.section-head {
+  max-width: 38rem;
+  margin-bottom: 2.25rem;
+}
+.eyebrow {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--cedar);
-  margin-bottom: 0.7rem;
+  margin-bottom: 0.55rem;
 }
-.biz h3 {
+.section-head h2,
+.night-copy h2,
+.book-copy h2 {
   font-family: var(--ff-display);
-  font-size: 1.35rem;
+  font-weight: 800;
+  font-size: clamp(1.85rem, 4vw, 2.55rem);
+  line-height: 1.1;
   letter-spacing: -0.03em;
   color: var(--fir-deep);
-  margin-bottom: 0.55rem;
-  line-height: 1.15;
+  margin-bottom: 0.65rem;
 }
-.biz p {
+.section-head p,
+.night-copy p,
+.book-copy p {
   color: var(--muted);
-  font-size: 0.96rem;
-  flex: 1;
-  margin-bottom: 1.15rem;
-}
-.biz-cta {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-  font-weight: 700;
-  font-size: 0.92rem;
-  color: var(--lake);
-}
-.biz-cta span { transition: transform 0.25s var(--ease); }
-.biz:hover .biz-cta span { transform: translateX(4px); }
-.biz-muted-cta {
-  color: var(--moss);
+  font-size: 1.05rem;
 }
 
-/* Filters + directory */
-#directory {
+/* Packages */
+.packages {
   background:
-    linear-gradient(180deg, var(--foam), #e9f1ee 50%, var(--foam));
+    radial-gradient(ellipse 80% 50% at 10% 0%, rgba(42, 111, 132, 0.08), transparent 55%),
+    linear-gradient(180deg, var(--mist), var(--foam));
 }
-.filters {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.55rem;
-  margin-bottom: 1.75rem;
+.package-grid {
+  display: grid;
+  gap: 1.25rem;
 }
-.filter-btn {
-  padding: 0.55rem 0.95rem;
-  border-radius: 0.45rem;
+@media (min-width: 860px) {
+  .package-grid { grid-template-columns: repeat(3, 1fr); }
+}
+.package {
+  background: #fff;
   border: 1px solid var(--line);
-  background: rgba(255,255,255,0.7);
+  border-radius: 0.65rem;
+  padding: 1.6rem 1.45rem 1.45rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: transform 0.3s var(--ease), border-color 0.3s var(--ease);
+}
+.package:hover {
+  transform: translateY(-4px);
+  border-color: rgba(47, 92, 69, 0.28);
+}
+.package.featured {
+  border-color: rgba(196, 137, 58, 0.45);
+  background:
+    linear-gradient(180deg, rgba(196, 137, 58, 0.08), transparent 40%),
+    #fff;
+}
+.package-top h3 {
+  font-family: var(--ff-display);
+  font-weight: 800;
+  font-size: 1.45rem;
+  letter-spacing: -0.02em;
+  color: var(--fir-deep);
+}
+.package-top p {
   color: var(--muted);
-  font-weight: 650;
-  font-size: 0.9rem;
-  transition: background 0.2s, color 0.2s, border-color 0.2s;
+  font-size: 0.98rem;
+  margin-top: 0.35rem;
 }
-.filter-btn:hover { border-color: var(--moss); color: var(--fir); }
-.filter-btn.active {
-  background: var(--fir);
-  border-color: var(--fir);
-  color: var(--foam);
+.price {
+  font-family: var(--ff-display);
+  font-weight: 800;
+  font-size: 1.7rem;
+  color: var(--fir);
+  letter-spacing: -0.02em;
 }
-.place-count {
-  font-size: 0.88rem;
+.price small {
+  display: block;
+  font-family: var(--ff-body);
+  font-weight: 500;
+  font-size: 0.85rem;
   color: var(--muted);
-  margin-bottom: 1.25rem;
+  margin-top: 0.15rem;
 }
-.place-list {
+.package ul {
+  display: grid;
+  gap: 0.55rem;
+  flex: 1;
+}
+.package li {
+  position: relative;
+  padding-left: 1.2rem;
+  color: var(--ink);
+  font-size: 0.98rem;
+}
+.package li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55rem;
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 50%;
+  background: var(--moss);
+}
+.package .btn { width: 100%; margin-top: 0.25rem; }
+
+.addons {
+  margin-top: 2rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--line);
+}
+.addons h3 {
+  font-family: var(--ff-display);
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 0.85rem;
+  color: var(--fir-deep);
+}
+.addon-row {
   display: grid;
   gap: 0.85rem;
 }
-.place {
-  display: grid;
-  grid-template-columns: 7.5rem 1fr auto;
-  gap: 1.1rem;
-  align-items: center;
-  padding: 1rem 1.15rem;
-  border-radius: 0.85rem;
-  background: rgba(255,255,255,0.72);
-  border: 1px solid var(--line);
-  transition: border-color 0.25s, transform 0.25s var(--ease), background 0.25s;
-  opacity: 0;
-  transform: translateY(18px);
+@media (min-width: 700px) {
+  .addon-row { grid-template-columns: 1fr 1fr; }
 }
-.place.is-visible {
-  opacity: 1;
-  transform: none;
-  transition: opacity 0.5s var(--ease), transform 0.5s var(--ease), border-color 0.25s, background 0.25s;
-}
-.place:hover {
-  border-color: rgba(42,111,132,0.35);
-  background: #fff;
-  transform: translateY(-2px);
-}
-.place.hidden { display: none; }
-.place-thumb {
-  width: 7.5rem;
-  height: 5.4rem;
-  border-radius: 0.55rem;
-  background-size: cover;
-  background-position: center;
-}
-.place-body h3 {
-  font-family: var(--ff-display);
-  font-size: 1.15rem;
-  letter-spacing: -0.02em;
-  margin-bottom: 0.2rem;
-}
-.place-meta {
+.addon {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.45rem 0.85rem;
-  font-size: 0.82rem;
-  color: var(--muted);
-  margin-bottom: 0.4rem;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: baseline;
+  padding: 1rem 1.1rem;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid var(--line);
+  border-radius: 0.45rem;
 }
-.place-meta b {
+.addon strong {
+  display: block;
+  color: var(--fir-deep);
+}
+.addon span { color: var(--muted); font-size: 0.92rem; }
+.addon em {
+  font-style: normal;
   font-weight: 700;
-  color: var(--moss);
-}
-.place-body p {
-  color: var(--muted);
-  font-size: 0.95rem;
-  max-width: 58ch;
-}
-.place-map {
-  font-size: 0.85rem;
-  font-weight: 700;
-  color: var(--lake);
+  color: var(--cedar);
   white-space: nowrap;
-  padding: 0.45rem 0.7rem;
-  border-radius: 0.4rem;
-  transition: background 0.2s;
-}
-.place-map:hover { background: rgba(42,111,132,0.1); }
-@media (max-width: 720px) {
-  .place {
-    grid-template-columns: 1fr;
-    gap: 0.85rem;
-  }
-  .place-thumb {
-    width: 100%;
-    height: 10rem;
-  }
-  .place-map { justify-self: start; }
 }
 
-/* Weekend */
-#weekends {
-  background:
-    linear-gradient(135deg, var(--fir-deep), var(--moss) 55%, var(--lake) 120%);
-  color: var(--foam);
-}
-#weekends .kicker { color: rgba(247,250,249,0.7); }
-#weekends .section-head h2 { color: var(--foam); }
-#weekends .section-head p { color: rgba(247,250,249,0.78); }
-.weekend-grid {
+/* How it works */
+.steps {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
+  gap: 1.5rem;
+  counter-reset: step;
 }
-@media (max-width: 900px) {
-  .weekend-grid { grid-template-columns: 1fr; }
+@media (min-width: 800px) {
+  .steps { grid-template-columns: repeat(3, 1fr); gap: 2rem; }
 }
-.weekend {
-  padding: 1.4rem 1.35rem 1.5rem;
-  border-radius: 0.9rem;
-  background: rgba(247,250,249,0.08);
-  border: 1px solid rgba(247,250,249,0.14);
-  transition: background 0.25s, transform 0.3s var(--ease);
+.step {
+  position: relative;
+  padding-top: 0.25rem;
 }
-.weekend:hover {
-  background: rgba(247,250,249,0.12);
-  transform: translateY(-3px);
-}
-.weekend h3 {
+.step::before {
+  counter-increment: step;
+  content: "0" counter(step);
+  display: block;
   font-family: var(--ff-display);
-  font-size: 1.25rem;
-  letter-spacing: -0.02em;
-  margin-bottom: 0.55rem;
+  font-weight: 800;
+  font-size: 2rem;
+  color: var(--amber);
+  letter-spacing: -0.03em;
+  margin-bottom: 0.65rem;
+  line-height: 1;
 }
-.weekend p {
-  color: rgba(247,250,249,0.78);
-  font-size: 0.96rem;
+.step h3 {
+  font-family: var(--ff-display);
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin-bottom: 0.4rem;
+  color: var(--fir-deep);
+}
+.step p { color: var(--muted); }
+
+/* Night atmosphere section */
+.night {
+  position: relative;
+  min-height: clamp(28rem, 62vw, 36rem);
+  display: grid;
+  align-items: end;
+  color: #f3f7f5;
+  overflow: hidden;
+}
+.night-media {
+  position: absolute;
+  inset: 0;
+}
+.night-media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(15, 36, 28, 0.2), rgba(15, 36, 28, 0.82));
+}
+.night-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.night-copy {
+  position: relative;
+  z-index: 1;
+  padding: 4rem 0;
+  max-width: 32rem;
+}
+.night-copy h2 { color: #fff; }
+.night-copy p { color: rgba(243, 247, 245, 0.88); }
+
+/* Occasions */
+.occasions { background: var(--mist); }
+.occasion-list {
+  display: grid;
+  gap: 0.75rem;
+}
+@media (min-width: 700px) {
+  .occasion-list { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 980px) {
+  .occasion-list { grid-template-columns: repeat(3, 1fr); }
+}
+.occasion {
+  padding: 1.25rem 1.2rem;
+  border-bottom: 1px solid var(--line);
+  background: transparent;
+}
+.occasion h3 {
+  font-family: var(--ff-display);
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--fir-deep);
+  margin-bottom: 0.3rem;
+}
+.occasion p { color: var(--muted); font-size: 0.98rem; }
+
+/* Included */
+.include-grid {
+  display: grid;
+  gap: 2rem;
+}
+@media (min-width: 820px) {
+  .include-grid { grid-template-columns: 1fr 1fr; gap: 3rem; }
+}
+.include-block h3 {
+  font-family: var(--ff-display);
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: var(--fir-deep);
   margin-bottom: 1rem;
 }
-.weekend ol {
-  padding-left: 1.1rem;
-  display: grid;
-  gap: 0.35rem;
-  color: rgba(247,250,249,0.9);
-  font-size: 0.92rem;
+.include-block li {
+  position: relative;
+  padding: 0.7rem 0 0.7rem 1.2rem;
+  border-bottom: 1px solid var(--line);
+  color: var(--ink);
 }
-
-/* About strip */
-#about {
-  background:
-    radial-gradient(circle at 80% 20%, rgba(154,107,63,0.12), transparent 35%),
-    var(--mist);
+.include-block li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 1.15rem;
+  width: 0.4rem;
+  height: 0.4rem;
+  background: var(--lake);
+  border-radius: 1px;
 }
-.about-row {
-  display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: 2rem;
-  align-items: end;
-}
-@media (max-width: 800px) {
-  .about-row { grid-template-columns: 1fr; }
-}
-.about-note {
-  font-size: 1.02rem;
+.note {
+  margin-top: 1.5rem;
+  padding: 1rem 1.15rem;
+  background: rgba(42, 111, 132, 0.08);
+  border-left: 3px solid var(--lake);
   color: var(--muted);
-  max-width: 48ch;
+  font-size: 0.98rem;
 }
-.about-note strong { color: var(--fir); font-weight: 700; }
 
-/* Footer */
-footer {
-  padding: 2rem 0 2.5rem;
-  border-top: 1px solid var(--line);
-  background: var(--foam);
+/* FAQ */
+.faq { background: linear-gradient(180deg, var(--foam), var(--mist)); }
+.faq-list {
+  display: grid;
+  gap: 0.65rem;
+  max-width: 46rem;
 }
-.footer-row {
+.faq-item {
+  border: 1px solid var(--line);
+  border-radius: 0.45rem;
+  background: #fff;
+  overflow: hidden;
+}
+.faq-item summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 1.05rem 1.2rem;
+  font-family: var(--ff-display);
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--fir-deep);
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   gap: 1rem;
   align-items: center;
 }
-.footer-row p {
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+  content: "+";
+  font-weight: 500;
+  color: var(--cedar);
+  font-size: 1.25rem;
+  line-height: 1;
+}
+.faq-item[open] summary::after { content: "–"; }
+.faq-item p {
+  padding: 0 1.2rem 1.15rem;
   color: var(--muted);
-  font-size: 0.9rem;
+}
+
+/* Booking */
+.book {
+  background:
+    radial-gradient(ellipse 70% 60% at 90% 10%, rgba(196, 137, 58, 0.12), transparent 50%),
+    var(--fir-deep);
+  color: #f3f7f5;
+}
+.book-layout {
+  display: grid;
+  gap: 2.5rem;
+}
+@media (min-width: 900px) {
+  .book-layout {
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 3.5rem;
+    align-items: start;
+  }
+}
+.book-copy .eyebrow { color: var(--amber); }
+.book-copy h2 { color: #fff; }
+.book-copy p { color: rgba(243, 247, 245, 0.8); margin-bottom: 1.25rem; }
+.contact-lines {
+  display: grid;
+  gap: 0.75rem;
+}
+.contact-lines a {
+  color: #fff;
+  font-weight: 600;
+  border-bottom: 1px solid rgba(196, 137, 58, 0.5);
+  width: fit-content;
+}
+.contact-lines a:hover { color: var(--amber); }
+.reassure {
+  margin-top: 1.5rem;
+  color: rgba(243, 247, 245, 0.7);
+  font-size: 0.95rem;
+}
+
+.form {
+  background: rgba(247, 250, 249, 0.97);
+  color: var(--ink);
+  border-radius: 0.65rem;
+  padding: 1.5rem;
+  display: grid;
+  gap: 1rem;
+}
+@media (min-width: 560px) {
+  .form { padding: 1.75rem; }
+}
+.form-row {
+  display: grid;
+  gap: 1rem;
+}
+@media (min-width: 560px) {
+  .form-row.two { grid-template-columns: 1fr 1fr; }
+}
+.field { display: grid; gap: 0.4rem; }
+.field label {
+  font-weight: 600;
+  font-size: 0.92rem;
+  color: var(--fir-deep);
+}
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  padding: 0.8rem 0.9rem;
+  border: 1px solid var(--line);
+  border-radius: 0.35rem;
+  background: #fff;
+  transition: border-color 0.2s var(--ease);
+}
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  outline: none;
+  border-color: var(--lake);
+  box-shadow: 0 0 0 3px rgba(42, 111, 132, 0.15);
+}
+.field textarea { min-height: 6.5rem; resize: vertical; }
+.field .error {
+  color: #9b2c2c;
+  font-size: 0.85rem;
+  display: none;
+}
+.field.invalid input,
+.field.invalid select,
+.field.invalid textarea {
+  border-color: #9b2c2c;
+}
+.field.invalid .error { display: block; }
+.form-actions {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 0.25rem;
+}
+.form-success {
+  display: none;
+  padding: 1rem 1.1rem;
+  background: rgba(47, 92, 69, 0.1);
+  border: 1px solid rgba(47, 92, 69, 0.25);
+  border-radius: 0.4rem;
+  color: var(--fir);
+  font-weight: 600;
+}
+.form.sent .form-success { display: block; }
+.form.sent .form-fields { display: none; }
+
+/* Footer */
+.site-footer {
+  background: #0b1a14;
+  color: rgba(243, 247, 245, 0.72);
+  padding: 2.5rem 0 6.5rem;
+}
+@media (min-width: 800px) {
+  .site-footer { padding-bottom: 2.5rem; }
+}
+.footer-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+@media (min-width: 720px) {
+  .footer-grid {
+    grid-template-columns: 1.4fr 1fr 1fr;
+    align-items: start;
+  }
 }
 .footer-brand {
   font-family: var(--ff-display);
   font-weight: 800;
-  letter-spacing: -0.03em;
-  color: var(--fir);
+  font-size: 1.25rem;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+.footer-brand span { color: var(--amber); }
+.footer-grid h4 {
+  color: #fff;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.65rem;
+}
+.footer-grid p, .footer-grid li { font-size: 0.95rem; }
+.footer-grid a:hover { color: var(--amber); }
+.footer-bottom {
+  margin-top: 2rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(243, 247, 245, 0.1);
+  font-size: 0.88rem;
 }
 
-/* Reveal */
+/* Sticky mobile CTA */
+.sticky-cta {
+  position: fixed;
+  inset-inline: 0;
+  bottom: 0;
+  z-index: 50;
+  padding: 0.75rem 1rem calc(0.75rem + env(safe-area-inset-bottom));
+  background: linear-gradient(180deg, transparent, rgba(15, 36, 28, 0.92) 30%);
+  display: grid;
+}
+.sticky-cta .btn { width: 100%; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25); }
+@media (min-width: 800px) {
+  .sticky-cta { display: none; }
+}
+
+/* Reveal motion */
 .reveal {
   opacity: 0;
-  transform: translateY(22px);
+  transform: translateY(18px);
   transition: opacity 0.7s var(--ease), transform 0.7s var(--ease);
 }
-.reveal.in { opacity: 1; transform: none; }
+.reveal.in {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .hero-media img { animation: none; }
+  .reveal { opacity: 1; transform: none; transition: none; }
+  .btn:hover, .package:hover { transform: none; }
+}
 </style>
 </head>
 <body>
 <div class="grain" aria-hidden="true"></div>
 
-<header id="nav">
-  <a class="brand" href="#hero">
-    <span class="brand-mark" aria-hidden="true"></span>
-    Santiam Nearby
-  </a>
-  <nav class="nav-links" aria-label="Primary">
-    <a href="#regions">Regions</a>
-    <a href="#businesses">Local services</a>
-    <a href="#directory">Places</a>
-    <a href="#weekends">Weekends</a>
-    <a class="nav-cta" href="#businesses">Our businesses</a>
-  </nav>
+<header class="site-header">
+  <div class="wrap">
+    <a class="logo" href="#top">Cascadia Cinema <span>Co.</span></a>
+    <nav class="nav" aria-label="Primary">
+      <a href="#packages">Packages</a>
+      <a href="#how">How it works</a>
+      <a href="#area">Service area</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="btn btn-amber header-cta" href="#book">Book your night</a>
+  </div>
 </header>
 
-<main>
-  <section id="hero">
-    <div class="hero-media" role="img" aria-label="Mountain lake surrounded by forest, Oregon Cascades atmosphere"></div>
-    <div class="hero-content">
-      <h1 class="hero-brand">Santiam Nearby</h1>
-      <p class="hero-lead">A local guide to Lyons and Detroit Lake — plus bounce houses, boat concierge, and mobile tire help from people who live here.</p>
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="#businesses">Local services</a>
-        <a class="btn btn-ghost" href="#directory">Browse places</a>
+<main id="top">
+  <section class="hero" aria-label="Cascadia Cinema Co. outdoor movie rentals">
+    <div class="hero-media" aria-hidden="true">
+      <!-- Swap with your own PNW dusk / outdoor cinema photo when ready -->
+      <img
+        src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=2000&q=80"
+        alt=""
+        width="2000"
+        height="1333"
+        fetchpriority="high">
+    </div>
+    <div class="wrap hero-content">
+      <p class="brand-mark">Cascadia Cinema <em>Co.</em></p>
+      <h1>Outdoor movie nights, delivered under Oregon skies.</h1>
+      <p>Professional screen and sound for backyard parties, campgrounds, and community nights from Lyons to Bend.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-amber" href="#book">Book your night</a>
+        <a class="btn btn-ghost" href="#packages">See packages</a>
       </div>
     </div>
   </section>
 
-  <section id="regions" class="section">
+  <section class="trust" id="area" aria-label="Why rent from us">
+    <div class="wrap trust-grid">
+      <div class="trust-towns">
+        Lyons · Detroit Lake · Salem · Sisters · Bend
+        <small>Outside this corridor? Ask us — travel quotes welcome.</small>
+      </div>
+      <div class="trust-item">
+        <strong>We deliver &amp; set up</strong>
+        <span>Arrive, plug in, press play</span>
+      </div>
+      <div class="trust-item">
+        <strong>You pick the movie</strong>
+        <span>Any title you want to watch</span>
+      </div>
+      <div class="trust-item">
+        <strong>Local &amp; professional</strong>
+        <span>Family, HOA &amp; campground nights</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section packages" id="packages">
     <div class="wrap">
       <div class="section-head reveal">
-        <p class="kicker">Start here</p>
-        <h2>Two hubs, one canyon corridor</h2>
-        <p>Base in Lyons for river towns and valley parks. Drive up Highway 22 for Detroit Lake swimming, camping, and Cascade day trips.</p>
+        <span class="eyebrow">Packages</span>
+        <h2>Choose your night.</h2>
+        <p>Every package includes delivery, setup, screen, speakers, and the movie you choose. Prices shown are starting ranges — we’ll confirm your exact quote.</p>
       </div>
-      <div class="region-grid">
-        <a class="region-panel region-lyons reveal" href="#directory" data-jump-filter="lyons">
-          <h3>Lyons</h3>
-          <p>River parks, quiet town energy, and North Santiam access — plus Stayton and Mill City just down the road.</p>
-          <span class="region-link">Explore Lyons places <span aria-hidden="true">→</span></span>
-        </a>
-        <a class="region-panel region-detroit reveal" href="#directory" data-jump-filter="detroit">
-          <h3>Detroit Lake</h3>
-          <p>Boat launches, day-use beaches, campgrounds, and forest trailheads around the reservoir.</p>
-          <span class="region-link">Explore lake places <span aria-hidden="true">→</span></span>
-        </a>
+
+      <div class="package-grid">
+        <article class="package reveal">
+          <div class="package-top">
+            <h3>Basic Cinema</h3>
+            <p>Screen, speakers, and your movie — the classic backyard theater.</p>
+          </div>
+          <div class="price">From $275<small>starting range · exact quote after details</small></div>
+          <ul>
+            <li>Outdoor movie screen</li>
+            <li>Amplified speakers</li>
+            <li>Projector &amp; playback setup</li>
+            <li>Delivery, setup &amp; pack-up</li>
+            <li>Any movie you want to see</li>
+          </ul>
+          <button type="button" class="btn btn-fir" data-package="basic">Request this package</button>
+        </article>
+
+        <article class="package featured reveal">
+          <div class="package-top">
+            <h3>Cinema + Popcorn</h3>
+            <p>The full theater feel — warm popcorn while the credits roll.</p>
+          </div>
+          <div class="price">From $375<small>starting range · exact quote after details</small></div>
+          <ul>
+            <li>Everything in Basic Cinema</li>
+            <li>Popcorn machine</li>
+            <li>Serving supplies for your guests</li>
+            <li>Ideal for birthdays &amp; family nights</li>
+          </ul>
+          <button type="button" class="btn btn-amber" data-package="popcorn">Request this package</button>
+        </article>
+
+        <article class="package reveal">
+          <div class="package-top">
+            <h3>Full Night Out</h3>
+            <p>Movie, popcorn, and a bouncy house — an all-ages evening.</p>
+          </div>
+          <div class="price">From $525<small>starting range · exact quote after details</small></div>
+          <ul>
+            <li>Everything in Cinema + Popcorn</li>
+            <li>Bouncy house for pre-show fun</li>
+            <li>Great for kids’ parties &amp; block events</li>
+            <li>We handle setup for both attractions</li>
+          </ul>
+          <button type="button" class="btn btn-fir" data-package="full">Request this package</button>
+        </article>
+      </div>
+
+      <div class="addons reveal">
+        <h3>À la carte add-ons</h3>
+        <div class="addon-row">
+          <div class="addon">
+            <div>
+              <strong>Popcorn machine</strong>
+              <span>Add theater snacks to Basic Cinema</span>
+            </div>
+            <em>From $95</em>
+          </div>
+          <div class="addon">
+            <div>
+              <strong>Bouncy house</strong>
+              <span>Pre-show energy for kids and families</span>
+            </div>
+            <em>From $175</em>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <section id="businesses" class="section">
+  <section class="section" id="how">
     <div class="wrap">
       <div class="section-head reveal">
-        <p class="kicker">Local services</p>
-        <h2>Businesses from around here</h2>
-        <p>Party rentals, Detroit Lake boat help, and 24/7 mobile tire &amp; roadside service for the canyon corridor.</p>
+        <span class="eyebrow">How it works</span>
+        <h2>Booked in three easy steps.</h2>
+        <p>No complicated gear lists. We bring the cinema — you bring the blankets.</p>
       </div>
-      <div class="biz-grid">
-        <article class="biz reveal">
-          <p class="biz-tag">Parties · Lyons area</p>
-          <h3>Bounce House Rentals</h3>
-          <p>Inflatable bounce houses delivered for birthdays, backyard parties, and family gatherings around Lyons, Stayton, and the Santiam Canyon.</p>
-          <a class="biz-cta biz-muted-cta" href="#directory" data-jump-filter="services">See in directory <span aria-hidden="true">→</span></a>
-        </article>
-        <article class="biz reveal">
-          <p class="biz-tag">Detroit Lake</p>
-          <h3>Boat Concierge</h3>
-          <p>Lake-day help at Detroit Lake — boat delivery, launch support, and concierge-style service so you spend more time on the water.</p>
-          <a class="biz-cta biz-muted-cta" href="#directory" data-jump-filter="services">See in directory <span aria-hidden="true">→</span></a>
-        </article>
-        <article class="biz reveal">
-          <p class="biz-tag">24/7 roadside</p>
-          <h3>Oregon Mobile Tire</h3>
-          <p>Flat tires, jump starts, lockouts, fuel delivery, and mobile tire help for Highway 22, Detroit Lake, Lyons, and rural Oregon routes.</p>
-          <a class="biz-cta" href="https://oregonmobiletire.com" target="_blank" rel="noopener noreferrer">oregonmobiletire.com <span aria-hidden="true">→</span></a>
-        </article>
-      </div>
+      <ol class="steps">
+        <li class="step reveal">
+          <h3>Book</h3>
+          <p>Tell us your date, town, package, and movie. We reply same day with availability and a clear quote.</p>
+        </li>
+        <li class="step reveal">
+          <h3>We deliver &amp; set up</h3>
+          <p>We arrive early, place the screen, dial in the sound, and run a quick test so showtime feels effortless.</p>
+        </li>
+        <li class="step reveal">
+          <h3>You press play</h3>
+          <p>Guests settle in under the firs. When the night ends, we pack everything up — you enjoy the memories.</p>
+        </li>
+      </ol>
     </div>
   </section>
 
-  <section id="directory" class="section">
+  <section class="night" aria-label="The Cascadia cinema experience">
+    <div class="night-media" aria-hidden="true">
+      <!-- Swap with your own PNW lakeside / forest dusk photo -->
+      <img
+        src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=2000&q=80"
+        alt=""
+        width="2000"
+        height="1333"
+        loading="lazy">
+    </div>
+    <div class="wrap night-copy reveal">
+      <span class="eyebrow" style="color: var(--amber);">The night</span>
+      <h2>Dusk settles. The screen glows. Oregon does the rest.</h2>
+      <p>From Detroit Lake campgrounds to Salem backyards and Bend block parties — we build a cinema that feels like it belongs here.</p>
+    </div>
+  </section>
+
+  <section class="section occasions" id="occasions">
     <div class="wrap">
       <div class="section-head reveal">
-        <p class="kicker">Directory</p>
-        <h2>Things near Lyons &amp; Detroit Lake</h2>
-        <p>Curated, not endless. Filter by region or vibe, then open maps when you’re ready to go.</p>
+        <span class="eyebrow">Occasions</span>
+        <h2>Made for the nights that matter.</h2>
+        <p>Pick the moment — we’ll match the package.</p>
       </div>
-
-      <div class="filters reveal" role="toolbar" aria-label="Filter places">
-        <button class="filter-btn active" type="button" data-filter="all">All</button>
-        <button class="filter-btn" type="button" data-filter="services">Local services</button>
-        <button class="filter-btn" type="button" data-filter="lyons">Lyons area</button>
-        <button class="filter-btn" type="button" data-filter="detroit">Detroit Lake</button>
-        <button class="filter-btn" type="button" data-filter="outdoors">Outdoors</button>
-        <button class="filter-btn" type="button" data-filter="swim">Swim &amp; boat</button>
-        <button class="filter-btn" type="button" data-filter="food">Food &amp; coffee</button>
-        <button class="filter-btn" type="button" data-filter="free">Free / cheap</button>
-      </div>
-      <p class="place-count" id="place-count" aria-live="polite"></p>
-
-      <div class="place-list" id="place-list">
-        <!-- Places injected by JS for clean filtering -->
+      <div class="occasion-list">
+        <article class="occasion reveal">
+          <h3>Birthday &amp; backyard</h3>
+          <p>Kids’ favorites or a nostalgic classic — popcorn optional, laughter included.</p>
+        </article>
+        <article class="occasion reveal">
+          <h3>Campground nights</h3>
+          <p>Detroit Lake and canyon weekends with a proper screen under the stars.</p>
+        </article>
+        <article class="occasion reveal">
+          <h3>HOA &amp; community</h3>
+          <p>Neighborhood movie nights that bring the block together.</p>
+        </article>
+        <article class="occasion reveal">
+          <h3>Wedding welcome</h3>
+          <p>A soft outdoor screening the night before — romantic, memorable, easy.</p>
+        </article>
+        <article class="occasion reveal">
+          <h3>School &amp; team</h3>
+          <p>End-of-season celebrations and fundraiser nights with professional sound.</p>
+        </article>
+        <article class="occasion reveal">
+          <h3>Just because</h3>
+          <p>Friday under the firs. You pick the film. We’ll be there at dusk.</p>
+        </article>
       </div>
     </div>
   </section>
 
-  <section id="weekends" class="section">
+  <section class="section" id="included">
     <div class="wrap">
       <div class="section-head reveal">
-        <p class="kicker">Ready-made plans</p>
-        <h2>Three easy weekends</h2>
-        <p>Simple loops you can run from Lyons without overthinking the logistics.</p>
+        <span class="eyebrow">Details</span>
+        <h2>What’s included &amp; what you’ll need.</h2>
+        <p>Clear expectations make for an easy, professional night.</p>
       </div>
-      <div class="weekend-grid">
-        <article class="weekend reveal">
-          <h3>Lake day</h3>
-          <p>Detroit Lake when the weather’s warm and you want water first.</p>
-          <ol>
-            <li>Book Boat Concierge if you want delivery / launch help</li>
-            <li>Mongold or Detroit Flats for swim / picnic</li>
-            <li>Save oregonmobiletire.com before the Hwy 22 drive</li>
-          </ol>
-        </article>
-        <article class="weekend reveal">
-          <h3>River towns</h3>
-          <p>Stay closer to Lyons and keep it low-mileage.</p>
-          <ol>
-            <li>Morning at John Neal Memorial Park</li>
-            <li>Bounce house day for a birthday or backyard hang</li>
-            <li>Evening river stretch near Mill City</li>
-          </ol>
-        </article>
-        <article class="weekend reveal">
-          <h3>Canyon drive</h3>
-          <p>Highway 22 as the main event — views, stops, and a lake finish.</p>
-          <ol>
-            <li>Roll out early toward Detroit</li>
-            <li>Viewpoint / trailhead stop along the corridor</li>
-            <li>Lake loop, then back down-canyon with roadside help on call</li>
-          </ol>
-        </article>
+      <div class="include-grid">
+        <div class="include-block reveal">
+          <h3>We bring</h3>
+          <ul>
+            <li>Outdoor screen sized for your guest count</li>
+            <li>Projector, media playback, and amplified speakers</li>
+            <li>Extension power as needed for setup</li>
+            <li>Popcorn machine and/or bouncy house on upgraded packages</li>
+            <li>Delivery, professional setup, and pack-up</li>
+          </ul>
+        </div>
+        <div class="include-block reveal">
+          <h3>You’ll need</h3>
+          <ul>
+            <li>A relatively flat open space for the screen</li>
+            <li>Standard outdoor power access nearby</li>
+            <li>Your chosen movie title (streaming account or disc)</li>
+            <li>Blankets, chairs, and the guest list</li>
+            <li>A rain plan — we reschedule weather washouts</li>
+          </ul>
+          <p class="note">Movie note: you choose the title; we handle the screen and sound. Please use a properly licensed or personal copy for private events.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <section id="about" class="section">
-    <div class="wrap about-row">
-      <div class="section-head reveal" style="margin-bottom:0">
-        <p class="kicker">About this guide</p>
-        <h2>Built for people who already live nearby</h2>
-        <p class="about-note">Santiam Nearby is a starter directory for the Lyons–Detroit Lake stretch of the North Santiam — including local bounce house rentals, Detroit Lake boat concierge, and <a href="https://oregonmobiletire.com" target="_blank" rel="noopener noreferrer" style="color:var(--lake);font-weight:700">Oregon Mobile Tire</a>. Always check lake levels, fire restrictions, and road conditions before you go.</p>
+  <section class="section faq" id="faq">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">FAQ</span>
+        <h2>Questions before you book.</h2>
+        <p>Straight answers so you can plan with confidence.</p>
       </div>
-      <p class="about-note reveal"><strong>Need a service?</strong> Start with Local services above, or visit oregonmobiletire.com for 24/7 roadside help.</p>
+      <div class="faq-list">
+        <details class="faq-item reveal">
+          <summary>What if it rains?</summary>
+          <p>Pacific Northwest weather happens. If rain or high wind makes the night unsafe or unwatchable, we reschedule with you at no penalty. Light drizzle can sometimes continue under covered spaces — we’ll decide together the day of.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary>How long does setup take?</summary>
+          <p>Most Basic Cinema setups take about 45–75 minutes. Full Night Out (with bouncy house) usually needs a bit longer. We’ll arrive early enough that your guests never wait on gear.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary>Can we really watch any movie?</summary>
+          <p>Yes — bring the title you want on a streaming account, USB, or disc. We connect playback to our projector and speakers. For public or ticketed events, ask us about licensing so everything stays above board.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary>What kind of power do we need?</summary>
+          <p>A standard outdoor outlet is enough for most backyard setups. Campgrounds and larger community nights may need a dedicated circuit — mention your venue when you request a quote and we’ll confirm.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary>Do you travel outside Lyons–Bend?</summary>
+          <p>Our core corridor is Lyons, Detroit Lake, Salem, Sisters, and Bend. Nearby towns are often easy to add. Farther trips may include a travel fee — just ask.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary>Is there a deposit?</summary>
+          <p>A modest deposit holds your date once you approve the quote. The balance is due before showtime. We’ll spell out payment details in your confirmation.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="section book" id="book">
+    <div class="wrap book-layout">
+      <div class="book-copy reveal">
+        <span class="eyebrow">Book</span>
+        <h2>Request your outdoor cinema night.</h2>
+        <p>Share a few details and we’ll reply with availability and a clear quote — usually the same day.</p>
+        <div class="contact-lines">
+          <a href="tel:+15035550192">(503) 555-0192</a>
+          <a href="mailto:hello@cascadiacinema.example">hello@cascadiacinema.example</a>
+        </div>
+        <p class="reassure">Prefer to text or call? We’re happy to plan your night by phone.</p>
+      </div>
+
+      <form class="form reveal" id="quote-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
+        <div class="form-success" role="status">Thanks — your request is ready to send. If Formspree isn’t connected yet, your email client will open with the details.</div>
+        <div class="form-fields">
+          <div class="form-row two">
+            <div class="field">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" autocomplete="name" required>
+              <span class="error">Please enter your name.</span>
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" required>
+              <span class="error">Enter a valid email.</span>
+            </div>
+          </div>
+          <div class="form-row two">
+            <div class="field">
+              <label for="phone">Phone</label>
+              <input id="phone" name="phone" type="tel" autocomplete="tel" required>
+              <span class="error">Please add a phone number.</span>
+            </div>
+            <div class="field">
+              <label for="date">Event date</label>
+              <input id="date" name="date" type="date" required>
+              <span class="error">Choose your preferred date.</span>
+            </div>
+          </div>
+          <div class="form-row two">
+            <div class="field">
+              <label for="location">Town / location</label>
+              <input id="location" name="location" type="text" placeholder="e.g. Detroit Lake, Salem, Bend" required>
+              <span class="error">Tell us where the night will be.</span>
+            </div>
+            <div class="field">
+              <label for="package">Package</label>
+              <select id="package" name="package" required>
+                <option value="">Select a package</option>
+                <option value="basic">Basic Cinema</option>
+                <option value="popcorn">Cinema + Popcorn</option>
+                <option value="full">Full Night Out</option>
+              </select>
+              <span class="error">Select a package.</span>
+            </div>
+          </div>
+          <div class="field">
+            <label for="movie">Movie preference</label>
+            <input id="movie" name="movie" type="text" placeholder="Title you’d love to watch (optional)">
+          </div>
+          <div class="field">
+            <label for="message">Anything else?</label>
+            <textarea id="message" name="message" placeholder="Guest count, add-ons, power notes, occasion…"></textarea>
+          </div>
+          <input type="hidden" name="_subject" value="Cascadia Cinema Co. quote request">
+          <div class="form-actions">
+            <button type="submit" class="btn btn-amber">Send quote request</button>
+          </div>
+        </div>
+      </form>
     </div>
   </section>
 </main>
 
-<footer>
-  <div class="wrap footer-row">
-    <p class="footer-brand">Santiam Nearby</p>
-    <p>Lyons · Detroit Lake · oregonmobiletire.com</p>
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <div class="footer-brand">Cascadia Cinema <span>Co.</span></div>
+      <p>Professional outdoor movie night rentals across the Willamette Valley and Cascades corridor.</p>
+    </div>
+    <div>
+      <h4>Service area</h4>
+      <ul>
+        <li>Lyons</li>
+        <li>Detroit Lake</li>
+        <li>Salem</li>
+        <li>Sisters</li>
+        <li>Bend</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="tel:+15035550192">(503) 555-0192</a></li>
+        <li><a href="mailto:hello@cascadiacinema.example">hello@cascadiacinema.example</a></li>
+        <li><a href="#book">Request a quote</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <p>&copy; <span id="year"></span> Cascadia Cinema Co. Outdoor movie rentals in Oregon.</p>
   </div>
 </footer>
 
+<div class="sticky-cta">
+  <a class="btn btn-amber" href="#book">Book your night</a>
+</div>
+
 <script>
-const places = [
-  {
-    id: "bounce-houses",
-    name: "Bounce House Rentals",
-    region: "lyons",
-    tags: ["services", "lyons"],
-    town: "Lyons area",
-    vibe: "Party rentals",
-    note: "Local bounce house delivery for birthdays and backyard parties around Lyons, Stayton, and the Santiam Canyon.",
-    url: "#businesses",
-    cta: "Local service",
-    image: "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=600&q=80"
-  },
-  {
-    id: "boat-concierge",
-    name: "Boat Concierge",
-    region: "detroit",
-    tags: ["services", "detroit", "swim"],
-    town: "Detroit Lake",
-    vibe: "Boat delivery & launch",
-    note: "Concierge-style boat help for Detroit Lake — delivery, launch support, and lake-day logistics so you get on the water faster.",
-    url: "#businesses",
-    cta: "Local service",
-    image: "https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?auto=format&fit=crop&w=600&q=80"
-  },
-  {
-    id: "oregon-mobile-tire",
-    name: "Oregon Mobile Tire",
-    region: "lyons",
-    tags: ["services", "lyons", "detroit"],
-    town: "Lyons · Detroit Lake · Hwy 22",
-    vibe: "24/7 roadside",
-    note: "Mobile tire service, flat changes, jump starts, lockouts, and fuel delivery for canyon drivers, campers, trailers, and rural Oregon routes.",
-    url: "https://oregonmobiletire.com",
-    cta: "Visit website",
-    image: "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=600&q=80"
-  },
-  {
-    id: "john-neal",
-    name: "John Neal Memorial Park",
-    region: "lyons",
-    tags: ["lyons", "outdoors", "free"],
-    town: "Lyons",
-    vibe: "River park",
-    note: "Local go-to for picnic tables, river access, and an easy afternoon without leaving town.",
-    map: "https://www.google.com/maps/search/?api=1&query=John+Neal+Memorial+Park+Lyons+OR",
-    image: "https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=600&q=80"
-  },
-  {
-    id: "north-santiam-lyons",
-    name: "North Santiam River (Lyons)",
-    region: "lyons",
-    tags: ["lyons", "outdoors", "free"],
-    town: "Lyons",
-    vibe: "Fishing & walk",
-    note: "The river is the town’s backbone — cool air, rock bars, and a quieter alternative to the lake crowds.",
-    map: "https://www.google.com/maps/search/?api=1&query=North+Santiam+River+Lyons+OR",
-    image: "https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?auto=format&fit=crop&w=600&q=80"
-  },
-  {
-    id: "stayton-riverfront",
-    name: "Stayton Riverfront Park",
-    region: "lyons",
-    tags: ["lyons", "outdoors", "free"],
-    town: "Stayton",
-    vibe: "Town park",
-    note: "A short hop from Lyons with paths, open grass, and an easy add-on when you’re already running errands.",
-    map: "https://www.google.com/maps/search/?api=1&query=Stayton+Riverfront+Park+Stayton+OR",
-    image: "https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=600&q=80"
-  },
-  {
-    id: "mill-city-falls",
-    name: "Mill City riverfront & falls views",
-    region: "lyons",
-    tags: ["lyons", "outdoors", "free"],
-    town: "Mill City",
-    vibe: "Quick stop",
-    note: "Worth a pull-over on the way up-canyon — river drama without committing to a full lake day.",
-    map: "https://www.google.com/maps/search/?api=1&query=Mill+City+Oregon+North+Santiam",
-    image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=600&q=80"
-  },
-  {
-    id: "roaring-river",
-    name: "Roaring River County Park",
-    region: "lyons",
-    tags: ["lyons", "outdoors", "free"],
-    town: "Near Scio",
-    vibe: "Day-use park",
-    note: "A valley favorite for shade, picnic space, and a calmer water day when Detroit Lake is slammed.",
-    map: "https://www.google.com/maps/search/?api=1&query=Roaring+River+County+Park+Oregon",
-    image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=600&q=80"
-  },
-  {
-    id: "stayton-coffee",
-    name: "Stayton coffee & bakery crawl",
-    region: "lyons",
-    tags: ["lyons", "food"],
-    town: "Stayton",
-    vibe: "Fuel stop",
-    note: "Best launch pad before Highway 22 — grab coffee and a pastry, then decide lake vs. river.",
-    map: "https://www.google.com/maps/search/?api=1&query=coffee+Stayton+OR",
-    image: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=600&q=80"
-  },
-  {
-    id: "mill-city-eats",
-    name: "Mill City / Gates food stops",
-    region: "lyons",
-    tags: ["lyons", "food"],
-    town: "Mill City",
-    vibe: "Small-town eats",
-    note: "Handy midway points for burgers, cafe food, or a reset before the last climb to Detroit.",
-    map: "https://www.google.com/maps/search/?api=1&query=restaurants+Mill+City+OR",
-    image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=600&q=80"
-  },
-  {
-    id: "mongold",
-    name: "Mongold Day-Use Area",
-    region: "detroit",
-    tags: ["detroit", "outdoors", "swim", "free"],
-    town: "Detroit Lake",
-    vibe: "Swim & picnic",
-    note: "Classic Detroit Lake beach energy — arrive early on hot weekends; parking and shoreline fill fast.",
-    map: "https://www.google.com/maps/search/?api=1&query=Mongold+Day+Use+Area+Detroit+Lake+OR",
-    image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80"
-  },
-  {
-    id: "detroit-flats",
-    name: "Detroit Flats Day Use",
-    region: "detroit",
-    tags: ["detroit", "outdoors", "swim", "free"],
-    town: "Detroit Lake",
-    vibe: "Open shoreline",
-    note: "Another strong day-use option when you want space to spread out and keep the day simple.",
-    map: "https://www.google.com/maps/search/?api=1&query=Detroit+Flats+Day+Use+Detroit+Lake+Oregon",
-    image: "https://images.unsplash.com/photo-1439066615861-d1af74d74000?auto=format&fit=crop&w=600&q=80"
-  },
-  {
-    id: "detroit-sra",
-    name: "Detroit Lake State Recreation Area",
-    region: "detroit",
-    tags: ["detroit", "outdoors", "swim"],
-    town: "Detroit Lake",
-    vibe: "Camp & recreate",
-    note: "The main hub for camping near the water — reserve ahead in summer; shoulder seasons feel completely different.",
-    map: "https://www.google.com/maps/search/?api=1&query=Detroit+Lake+State+Recreation+Area",
-    image: "https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?auto=format&fit=crop&w=600&q=80"
-  },
-  {
-    id: "cove-creek",
-    name: "Cove Creek Campground",
-    region: "detroit",
-    tags: ["detroit", "outdoors"],
-    town: "Detroit Lake",
-    vibe: "Forest camp",
-    note: "A reliable base for lake mornings and cooler overnight temps under the trees.",
-    map: "https://www.google.com/maps/search/?api=1&query=Cove+Creek+Campground+Detroit+Lake+OR",
-    image: "https://images.unsplash.com/photo-1504851149312-7a075b496cc7?auto=format&fit=crop&w=600&q=80"
-  },
-  {
-    id: "hoover",
-    name: "Hoover Campground",
-    region: "detroit",
-    tags: ["detroit", "outdoors"],
-    town: "Detroit Lake",
-    vibe: "Lakeside camp",
-    note: "Good pick when you want to wake up close to the water and skip a long morning shuffle.",
-    map: "https://www.google.com/maps/search/?api=1&query=Hoover+Campground+Detroit+Lake+OR",
-    image: "https://images.unsplash.com/photo-1537905569824-f89f14cceb68?auto=format&fit=crop&w=600&q=80"
-  },
-  {
-    id: "packsaddle",
-    name: "Packsaddle Park",
-    region: "detroit",
-    tags: ["detroit", "outdoors", "swim", "free"],
-    town: "Detroit Lake",
-    vibe: "Boat & day use",
-    note: "Useful launch / hang spot on the lake circuit — check seasonal access and water levels.",
-    map: "https://www.google.com/maps/search/?api=1&query=Packsaddle+Park+Detroit+Lake+OR",
-    image: "https://images.unsplash.com/photo-1473496169904-658ba7c44d8a?auto=format&fit=crop&w=600&q=80"
-  },
-  {
-    id: "stahlman",
-    name: "Stahlman Point Trail",
-    region: "detroit",
-    tags: ["detroit", "outdoors", "free"],
-    town: "Near Detroit",
-    vibe: "Viewpoint hike",
-    note: "Short effort, big payoff — lake and Cascade views when you want a hike without a full wilderness day.",
-    map: "https://www.google.com/maps/search/?api=1&query=Stahlman+Point+Trail+Oregon",
-    image: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=600&q=80"
-  },
-  {
-    id: "detroit-town",
-    name: "Detroit town & marina stops",
-    region: "detroit",
-    tags: ["detroit", "food", "swim"],
-    town: "Detroit",
-    vibe: "Supplies & food",
-    note: "Grab snacks, browse the marina energy, and reset before another swim or the drive home.",
-    map: "https://www.google.com/maps/search/?api=1&query=Detroit+Oregon+marina",
-    image: "https://images.unsplash.com/photo-1527004013197-933c4bb611b3?auto=format&fit=crop&w=600&q=80"
-  },
-  {
-    id: "hwy22-corridor",
-    name: "Highway 22 canyon pullouts",
-    region: "detroit",
-    tags: ["detroit", "outdoors", "free"],
-    town: "Hwy 22",
-    vibe: "Scenic drive",
-    note: "The corridor itself is part of the experience — misty mornings, river bends, and spontaneous photo stops.",
-    map: "https://www.google.com/maps/search/?api=1&query=Highway+22+Detroit+Lake+Oregon",
-    image: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=600&q=80"
+(function () {
+  document.getElementById("year").textContent = String(new Date().getFullYear());
+
+  // Scroll reveals
+  const reveals = document.querySelectorAll(".reveal");
+  if ("IntersectionObserver" in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("in");
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: "0px 0px -8% 0px" });
+    reveals.forEach((el) => io.observe(el));
+  } else {
+    reveals.forEach((el) => el.classList.add("in"));
   }
-];
 
-const listEl = document.getElementById("place-list");
-const countEl = document.getElementById("place-count");
-const filterBtns = [...document.querySelectorAll(".filter-btn")];
-let activeFilter = "all";
-
-function renderPlaces() {
-  const filtered = places.filter((p) =>
-    activeFilter === "all" ? true : p.tags.includes(activeFilter)
-  );
-
-  countEl.textContent = `${filtered.length} place${filtered.length === 1 ? "" : "s"}`;
-
-  listEl.innerHTML = filtered.map((p, i) => {
-    const href = p.url || p.map || "#";
-    const label = p.cta || "Open map";
-    const external = href.startsWith("http");
-    const rel = external ? ' target="_blank" rel="noopener noreferrer"' : "";
-    return `
-    <article class="place" style="transition-delay:${Math.min(i, 8) * 40}ms" data-id="${p.id}">
-      <div class="place-thumb" style="background-image:url('${p.image}')" role="img" aria-label=""></div>
-      <div class="place-body">
-        <h3>${p.name}</h3>
-        <div class="place-meta">
-          <span><b>${p.town}</b></span>
-          <span>${p.vibe}</span>
-        </div>
-        <p>${p.note}</p>
-      </div>
-      <a class="place-map" href="${href}"${rel}>${label}</a>
-    </article>
-  `;
-  }).join("");
-
-  requestAnimationFrame(() => {
-    listEl.querySelectorAll(".place").forEach((el) => el.classList.add("is-visible"));
+  // Package preselect → book form
+  const packageSelect = document.getElementById("package");
+  document.querySelectorAll("[data-package]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const value = btn.getAttribute("data-package");
+      if (packageSelect && value) {
+        packageSelect.value = value;
+        packageSelect.dispatchEvent(new Event("change", { bubbles: true }));
+      }
+      const book = document.getElementById("book");
+      if (book) book.scrollIntoView({ behavior: "smooth", block: "start" });
+      window.setTimeout(() => {
+        const name = document.getElementById("name");
+        if (name) name.focus({ preventScroll: true });
+      }, 450);
+    });
   });
-}
 
-filterBtns.forEach((btn) => {
-  btn.addEventListener("click", () => {
-    activeFilter = btn.dataset.filter;
-    filterBtns.forEach((b) => b.classList.toggle("active", b === btn));
-    renderPlaces();
+  // Form validation + Formspree / mailto fallback
+  const form = document.getElementById("quote-form");
+  if (!form) return;
+
+  const requiredFields = ["name", "email", "phone", "date", "location", "package"];
+
+  function validateField(id) {
+    const el = document.getElementById(id);
+    const wrap = el && el.closest(".field");
+    if (!el || !wrap) return true;
+    let ok = el.checkValidity();
+    if (id === "email") {
+      ok = ok && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(el.value.trim());
+    }
+    wrap.classList.toggle("invalid", !ok);
+    return ok;
+  }
+
+  requiredFields.forEach((id) => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.addEventListener("blur", () => validateField(id));
+    el.addEventListener("input", () => {
+      const wrap = el.closest(".field");
+      if (wrap && wrap.classList.contains("invalid")) validateField(id);
+    });
   });
-});
 
-document.querySelectorAll("[data-jump-filter]").forEach((el) => {
-  el.addEventListener("click", () => {
-    const filter = el.dataset.jumpFilter;
-    activeFilter = filter;
-    filterBtns.forEach((b) => b.classList.toggle("active", b.dataset.filter === filter));
-    renderPlaces();
-  });
-});
+  form.addEventListener("submit", (event) => {
+    let valid = true;
+    requiredFields.forEach((id) => {
+      if (!validateField(id)) valid = false;
+    });
+    if (!valid) {
+      event.preventDefault();
+      const firstBad = form.querySelector(".field.invalid input, .field.invalid select");
+      if (firstBad) firstBad.focus();
+      return;
+    }
 
-renderPlaces();
-
-/* Nav scroll state */
-const nav = document.getElementById("nav");
-const onScroll = () => nav.classList.toggle("scrolled", window.scrollY > 24);
-onScroll();
-window.addEventListener("scroll", onScroll, { passive: true });
-
-/* Reveal on scroll */
-const io = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("in");
-      io.unobserve(entry.target);
+    const action = form.getAttribute("action") || "";
+    if (action.includes("YOUR_FORM_ID")) {
+      event.preventDefault();
+      const data = new FormData(form);
+      const body = [
+        "Cascadia Cinema Co. quote request",
+        "",
+        "Name: " + (data.get("name") || ""),
+        "Email: " + (data.get("email") || ""),
+        "Phone: " + (data.get("phone") || ""),
+        "Date: " + (data.get("date") || ""),
+        "Location: " + (data.get("location") || ""),
+        "Package: " + (data.get("package") || ""),
+        "Movie: " + (data.get("movie") || "(not specified)"),
+        "",
+        "Notes:",
+        data.get("message") || "(none)"
+      ].join("\n");
+      const mailto = "mailto:hello@cascadiacinema.example?subject=" +
+        encodeURIComponent("Cascadia Cinema Co. quote request") +
+        "&body=" + encodeURIComponent(body);
+      window.location.href = mailto;
+      form.classList.add("sent");
     }
   });
-}, { threshold: 0.14, rootMargin: "0px 0px -8% 0px" });
-
-document.querySelectorAll(".reveal").forEach((el, i) => {
-  el.style.transitionDelay = `${(i % 4) * 60}ms`;
-  io.observe(el);
-});
+})();
 </script>
 </body>
 </html>
