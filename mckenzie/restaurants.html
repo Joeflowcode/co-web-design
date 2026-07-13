@@ -5,10 +5,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Restaurants on the McKenzie River, Oregon | McKenzie Nearby</title>
 <meta name="description" content="Where to eat on the McKenzie River corridor: Takoda’s in Rainbow, Obsidian Grill at McKenzie Bridge, markets, and timing tips for Highway 126 weekends.">
-<link rel="canonical" href="https://joeflowcode.github.io/co-web-design/mckenzie/restaurants.html">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://mckenzienearby.com/restaurants.html">
 <meta property="og:title" content="Restaurants on the McKenzie River">
 <meta property="og:description" content="Corridor food stops travelers actually use between Eugene and the upper McKenzie.">
 <meta property="og:type" content="article">
+<meta property="og:url" content="https://mckenzienearby.com/restaurants.html">
+<meta property="og:image" content="https://mckenzienearby.com/images/mckenzie-river-hero.jpg">
+<meta property="og:image:alt" content="Fall color along the McKenzie River in Oregon">
+<meta property="og:site_name" content="McKenzie Nearby">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Restaurants on the McKenzie River">
+<meta name="twitter:description" content="Corridor food stops travelers actually use on Highway 126.">
+<meta name="twitter:image" content="https://mckenzienearby.com/images/mckenzie-river-hero.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -16,11 +25,51 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "ItemList",
-  "name": "Restaurants on the McKenzie River",
-  "itemListElement": [
-    {"@type": "ListItem", "position": 1, "item": {"@type": "Restaurant", "name": "Takoda's Restaurant", "address": {"@type": "PostalAddress", "addressLocality": "Rainbow", "addressRegion": "OR"}}},
-    {"@type": "ListItem", "position": 2, "item": {"@type": "Restaurant", "name": "Obsidian Grill", "address": {"@type": "PostalAddress", "addressLocality": "McKenzie Bridge", "addressRegion": "OR"}}}
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "McKenzie Nearby", "item": "https://mckenzienearby.com/"},
+        {"@type": "ListItem", "position": 2, "name": "Restaurants", "item": "https://mckenzienearby.com/restaurants.html"}
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "name": "Restaurants on the McKenzie River",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "Restaurant",
+            "name": "Takoda's Restaurant",
+            "address": {"@type": "PostalAddress", "streetAddress": "57600 McKenzie Hwy", "addressLocality": "Rainbow", "addressRegion": "OR", "postalCode": "97469", "addressCountry": "US"},
+            "telephone": "+1-541-822-3797",
+            "servesCuisine": "American, Pizza"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "Restaurant",
+            "name": "Obsidian Grill",
+            "address": {"@type": "PostalAddress", "streetAddress": "57470 McKenzie Hwy", "addressLocality": "McKenzie Bridge", "addressRegion": "OR", "postalCode": "97413", "addressCountry": "US"},
+            "telephone": "+1-541-822-3330",
+            "servesCuisine": "American"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "Article",
+      "headline": "Restaurants on the McKenzie River, Oregon",
+      "datePublished": "2026-07-12",
+      "dateModified": "2026-07-13",
+      "author": {"@type": "Organization", "name": "McKenzie Nearby", "url": "https://mckenzienearby.com/"},
+      "publisher": {"@type": "Organization", "name": "McKenzie Nearby", "url": "https://mckenzienearby.com/"},
+      "mainEntityOfPage": "https://mckenzienearby.com/restaurants.html"
+    }
   ]
 }
 </script>
@@ -32,7 +81,7 @@
   <nav class="nav-links" aria-label="Primary">
     <a href="things-to-do.html">Things to do</a>
     <a href="where-to-stay.html">Where to stay</a>
-    <a href="index.html#directory">Directory</a>
+    <a href="blog/">Blog</a>
     <a class="nav-cta" href="blog/mckenzie-river-weekend-itinerary.html">Weekend plan</a>
   </nav>
 </header>
@@ -44,6 +93,7 @@
       </nav>
       <h1>Restaurants on the McKenzie River</h1>
       <p class="lead">Corridor kitchens are fewer and more seasonal than Maps makes them look. Plan dinner like part of the itinerary.</p>
+      <p class="updated">Updated <time datetime="2026-07-13">July 13, 2026</time></p>
     </div>
   </header>
   <section class="section">
@@ -51,12 +101,12 @@
       <div class="spot-block">
         <article class="spot">
           <h3>Takoda’s Restaurant</h3>
-          <p class="where">Rainbow, OR</p>
+          <p class="where">Rainbow, OR · (541) 822-3797</p>
           <p>The dependable post-hike stop — pizza, pub fare, and patio time when weather cooperates. Don’t wait until 8pm on a Saturday and hope.</p>
         </article>
         <article class="spot">
           <h3>Obsidian Grill</h3>
-          <p class="where">McKenzie Bridge · McKenzie General Store</p>
+          <p class="where">McKenzie Bridge · McKenzie General Store · (541) 822-3330</p>
           <p>Sit-down meals plus provisions in one place. Useful when your lodging is up-corridor and you need a real dinner without driving forever.</p>
         </article>
         <article class="spot">
@@ -72,7 +122,7 @@
       </div>
       <div class="prose" style="margin-top:2rem">
         <h2>Timing tip</h2>
-        <p>If you’re based mid-corridor around Vida, eat on the way up or on the way down from the falls. That keeps dinner from competing with sunset drives and soak plans. More stay logic in <a href="where-to-stay.html">where to stay</a>.</p>
+        <p>If you’re based mid-corridor around <a href="vida-oregon.html">Vida</a>, eat on the way up or on the way down from the falls. That keeps dinner from competing with sunset drives and soak plans. More stay logic in <a href="where-to-stay.html">where to stay</a>.</p>
       </div>
     </div>
   </section>
@@ -80,7 +130,11 @@
 <footer>
   <div class="wrap footer-row">
     <p class="footer-brand">McKenzie Nearby</p>
-    <p>McKenzie River food stops</p>
+    <p class="footer-links">
+      <a href="things-to-do.html">Things to do</a>
+      <a href="where-to-stay.html">Where to stay</a>
+      <a href="blog/">Blog</a>
+    </p>
   </div>
 </footer>
 </body>
