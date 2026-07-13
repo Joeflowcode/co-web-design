@@ -2,6 +2,9 @@ name: Publish to flip-finder repo
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - flip-finder-main
 
 jobs:
   publish:
