@@ -103,7 +103,7 @@ flip-finder/
 
 6. Tap **Deploy**, then **Redeploy** after adding variables
 
-The app shows a setup guide until all three variables are configured.
+The app shows a setup guide until **APIFY_TOKEN** is configured. eBay keys are optional.
 
 Works on Netlify or any Node.js host too.
 
