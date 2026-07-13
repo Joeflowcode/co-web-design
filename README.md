@@ -1,63 +1,80 @@
-# Santiam Nearby
+# Cascadia Cinema Co.
 
-A curated local guide to **Lyons, Oregon** and **Detroit Lake** — parks, swimming, trails, food stops, weekend plans, and local services along the North Santiam / Highway 22 corridor.
+Professional **outdoor movie night rentals** across **Portland metro** (Hillsboro, Lake Oswego, West Linn, Beaverton, and neighbors) plus **Lyons, Detroit Lake, Salem, Sisters, and Bend**, Oregon.
 
-**Live:** [Your site URL will go here]
+**Live:** https://cascadia-cinema-co.netlify.app
 
-## Local businesses featured
+Admin: https://app.netlify.com/projects/cascadia-cinema-co
 
-| Business | What it is | Link |
+## Packages
+
+| Package | What’s included | Starting at |
 |---|---|---|
-| **Bounce House Rentals** | Inflatable party rentals around Lyons / Santiam Canyon | Listed on site |
-| **Boat Concierge** | Detroit Lake boat delivery & launch help | Listed on site |
-| **Oregon Mobile Tire** | 24/7 mobile tire & roadside assistance | [oregonmobiletire.com](https://oregonmobiletire.com) |
+| **Basic Cinema** | Screen, speakers, projector setup, delivery & pack-up, any movie you choose | $275 |
+| **Cinema + Popcorn** | Basic + popcorn machine & serving supplies | $375 |
+| **Full Night Out** | Cinema + popcorn + bouncy house | $525 |
 
-## What’s included
+À la carte add-ons: popcorn machine (from $95), bouncy house (from $175), and quiet generator when there’s no outlet (from $75).
 
-- **Hero** — Brand-first landing focused on Lyons & Detroit Lake
-- **Local services** — Bounce houses, boat concierge, and Oregon Mobile Tire
-- **Regions** — Quick jump into Lyons-area vs Detroit Lake places
-- **Directory** — Filterable listings (services, region, outdoors, swim/boat, food, free/cheap)
-- **Weekend plans** — Three simple loops: lake day, river towns, canyon drive
-- **Maps / website links** — Places open in Maps; services link to the business
+## What’s on the site
 
-## Focus area
+- **Hero** — Brand-first PNW outdoor cinema landing
+- **Town ticker** — Portland-metro suburbs + Valley & Cascades towns
+- **Packages** — Three clear tiers with quote CTAs that preselect the booking form
+- **How it works** — Book → We deliver & set up → You press play
+- **The night** — Full-bleed atmospheric outdoor cinema visual
+- **Occasions** — Birthday, campground, HOA, wedding welcome, and more
+- **Included / site needs** — Power, space, weather, movie notes
+- **FAQ** — Rain, setup time, licensing, travel, deposit
+- **Booking form** — Quote request with Formspree-ready action + mailto fallback
+- **Sticky mobile CTA** — Always-visible “Book a night” on phones
 
-| Hub | Nearby |
+## Service area
+
+| Region | Towns |
 |---|---|
-| **Lyons** | Stayton, Mill City, Scio / Roaring River |
-| **Detroit Lake** | Mongold, Detroit Flats, campgrounds, Stahlman Point, town/marina |
+| **Portland metro** | Hillsboro, Beaverton, Lake Oswego, West Linn, Tualatin, Sherwood, Wilsonville, Happy Valley, Portland |
+| **Willamette Valley** | Salem, Lyons |
+| **Santiam / lake** | Detroit Lake |
+| **Cascades** | Sisters, Bend |
+
+Outside this list? Ask — travel quotes welcome.
 
 ## Features
 
 - Single `index.html` — no build step or dependencies
-- Responsive layout for phone and desktop
-- Local SEO basics (`WebSite` structured data)
-- Subtle motion: hero drift, scroll reveals, filter transitions
+- Local Pexels photos of outdoor cinemas (see `assets/photos/`)
+- Editorial layout: menu-style packages, town ticker, photo breakouts
+- LocalBusiness structured data + Open Graph meta
+- Conversion UX: package preselect, form validation, sticky mobile CTA
+- Motion: hero drift, town ticker, scroll reveals
 
 ## File structure
 
 ```
-index.html           — Full directory site
-README.md            — This file
-GITHUB_SETUP_GUIDE.md — Deploy to GitHub Pages or Netlify
+index.html              — Marketing + booking site
+assets/photos/          — Outdoor cinema photos from Pexels
+assets/photos/ATTRIBUTION.txt
+README.md
+GITHUB_SETUP_GUIDE.md
 ```
+
+## Before you go live
+
+1. Replace placeholder phone `(503) 555-0192` and email `hello@cascadiacinema.example` with your real contact info.
+2. **Quote form:** Formspree is connected (`xvzeogwp`) — see [FORMSPREE_SETUP.md](FORMSPREE_SETUP.md).
+3. Optionally swap Pexels photos for your own event photography.
+4. Adjust “starting at” prices to match your real rates.
+5. Rename **Cascadia Cinema Co.** if you have a final business name.
 
 ## Deployment
 
 ### GitHub Pages
 1. Push to GitHub
 2. Settings → Pages → Deploy from branch (`main` or this feature branch)
-3. Site live at `https://yourusername.github.io/co-web-design`
+3. Site live at `https://yourusername.github.io/cascadia-cinema-co`
 
 ### Netlify
 1. Connect the GitHub repo
 2. Publish directory: `/` (root)
 3. Add a custom domain when ready
-
-## Next ideas
-
-- Add booking links / phone numbers for bounce houses and boat concierge
-- Add real local photos instead of stock imagery
-- Expand food listings with named cafes/restaurants you trust
-- Add seasonal notes (reservoir levels, snow, peak weekends)
