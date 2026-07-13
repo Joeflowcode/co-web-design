@@ -2,7 +2,9 @@
 
 Professional **outdoor movie night rentals** across **Portland metro** (Hillsboro, Lake Oswego, West Linn, Beaverton, and neighbors) plus **Lyons, Detroit Lake, Salem, Sisters, and Bend**, Oregon.
 
-**Live:** [Your site URL will go here]
+**Live:** https://cascadia-cinema-co.netlify.app
+
+Admin: https://app.netlify.com/projects/cascadia-cinema-co
 
 ## Packages
 
