@@ -1,6 +1,6 @@
 # Cascadia Cinema Co.
 
-Professional **outdoor movie night rentals** across **Lyons, Detroit Lake, Salem, Sisters, and Bend**, Oregon.
+Professional **outdoor movie night rentals** across **Portland metro** (Hillsboro, Lake Oswego, West Linn, Beaverton, and neighbors) plus **Lyons, Detroit Lake, Salem, Sisters, and Bend**, Oregon.
 
 **Live:** [Your site URL will go here]
 
@@ -17,25 +17,26 @@ Professional **outdoor movie night rentals** across **Lyons, Detroit Lake, Salem
 ## What’s on the site
 
 - **Hero** — Brand-first PNW outdoor cinema landing
-- **Trust strip** — Service towns, delivery & setup, you pick the movie
+- **Town ticker** — Portland-metro suburbs + Valley & Cascades towns
 - **Packages** — Three clear tiers with quote CTAs that preselect the booking form
 - **How it works** — Book → We deliver & set up → You press play
-- **The night** — Full-bleed atmospheric PNW visual
+- **The night** — Full-bleed atmospheric outdoor cinema visual
 - **Occasions** — Birthday, campground, HOA, wedding welcome, and more
 - **Included / site needs** — Power, space, weather, movie notes
 - **FAQ** — Rain, setup time, licensing, travel, deposit
 - **Booking form** — Quote request with Formspree-ready action + mailto fallback
-- **Sticky mobile CTA** — Always-visible “Book your night” on phones
+- **Sticky mobile CTA** — Always-visible “Book a night” on phones
 
 ## Service area
 
-| Hub | Corridor |
+| Region | Towns |
 |---|---|
-| **Lyons / Detroit Lake** | Santiam Canyon & reservoir weekends |
-| **Salem** | Willamette Valley backyards & community nights |
-| **Sisters / Bend** | Cascades high-desert evenings |
+| **Portland metro** | Hillsboro, Beaverton, Lake Oswego, West Linn, Tualatin, Sherwood, Wilsonville, Happy Valley, Portland |
+| **Willamette Valley** | Salem, Lyons |
+| **Santiam / lake** | Detroit Lake |
+| **Cascades** | Sisters, Bend |
 
-Outside this corridor? The site invites travel quotes.
+Outside this list? Ask — travel quotes welcome.
 
 ## Features
 
@@ -69,7 +70,7 @@ GITHUB_SETUP_GUIDE.md
 ### GitHub Pages
 1. Push to GitHub
 2. Settings → Pages → Deploy from branch (`main` or this feature branch)
-3. Site live at `https://yourusername.github.io/co-web-design`
+3. Site live at `https://yourusername.github.io/cascadia-cinema-co`
 
 ### Netlify
 1. Connect the GitHub repo
