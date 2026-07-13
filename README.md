@@ -12,7 +12,7 @@ Professional **outdoor movie night rentals** across **Portland metro** (Hillsbor
 | **Cinema + Popcorn** | Basic + popcorn machine & serving supplies | $375 |
 | **Full Night Out** | Cinema + popcorn + bouncy house | $525 |
 
-À la carte add-ons: popcorn machine (from $95) and bouncy house (from $175).
+À la carte add-ons: popcorn machine (from $95), bouncy house (from $175), and quiet generator when there’s no outlet (from $75).
 
 ## What’s on the site
 
