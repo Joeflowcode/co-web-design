@@ -60,7 +60,7 @@ GITHUB_SETUP_GUIDE.md
 ## Before you go live
 
 1. Replace placeholder phone `(503) 555-0192` and email `hello@cascadiacinema.example` with your real contact info.
-2. Connect the quote form: replace `YOUR_FORM_ID` in the form `action` with your [Formspree](https://formspree.io) form ID (or keep the mailto fallback).
+2. **Connect quote form (Formspree):** follow [FORMSPREE_SETUP.md](FORMSPREE_SETUP.md) — paste your form ID into `FORMSPREE_ID` in `index.html`.
 3. Optionally swap Pexels photos for your own event photography.
 4. Adjust “starting at” prices to match your real rates.
 5. Rename **Cascadia Cinema Co.** if you have a final business name.

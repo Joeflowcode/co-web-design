@@ -400,6 +400,9 @@ ul, ol { list-style: none; }
 @media (min-width: 700px) {
   .addons { grid-template-columns: 1fr 1fr; }
 }
+@media (min-width: 980px) {
+  .addons { grid-template-columns: 1fr 1fr 1fr; }
+}
 .addon {
   display: flex;
   justify-content: space-between;
@@ -707,8 +710,33 @@ ul, ol { list-style: none; }
   font-weight: 600;
   color: var(--fir);
 }
+.form-fail {
+  display: none;
+  padding: 0.9rem 1rem;
+  background: rgba(138, 42, 42, 0.08);
+  border-left: 3px solid #8a2a2a;
+  color: #8a2a2a;
+  font-weight: 600;
+}
 .form.sent .form-ok { display: block; }
 .form.sent .fields { display: none; }
+.form.failing .form-fail { display: block; }
+.form .btn[disabled] { opacity: 0.65; cursor: wait; }
+.check {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  padding: 0.35rem 0 0.15rem;
+  color: var(--fir);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+.check input {
+  margin-top: 0.2rem;
+  width: 1.05rem;
+  height: 1.05rem;
+  accent-color: var(--needle);
+}
 
 /* —— Footer —— */
 .foot {
@@ -983,7 +1011,7 @@ ul, ol { list-style: none; }
           <ul>
             <li>Outdoor screen sized for your crowd</li>
             <li>Projector, media playback, amplified speakers</li>
-            <li>Power leads for a clean setup</li>
+            <li>Power leads — and a quiet generator when there’s no outlet</li>
             <li>Popcorn machine and/or bouncy house on upgraded nights</li>
             <li>Delivery, setup, and pack-up</li>
           </ul>
@@ -992,7 +1020,7 @@ ul, ol { list-style: none; }
           <h3>You’ll need</h3>
           <ul>
             <li>Flat open space for the screen</li>
-            <li>A nearby outdoor outlet</li>
+            <li>An outdoor outlet <em>or</em> tell us to bring the generator</li>
             <li>Your movie (stream, USB, or disc)</li>
             <li>Blankets, chairs, people you like</li>
             <li>A rain plan — we reschedule washouts</li>
@@ -1020,9 +1048,12 @@ ul, ol { list-style: none; }
           <summary>Any movie we want?</summary>
           <p>Yes — streaming account, USB, or disc. For public or ticketed events, ask us about licensing.</p>
         </details>
+          <summary>No outlet at the venue?</summary>
+          <p>No problem — we bring a quiet generator so the show still runs at parks, fields, and campgrounds. Add it on the quote form or mention it when you call.</p>
+        </details>
         <details class="rise">
           <summary>Power requirements?</summary>
-          <p>A standard outdoor outlet covers most yards. Campgrounds and big community nights may need a dedicated circuit — mention your venue on the form.</p>
+          <p>A standard outdoor outlet covers most yards. No outlet? Add our generator. Campgrounds and big community nights — tell us the venue and we’ll size power correctly.</p>
         </details>
         <details class="rise">
           <summary>Outside Portland metro or Lyons–Bend?</summary>
@@ -1050,7 +1081,8 @@ ul, ol { list-style: none; }
       </div>
 
       <form class="form rise" id="quote-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
-        <div class="form-ok" role="status">Thanks — if Formspree isn’t connected yet, your email app will open with the details.</div>
+        <div class="form-ok" role="status">Thanks — we got your request and will reply with a quote, usually the same day.</div>
+        <div class="form-fail" role="alert">Something went wrong sending that. Call or text (503) 555-0192 and we’ll take it from there.</div>
         <div class="fields">
           <div class="row two">
             <div class="field">
@@ -1097,12 +1129,17 @@ ul, ol { list-style: none; }
             <label for="movie">Movie preference</label>
             <input id="movie" name="movie" type="text" placeholder="Optional — title you’d love">
           </div>
+          <label class="check">
+            <input id="generator" name="generator" type="checkbox" value="Yes — please bring a generator">
+            <span>No outdoor outlet — please bring a quiet generator</span>
+          </label>
           <div class="field">
             <label for="message">Anything else?</label>
-            <textarea id="message" name="message" placeholder="Guest count, add-ons, power notes…"></textarea>
+            <textarea id="message" name="message" placeholder="Guest count, add-ons, venue notes…"></textarea>
           </div>
           <input type="hidden" name="_subject" value="Cascadia Cinema Co. quote request">
-          <button type="submit" class="btn btn-solid btn-wide">Send quote request</button>
+          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;height:0;width:0;opacity:0">
+          <button type="submit" class="btn btn-solid btn-wide" id="quote-submit">Send quote request</button>
         </div>
       </form>
     </div>
@@ -1148,6 +1185,13 @@ ul, ol { list-style: none; }
 
 <script>
 (function () {
+  // ── Formspree setup ──────────────────────────────────────────────
+  // 1. Create a free form at https://formspree.io/register
+  // 2. New Form → copy the form ID (looks like "xyzabcde")
+  // 3. Paste it below. Submissions email you + show in the Formspree inbox.
+  var FORMSPREE_ID = "YOUR_FORM_ID";
+  // ────────────────────────────────────────────────────────────────
+
   document.getElementById("year").textContent = String(new Date().getFullYear());
 
   var rises = document.querySelectorAll(".rise");
@@ -1184,7 +1228,12 @@ ul, ol { list-style: none; }
 
   var form = document.getElementById("quote-form");
   if (!form) return;
+
+  var endpoint = "https://formspree.io/f/" + FORMSPREE_ID;
+  form.setAttribute("action", endpoint);
+
   var required = ["name", "email", "phone", "date", "location", "package"];
+  var submitBtn = document.getElementById("quote-submit");
 
   function validate(id) {
     var el = document.getElementById(id);
@@ -1206,17 +1255,19 @@ ul, ol { list-style: none; }
   });
 
   form.addEventListener("submit", function (event) {
+    event.preventDefault();
+    form.classList.remove("failing");
+
     var valid = true;
     required.forEach(function (id) { if (!validate(id)) valid = false; });
     if (!valid) {
-      event.preventDefault();
       var bad = form.querySelector(".field.bad input, .field.bad select");
       if (bad) bad.focus();
       return;
     }
-    var action = form.getAttribute("action") || "";
-    if (action.indexOf("YOUR_FORM_ID") !== -1) {
-      event.preventDefault();
+
+    // Not configured yet → open email client so leads aren't lost
+    if (!FORMSPREE_ID || FORMSPREE_ID === "YOUR_FORM_ID") {
       var data = new FormData(form);
       var body = [
         "Cascadia Cinema Co. quote request", "",
@@ -1226,14 +1277,47 @@ ul, ol { list-style: none; }
         "Date: " + (data.get("date") || ""),
         "Location: " + (data.get("location") || ""),
         "Package: " + (data.get("package") || ""),
-        "Movie: " + (data.get("movie") || "(not specified)"), "",
-        "Notes:", data.get("message") || "(none)"
+        "Movie: " + (data.get("movie") || "(not specified)"),
+        "Generator: " + (data.get("generator") || "No"),
+        "",
+        "Notes:",
+        data.get("message") || "(none)"
       ].join("\n");
       window.location.href = "mailto:hello@cascadiacinema.example?subject=" +
         encodeURIComponent("Cascadia Cinema Co. quote request") +
         "&body=" + encodeURIComponent(body);
       form.classList.add("sent");
+      return;
     }
+
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.textContent = "Sending…";
+    }
+
+    fetch(endpoint, {
+      method: "POST",
+      body: new FormData(form),
+      headers: { Accept: "application/json" }
+    }).then(function (response) {
+      if (response.ok) {
+        form.classList.add("sent");
+        form.reset();
+        return;
+      }
+      return response.json().then(function (payload) {
+        throw new Error((payload && payload.error) || "Submit failed");
+      }).catch(function () {
+        throw new Error("Submit failed");
+      });
+    }).catch(function () {
+      form.classList.add("failing");
+    }).finally(function () {
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.textContent = "Send quote request";
+      }
+    });
   });
 })();
 </script>
