@@ -3,21 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Cascadia Cinema Co. — outdoor movie night rentals across Lyons, Detroit Lake, Salem, Sisters, and Bend. Screen, speakers, popcorn, and bouncy house packages. You pick the movie.">
+<meta name="description" content="Cascadia Cinema Co. brings outdoor movie nights to Lyons, Detroit Lake, Salem, Sisters, and Bend. Screen, speakers, popcorn, bouncy house — you pick the film.">
 <meta name="robots" content="index, follow, max-image-preview:large">
-<meta name="theme-color" content="#0f241c">
-<meta property="og:title" content="Cascadia Cinema Co. | Outdoor Movie Night Rentals">
-<meta property="og:description" content="Professional outdoor cinema delivered to your yard, campground, or community night — Lyons to Bend. Screen, sound, popcorn, and full-night packages.">
+<meta name="theme-color" content="#101814">
+<meta property="og:title" content="Cascadia Cinema Co. | Outdoor Movie Nights, Oregon">
+<meta property="og:description" content="We deliver the screen and the sound. You pick the movie. Serving Lyons through Bend.">
 <meta property="og:type" content="website">
-<meta property="og:locale" content="en_US">
+<meta property="og:image" content="assets/photos/hero-outdoor-cinema.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Cascadia Cinema Co. | Outdoor Movie Night Rentals">
-<meta name="twitter:description" content="Outdoor movie nights across Lyons, Detroit Lake, Salem, Sisters, and Bend. You pick the movie — we bring the cinema.">
-<title>Cascadia Cinema Co. | Outdoor Movie Night Rentals — Lyons to Bend</title>
+<title>Cascadia Cinema Co. — Outdoor Movie Nights from Lyons to Bend</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,700;9..144,800&display=swap" rel="stylesheet">
 
 <script type="application/ld+json">
 {
@@ -28,1149 +26,1081 @@
   "url": "https://cascadiacinema.example",
   "telephone": "+1-503-555-0192",
   "email": "hello@cascadiacinema.example",
+  "image": "assets/photos/hero-outdoor-cinema.jpg",
   "areaServed": [
-    {"@type": "City", "name": "Lyons", "containedInPlace": {"@type": "State", "name": "Oregon"}},
-    {"@type": "City", "name": "Detroit", "containedInPlace": {"@type": "State", "name": "Oregon"}},
-    {"@type": "City", "name": "Salem", "containedInPlace": {"@type": "State", "name": "Oregon"}},
-    {"@type": "City", "name": "Sisters", "containedInPlace": {"@type": "State", "name": "Oregon"}},
-    {"@type": "City", "name": "Bend", "containedInPlace": {"@type": "State", "name": "Oregon"}}
+    {"@type": "City", "name": "Lyons"},
+    {"@type": "City", "name": "Detroit"},
+    {"@type": "City", "name": "Salem"},
+    {"@type": "City", "name": "Sisters"},
+    {"@type": "City", "name": "Bend"}
   ],
-  "priceRange": "$$",
-  "openingHoursSpecification": {
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
-    "opens": "09:00",
-    "closes": "20:00"
-  }
+  "priceRange": "$$"
 }
 </script>
 
 <style>
 :root {
-  --fir: #163528;
-  --fir-deep: #0f241c;
-  --moss: #2f5c45;
-  --lake: #2a6f84;
-  --lake-bright: #3d8fa6;
-  --mist: #eef3f2;
-  --fog: #d7e3df;
-  --foam: #f7faf9;
-  --cedar: #9a6b3f;
-  --amber: #c4893a;
-  --ink: #15231d;
-  --muted: #5a6d64;
-  --line: rgba(22, 53, 40, 0.12);
-  --ff-display: "Bricolage Grotesque", system-ui, sans-serif;
-  --ff-body: "Source Sans 3", system-ui, sans-serif;
-  --ease: cubic-bezier(.22, 1, .36, 1);
-  --mw: 1120px;
+  --night: #0d1612;
+  --fir: #152820;
+  --pine: #1f3a2e;
+  --needle: #3a6b58;
+  --bone: #eef3f1;
+  --paper: #e4ece8;
+  --fog: #b7c7c0;
+  --filament: #7eb8a8;
+  --ember: #4f8f7a;
+  --ink: #101a16;
+  --mute: #51645b;
+  --hair: rgba(16, 26, 22, 0.13);
+  --display: "Fraunces", Georgia, serif;
+  --sans: "Archivo", "Avenir Next", system-ui, sans-serif;
+  --ease: cubic-bezier(.2, .8, .2, 1);
+  --mw: 1180px;
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 body {
-  font-family: var(--ff-body);
+  font-family: var(--sans);
   color: var(--ink);
-  background: var(--foam);
+  background: var(--bone);
   line-height: 1.55;
   overflow-x: clip;
+  font-size: 1.02rem;
 }
-img { display: block; max-width: 100%; }
+img { display: block; max-width: 100%; height: auto; }
 a { color: inherit; text-decoration: none; }
 button, input, select, textarea { font: inherit; color: inherit; }
 button { background: none; border: none; cursor: pointer; }
-ul { list-style: none; }
-:focus-visible { outline: 2px solid var(--lake); outline-offset: 3px; }
-::selection { background: var(--lake); color: #fff; }
+ul, ol { list-style: none; }
+:focus-visible { outline: 2px solid var(--filament); outline-offset: 3px; }
+::selection { background: var(--fir); color: var(--bone); }
 
 .wrap {
-  width: min(100% - 2.5rem, var(--mw));
+  width: min(100% - 2rem, var(--mw));
   margin-inline: auto;
 }
 
-.grain {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 200;
-  opacity: 0.035;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-}
-
-/* Header */
-.site-header {
+/* —— Header —— */
+.top {
   position: absolute;
   inset-inline: 0;
   top: 0;
-  z-index: 40;
-  padding: 1.25rem 0;
+  z-index: 30;
+  padding: 1.1rem 0;
+  mix-blend-mode: normal;
 }
-.site-header .wrap {
+.top .wrap {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
 }
-.logo {
-  font-family: var(--ff-display);
+.mark {
+  font-family: var(--display);
   font-weight: 800;
-  font-size: 1.05rem;
-  letter-spacing: -0.02em;
-  color: #f3f7f5;
+  font-size: 1.15rem;
+  letter-spacing: -0.03em;
+  color: var(--bone);
 }
-.logo span { color: var(--amber); }
+.mark i { font-style: normal; color: var(--filament); }
 .nav {
   display: none;
-  align-items: center;
-  gap: 1.5rem;
+  gap: 1.6rem;
 }
 .nav a {
-  color: rgba(243, 247, 245, 0.82);
-  font-size: 0.95rem;
+  color: rgba(238, 243, 241, 0.78);
+  font-size: 0.92rem;
   font-weight: 500;
-  transition: color 0.2s var(--ease);
+  letter-spacing: 0.01em;
 }
-.nav a:hover { color: #fff; }
+.nav a:hover { color: var(--bone); }
+.top-cta {
+  display: none;
+  color: var(--night);
+  background: var(--filament);
+  padding: 0.65rem 1rem;
+  font-weight: 700;
+  font-size: 0.88rem;
+  letter-spacing: 0.02em;
+}
+.top-cta:hover { background: #95c9bb; }
+@media (min-width: 860px) {
+  .nav { display: flex; }
+  .top-cta { display: inline-flex; }
+}
+
+/* —— Hero —— */
+.hero {
+  position: relative;
+  min-height: 100svh;
+  color: var(--bone);
+  display: grid;
+  align-items: end;
+  isolation: isolate;
+}
+.hero-photo {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+}
+.hero-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 65% center;
+  transform: scale(1.08);
+  animation: drift 32s var(--ease) infinite alternate;
+}
+.hero-photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(16, 24, 20, 0.82) 0%, rgba(16, 24, 20, 0.35) 48%, rgba(16, 24, 20, 0.55) 100%),
+    linear-gradient(180deg, rgba(16, 24, 20, 0.35) 0%, transparent 28%, rgba(16, 24, 20, 0.88) 100%);
+}
+@keyframes drift {
+  from { transform: scale(1.08) translate(0, 0); }
+  to { transform: scale(1.14) translate(-2%, -1%); }
+}
+.hero-inner {
+  padding: 6.5rem 0 3.5rem;
+  width: min(100% - 2rem, var(--mw));
+  margin-inline: auto;
+}
+.hero-brand {
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: clamp(3.4rem, 11vw, 7.2rem);
+  line-height: 0.88;
+  letter-spacing: -0.045em;
+  max-width: 10ch;
+  margin-bottom: 1.4rem;
+}
+.hero-brand span {
+  display: block;
+  color: var(--filament);
+}
+.hero h1 {
+  font-family: var(--sans);
+  font-weight: 500;
+  font-size: clamp(1.05rem, 2.2vw, 1.28rem);
+  line-height: 1.45;
+  max-width: 28ch;
+  color: rgba(242, 239, 230, 0.92);
+  margin-bottom: 1.6rem;
+}
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  align-items: center;
+}
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.45rem;
-  padding: 0.85rem 1.35rem;
-  border-radius: 0.4rem;
-  font-weight: 600;
-  font-size: 0.98rem;
-  transition: transform 0.25s var(--ease), background 0.25s var(--ease), color 0.25s var(--ease), box-shadow 0.25s var(--ease);
-}
-.btn:hover { transform: translateY(-2px); }
-.btn-amber {
-  background: var(--amber);
-  color: var(--fir-deep);
-}
-.btn-amber:hover { background: #d49a48; }
-.btn-ghost {
-  background: transparent;
-  color: #f3f7f5;
-  border: 1px solid rgba(243, 247, 245, 0.35);
-}
-.btn-ghost:hover { background: rgba(243, 247, 245, 0.08); border-color: rgba(243, 247, 245, 0.55); }
-.btn-fir {
-  background: var(--fir);
-  color: #f3f7f5;
-}
-.btn-fir:hover { background: var(--moss); }
-.btn-outline {
-  background: transparent;
-  color: var(--fir);
-  border: 1px solid var(--line);
-}
-.btn-outline:hover { border-color: var(--moss); background: rgba(47, 92, 69, 0.06); }
-.header-cta { display: none; }
-
-@media (min-width: 800px) {
-  .nav { display: flex; }
-  .header-cta { display: inline-flex; }
-}
-
-/* Hero */
-.hero {
-  position: relative;
-  min-height: 100svh;
-  display: grid;
-  align-items: end;
-  color: #f3f7f5;
-  overflow: hidden;
-}
-.hero-media {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-}
-.hero-media::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  background:
-    linear-gradient(180deg, rgba(15, 36, 28, 0.45) 0%, rgba(15, 36, 28, 0.25) 35%, rgba(15, 36, 28, 0.78) 100%),
-    linear-gradient(90deg, rgba(15, 36, 28, 0.55) 0%, transparent 55%);
-}
-.hero-media img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transform: scale(1.06);
-  animation: heroDrift 28s var(--ease) infinite alternate;
-}
-@keyframes heroDrift {
-  from { transform: scale(1.06) translate3d(0, 0, 0); }
-  to { transform: scale(1.12) translate3d(-1.5%, -1%, 0); }
-}
-.hero-content {
-  position: relative;
-  z-index: 2;
-  padding: 7.5rem 0 5.5rem;
-  max-width: 38rem;
-}
-.brand-mark {
-  font-family: var(--ff-display);
-  font-weight: 800;
-  font-size: clamp(2.6rem, 7vw, 4.4rem);
-  line-height: 0.95;
-  letter-spacing: -0.035em;
-  margin-bottom: 1.1rem;
-}
-.brand-mark em {
-  font-style: normal;
-  color: var(--amber);
-}
-.hero h1 {
-  font-family: var(--ff-display);
+  padding: 0.9rem 1.25rem;
   font-weight: 700;
-  font-size: clamp(1.35rem, 2.8vw, 1.75rem);
-  line-height: 1.25;
-  letter-spacing: -0.02em;
-  margin-bottom: 0.85rem;
-  max-width: 22ch;
+  font-size: 0.95rem;
+  letter-spacing: 0.01em;
+  transition: background 0.25s var(--ease), color 0.25s var(--ease), transform 0.25s var(--ease);
 }
-.hero p {
-  color: rgba(243, 247, 245, 0.88);
-  font-size: 1.08rem;
-  max-width: 36ch;
-  margin-bottom: 1.75rem;
+.btn:hover { transform: translateY(-1px); }
+.btn-solid {
+  background: var(--filament);
+  color: var(--night);
 }
-.hero-ctas {
+.btn-solid:hover { background: #95c9bb; }
+.btn-line {
+  border: 1px solid rgba(238, 243, 241, 0.4);
+  color: var(--bone);
+}
+.btn-line:hover { border-color: var(--bone); }
+.btn-dark {
+  background: var(--night);
+  color: var(--bone);
+}
+.btn-dark:hover { background: var(--pine); }
+.btn-wide { width: 100%; }
+
+/* —— Town ticker —— */
+.ticker {
+  background: var(--night);
+  color: var(--fog);
+  border-top: 1px solid rgba(242, 239, 230, 0.08);
+  overflow: hidden;
+  padding: 0.95rem 0;
+}
+.ticker-track {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
+  gap: 2.5rem;
+  width: max-content;
+  animation: scroll 38s linear infinite;
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 1.05rem;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+}
+.ticker-track span { color: var(--filament); }
+@keyframes scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
 }
 
-/* Trust */
-.trust {
-  background: var(--fir-deep);
-  color: rgba(243, 247, 245, 0.88);
-  padding: 1.35rem 0;
-  border-bottom: 1px solid rgba(243, 247, 245, 0.08);
+/* —— Shared —— */
+.band { padding: clamp(3.25rem, 7vw, 5.25rem) 0; }
+.kicker {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--needle);
+  margin-bottom: 0.6rem;
 }
-.trust-grid {
+.display {
+  font-family: var(--display);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  line-height: 1.05;
+  color: var(--night);
+}
+.lede { color: var(--mute); max-width: 38rem; }
+
+.rise {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.75s var(--ease), transform 0.75s var(--ease);
+}
+.rise.on { opacity: 1; transform: none; }
+
+/* —— Intro split —— */
+.intro {
   display: grid;
-  gap: 1rem;
+  gap: 2rem;
+  align-items: end;
 }
-@media (min-width: 720px) {
-  .trust-grid {
-    grid-template-columns: 1.4fr 1fr 1fr 1fr;
-    align-items: center;
-    gap: 1.5rem;
+@media (min-width: 880px) {
+  .intro {
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 3.5rem;
   }
 }
-.trust-towns {
-  font-family: var(--ff-display);
+.intro h2 {
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+  max-width: 14ch;
+}
+.intro-aside {
+  border-left: 2px solid var(--filament);
+  padding-left: 1.25rem;
+  color: var(--mute);
+}
+.intro-aside strong {
+  display: block;
+  color: var(--night);
+  font-family: var(--display);
+  font-size: 1.35rem;
   font-weight: 700;
-  font-size: 1.05rem;
-  color: #fff;
+  margin-bottom: 0.4rem;
   letter-spacing: -0.02em;
 }
-.trust-towns small {
-  display: block;
-  margin-top: 0.25rem;
-  font-family: var(--ff-body);
-  font-weight: 400;
-  font-size: 0.88rem;
-  color: rgba(243, 247, 245, 0.65);
-}
-.trust-item strong {
-  display: block;
-  color: var(--amber);
-  font-size: 0.82rem;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  margin-bottom: 0.2rem;
-}
-.trust-item span { font-size: 0.95rem; }
 
-/* Sections */
-.section {
-  padding: clamp(3.5rem, 8vw, 5.5rem) 0;
-}
-.section-head {
-  max-width: 38rem;
-  margin-bottom: 2.25rem;
-}
-.eyebrow {
-  display: block;
-  font-size: 0.8rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--cedar);
-  margin-bottom: 0.55rem;
-}
-.section-head h2,
-.night-copy h2,
-.book-copy h2 {
-  font-family: var(--ff-display);
-  font-weight: 800;
-  font-size: clamp(1.85rem, 4vw, 2.55rem);
-  line-height: 1.1;
-  letter-spacing: -0.03em;
-  color: var(--fir-deep);
-  margin-bottom: 0.65rem;
-}
-.section-head p,
-.night-copy p,
-.book-copy p {
-  color: var(--muted);
-  font-size: 1.05rem;
-}
-
-/* Packages */
-.packages {
+/* —— Packages as cinema menu —— */
+.menu-band {
   background:
-    radial-gradient(ellipse 80% 50% at 10% 0%, rgba(42, 111, 132, 0.08), transparent 55%),
-    linear-gradient(180deg, var(--mist), var(--foam));
+    linear-gradient(180deg, var(--paper), var(--bone));
 }
-.package-grid {
+.menu-head {
   display: grid;
-  gap: 1.25rem;
-}
-@media (min-width: 860px) {
-  .package-grid { grid-template-columns: repeat(3, 1fr); }
-}
-.package {
-  background: #fff;
-  border: 1px solid var(--line);
-  border-radius: 0.65rem;
-  padding: 1.6rem 1.45rem 1.45rem;
-  display: flex;
-  flex-direction: column;
   gap: 1rem;
-  transition: transform 0.3s var(--ease), border-color 0.3s var(--ease);
+  margin-bottom: 2rem;
+  max-width: 40rem;
 }
-.package:hover {
-  transform: translateY(-4px);
-  border-color: rgba(47, 92, 69, 0.28);
+.menu-head h2 { font-size: clamp(2rem, 4.5vw, 3rem); }
+
+.menu {
+  border-top: 1px solid var(--hair);
 }
-.package.featured {
-  border-color: rgba(196, 137, 58, 0.45);
-  background:
-    linear-gradient(180deg, rgba(196, 137, 58, 0.08), transparent 40%),
-    #fff;
+.menu-item {
+  display: grid;
+  gap: 1rem;
+  padding: 1.6rem 0;
+  border-bottom: 1px solid var(--hair);
+  align-items: start;
 }
-.package-top h3 {
-  font-family: var(--ff-display);
+@media (min-width: 800px) {
+  .menu-item {
+    grid-template-columns: 1.4fr 0.7fr auto;
+    gap: 2rem;
+    align-items: center;
+  }
+}
+.menu-item.featured {
+  background: linear-gradient(90deg, rgba(126, 184, 168, 0.16), transparent 55%);
+  margin-inline: -1rem;
+  padding-inline: 1rem;
+  border-color: rgba(79, 143, 122, 0.35);
+}
+.menu-item h3 {
+  font-family: var(--display);
+  font-size: clamp(1.45rem, 2.5vw, 1.85rem);
   font-weight: 800;
-  font-size: 1.45rem;
-  letter-spacing: -0.02em;
-  color: var(--fir-deep);
+  letter-spacing: -0.03em;
+  margin-bottom: 0.35rem;
 }
-.package-top p {
-  color: var(--muted);
-  font-size: 0.98rem;
-  margin-top: 0.35rem;
+.menu-item p { color: var(--mute); max-width: 42ch; }
+.menu-list {
+  margin-top: 0.85rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem 0.9rem;
 }
-.price {
-  font-family: var(--ff-display);
+.menu-list li {
+  font-size: 0.9rem;
+  color: var(--pine);
+  font-weight: 600;
+}
+.menu-list li::before {
+  content: "· ";
+  color: var(--ember);
+}
+.menu-price {
+  font-family: var(--display);
   font-weight: 800;
-  font-size: 1.7rem;
+  font-size: 1.85rem;
+  letter-spacing: -0.03em;
   color: var(--fir);
-  letter-spacing: -0.02em;
+  white-space: nowrap;
 }
-.price small {
+.menu-price small {
   display: block;
-  font-family: var(--ff-body);
+  font-family: var(--sans);
+  font-size: 0.78rem;
   font-weight: 500;
-  font-size: 0.85rem;
-  color: var(--muted);
+  color: var(--mute);
   margin-top: 0.15rem;
 }
-.package ul {
-  display: grid;
-  gap: 0.55rem;
-  flex: 1;
-}
-.package li {
-  position: relative;
-  padding-left: 1.2rem;
-  color: var(--ink);
-  font-size: 0.98rem;
-}
-.package li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0.55rem;
-  width: 0.45rem;
-  height: 0.45rem;
-  border-radius: 50%;
-  background: var(--moss);
-}
-.package .btn { width: 100%; margin-top: 0.25rem; }
-
 .addons {
   margin-top: 2rem;
-  padding-top: 1.75rem;
-  border-top: 1px solid var(--line);
-}
-.addons h3 {
-  font-family: var(--ff-display);
-  font-weight: 700;
-  font-size: 1.2rem;
-  margin-bottom: 0.85rem;
-  color: var(--fir-deep);
-}
-.addon-row {
   display: grid;
-  gap: 0.85rem;
+  gap: 0.75rem;
 }
 @media (min-width: 700px) {
-  .addon-row { grid-template-columns: 1fr 1fr; }
+  .addons { grid-template-columns: 1fr 1fr; }
 }
 .addon {
   display: flex;
   justify-content: space-between;
   gap: 1rem;
-  align-items: baseline;
-  padding: 1rem 1.1rem;
-  background: rgba(255, 255, 255, 0.7);
-  border: 1px solid var(--line);
-  border-radius: 0.45rem;
+  padding: 1rem 0;
+  border-bottom: 1px dashed var(--hair);
 }
-.addon strong {
-  display: block;
-  color: var(--fir-deep);
-}
-.addon span { color: var(--muted); font-size: 0.92rem; }
-.addon em {
-  font-style: normal;
-  font-weight: 700;
-  color: var(--cedar);
+.addon strong { display: block; color: var(--night); }
+.addon span { color: var(--mute); font-size: 0.92rem; }
+.addon b {
+  font-family: var(--display);
+  color: var(--needle);
   white-space: nowrap;
 }
 
-/* How it works */
-.steps {
-  display: grid;
-  gap: 1.5rem;
-  counter-reset: step;
-}
-@media (min-width: 800px) {
-  .steps { grid-template-columns: repeat(3, 1fr); gap: 2rem; }
-}
-.step {
+/* —— Photo break —— */
+.breakout {
   position: relative;
-  padding-top: 0.25rem;
-}
-.step::before {
-  counter-increment: step;
-  content: "0" counter(step);
-  display: block;
-  font-family: var(--ff-display);
-  font-weight: 800;
-  font-size: 2rem;
-  color: var(--amber);
-  letter-spacing: -0.03em;
-  margin-bottom: 0.65rem;
-  line-height: 1;
-}
-.step h3 {
-  font-family: var(--ff-display);
-  font-weight: 700;
-  font-size: 1.25rem;
-  margin-bottom: 0.4rem;
-  color: var(--fir-deep);
-}
-.step p { color: var(--muted); }
-
-/* Night atmosphere section */
-.night {
-  position: relative;
-  min-height: clamp(28rem, 62vw, 36rem);
+  min-height: clamp(26rem, 70vw, 38rem);
+  color: var(--bone);
   display: grid;
   align-items: end;
-  color: #f3f7f5;
-  overflow: hidden;
 }
-.night-media {
+.breakout img {
   position: absolute;
   inset: 0;
-}
-.night-media::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(15, 36, 28, 0.2), rgba(15, 36, 28, 0.82));
-}
-.night-media img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center 40%;
 }
-.night-copy {
+.breakout::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 20%, rgba(16, 24, 20, 0.88) 100%);
+}
+.breakout-copy {
   position: relative;
   z-index: 1;
-  padding: 4rem 0;
-  max-width: 32rem;
+  padding: 3.5rem 0;
+  max-width: 28rem;
 }
-.night-copy h2 { color: #fff; }
-.night-copy p { color: rgba(243, 247, 245, 0.88); }
+.breakout-copy .kicker { color: var(--filament); }
+.breakout-copy h2 {
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: clamp(1.9rem, 4vw, 2.8rem);
+  letter-spacing: -0.035em;
+  line-height: 1.08;
+  margin: 0.4rem 0 0.75rem;
+}
+.breakout-copy p { color: rgba(242, 239, 230, 0.86); }
 
-/* Occasions */
-.occasions { background: var(--mist); }
-.occasion-list {
+/* —— How —— */
+.how-grid {
   display: grid;
-  gap: 0.75rem;
+  gap: 0;
+  border-top: 1px solid var(--hair);
 }
-@media (min-width: 700px) {
-  .occasion-list { grid-template-columns: repeat(2, 1fr); }
+@media (min-width: 860px) {
+  .how-grid { grid-template-columns: repeat(3, 1fr); }
 }
-@media (min-width: 980px) {
-  .occasion-list { grid-template-columns: repeat(3, 1fr); }
+.how-step {
+  padding: 1.75rem 0;
+  border-bottom: 1px solid var(--hair);
 }
-.occasion {
-  padding: 1.25rem 1.2rem;
-  border-bottom: 1px solid var(--line);
-  background: transparent;
+@media (min-width: 860px) {
+  .how-step {
+    padding: 2rem 1.5rem 2rem 0;
+    border-bottom: none;
+    border-right: 1px solid var(--hair);
+  }
+  .how-step:last-child { border-right: none; padding-right: 0; }
+  .how-step:not(:first-child) { padding-left: 1.5rem; }
 }
-.occasion h3 {
-  font-family: var(--ff-display);
+.how-step .n {
+  font-family: var(--display);
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 0.85;
+  color: rgba(126, 184, 168, 0.55);
+  letter-spacing: -0.04em;
+  margin-bottom: 0.75rem;
+}
+.how-step h3 {
+  font-family: var(--display);
+  font-size: 1.35rem;
   font-weight: 700;
-  font-size: 1.15rem;
-  color: var(--fir-deep);
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.4rem;
+  letter-spacing: -0.02em;
 }
-.occasion p { color: var(--muted); font-size: 0.98rem; }
+.how-step p { color: var(--mute); }
 
-/* Included */
-.include-grid {
+/* —— Occasions + photo —— */
+.occ-layout {
   display: grid;
   gap: 2rem;
 }
-@media (min-width: 820px) {
-  .include-grid { grid-template-columns: 1fr 1fr; gap: 3rem; }
+@media (min-width: 900px) {
+  .occ-layout {
+    grid-template-columns: 0.95fr 1.05fr;
+    gap: 3rem;
+    align-items: start;
+  }
 }
-.include-block h3 {
-  font-family: var(--ff-display);
-  font-weight: 700;
-  font-size: 1.3rem;
-  color: var(--fir-deep);
-  margin-bottom: 1rem;
-}
-.include-block li {
+.occ-photo {
   position: relative;
-  padding: 0.7rem 0 0.7rem 1.2rem;
-  border-bottom: 1px solid var(--line);
-  color: var(--ink);
-}
-.include-block li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 1.15rem;
-  width: 0.4rem;
-  height: 0.4rem;
-  background: var(--lake);
-  border-radius: 1px;
-}
-.note {
-  margin-top: 1.5rem;
-  padding: 1rem 1.15rem;
-  background: rgba(42, 111, 132, 0.08);
-  border-left: 3px solid var(--lake);
-  color: var(--muted);
-  font-size: 0.98rem;
-}
-
-/* FAQ */
-.faq { background: linear-gradient(180deg, var(--foam), var(--mist)); }
-.faq-list {
-  display: grid;
-  gap: 0.65rem;
-  max-width: 46rem;
-}
-.faq-item {
-  border: 1px solid var(--line);
-  border-radius: 0.45rem;
-  background: #fff;
+  min-height: 22rem;
   overflow: hidden;
 }
-.faq-item summary {
+.occ-photo img {
+  width: 100%;
+  height: 100%;
+  min-height: 28rem;
+  object-fit: cover;
+  filter: saturate(0.92);
+}
+.occ-photo figcaption {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 0.75rem 1rem;
+  background: rgba(16, 24, 20, 0.72);
+  color: rgba(242, 239, 230, 0.8);
+  font-size: 0.78rem;
+}
+.occ-list { border-top: 1px solid var(--hair); }
+.occ-list li {
+  display: grid;
+  gap: 0.25rem;
+  padding: 1.1rem 0;
+  border-bottom: 1px solid var(--hair);
+}
+@media (min-width: 560px) {
+  .occ-list li {
+    grid-template-columns: 11rem 1fr;
+    gap: 1.25rem;
+    align-items: baseline;
+  }
+}
+.occ-list strong {
+  font-family: var(--display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+.occ-list span { color: var(--mute); }
+
+/* —— Details —— */
+.details {
+  background: var(--fir);
+  color: rgba(242, 239, 230, 0.86);
+}
+.details .display { color: var(--bone); }
+.details-grid {
+  display: grid;
+  gap: 2.5rem;
+  margin-top: 2rem;
+}
+@media (min-width: 800px) {
+  .details-grid { grid-template-columns: 1fr 1fr; gap: 3.5rem; }
+}
+.details h3 {
+  font-family: var(--display);
+  font-size: 1.35rem;
+  color: var(--filament);
+  margin-bottom: 0.85rem;
+  letter-spacing: -0.02em;
+}
+.details li {
+  padding: 0.65rem 0;
+  border-bottom: 1px solid rgba(242, 239, 230, 0.12);
+}
+.details .note {
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(212, 163, 92, 0.35);
+  color: rgba(242, 239, 230, 0.7);
+  font-size: 0.95rem;
+}
+
+/* —— FAQ —— */
+.faq-wrap { max-width: 42rem; }
+.faq details {
+  border-bottom: 1px solid var(--hair);
+  padding: 0.15rem 0;
+}
+.faq summary {
   list-style: none;
   cursor: pointer;
-  padding: 1.05rem 1.2rem;
-  font-family: var(--ff-display);
+  padding: 1.1rem 0;
+  font-family: var(--display);
   font-weight: 700;
-  font-size: 1.05rem;
-  color: var(--fir-deep);
+  font-size: 1.15rem;
+  letter-spacing: -0.02em;
   display: flex;
   justify-content: space-between;
   gap: 1rem;
-  align-items: center;
 }
-.faq-item summary::-webkit-details-marker { display: none; }
-.faq-item summary::after {
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after {
   content: "+";
+  color: var(--needle);
+  font-family: var(--sans);
   font-weight: 500;
-  color: var(--cedar);
-  font-size: 1.25rem;
-  line-height: 1;
 }
-.faq-item[open] summary::after { content: "–"; }
-.faq-item p {
-  padding: 0 1.2rem 1.15rem;
-  color: var(--muted);
+.faq details[open] summary::after { content: "–"; }
+.faq details p {
+  padding: 0 0 1.15rem;
+  color: var(--mute);
 }
 
-/* Booking */
+/* —— Book —— */
 .book {
-  background:
-    radial-gradient(ellipse 70% 60% at 90% 10%, rgba(196, 137, 58, 0.12), transparent 50%),
-    var(--fir-deep);
-  color: #f3f7f5;
+  background: var(--night);
+  color: var(--bone);
 }
-.book-layout {
+.book-grid {
   display: grid;
   gap: 2.5rem;
 }
-@media (min-width: 900px) {
-  .book-layout {
-    grid-template-columns: 0.9fr 1.1fr;
+@media (min-width: 920px) {
+  .book-grid {
+    grid-template-columns: 0.85fr 1.15fr;
     gap: 3.5rem;
     align-items: start;
   }
 }
-.book-copy .eyebrow { color: var(--amber); }
-.book-copy h2 { color: #fff; }
-.book-copy p { color: rgba(243, 247, 245, 0.8); margin-bottom: 1.25rem; }
-.contact-lines {
-  display: grid;
-  gap: 0.75rem;
+.book .kicker { color: var(--filament); }
+.book h2 {
+  font-family: var(--display);
+  font-size: clamp(2rem, 4vw, 3rem);
+  letter-spacing: -0.035em;
+  line-height: 1.05;
+  margin: 0.4rem 0 0.9rem;
 }
-.contact-lines a {
-  color: #fff;
-  font-weight: 600;
-  border-bottom: 1px solid rgba(196, 137, 58, 0.5);
+.book .lede { color: rgba(242, 239, 230, 0.72); margin-bottom: 1.4rem; }
+.phones a {
+  display: block;
   width: fit-content;
+  font-weight: 700;
+  border-bottom: 1px solid rgba(126, 184, 168, 0.55);
+  margin-bottom: 0.55rem;
 }
-.contact-lines a:hover { color: var(--amber); }
-.reassure {
-  margin-top: 1.5rem;
-  color: rgba(243, 247, 245, 0.7);
-  font-size: 0.95rem;
+.phones a:hover { color: var(--filament); }
+.reply {
+  margin-top: 1.4rem;
+  color: rgba(242, 239, 230, 0.6);
+  font-size: 0.92rem;
 }
 
 .form {
-  background: rgba(247, 250, 249, 0.97);
+  background: var(--bone);
   color: var(--ink);
-  border-radius: 0.65rem;
-  padding: 1.5rem;
+  padding: 1.35rem;
   display: grid;
-  gap: 1rem;
+  gap: 0.9rem;
+}
+@media (min-width: 560px) { .form { padding: 1.6rem; } }
+.row {
+  display: grid;
+  gap: 0.9rem;
 }
 @media (min-width: 560px) {
-  .form { padding: 1.75rem; }
+  .row.two { grid-template-columns: 1fr 1fr; }
 }
-.form-row {
-  display: grid;
-  gap: 1rem;
-}
-@media (min-width: 560px) {
-  .form-row.two { grid-template-columns: 1fr 1fr; }
-}
-.field { display: grid; gap: 0.4rem; }
+.field { display: grid; gap: 0.35rem; }
 .field label {
-  font-weight: 600;
-  font-size: 0.92rem;
-  color: var(--fir-deep);
+  font-size: 0.86rem;
+  font-weight: 700;
+  color: var(--fir);
 }
 .field input,
 .field select,
 .field textarea {
   width: 100%;
-  padding: 0.8rem 0.9rem;
-  border: 1px solid var(--line);
-  border-radius: 0.35rem;
+  padding: 0.75rem 0.8rem;
+  border: 1px solid var(--hair);
   background: #fff;
-  transition: border-color 0.2s var(--ease);
+  border-radius: 0;
 }
 .field input:focus,
 .field select:focus,
 .field textarea:focus {
   outline: none;
-  border-color: var(--lake);
-  box-shadow: 0 0 0 3px rgba(42, 111, 132, 0.15);
+  border-color: var(--needle);
+  box-shadow: 0 0 0 3px rgba(61, 92, 76, 0.18);
 }
-.field textarea { min-height: 6.5rem; resize: vertical; }
-.field .error {
-  color: #9b2c2c;
-  font-size: 0.85rem;
+.field textarea { min-height: 6rem; resize: vertical; }
+.field .err {
   display: none;
+  color: #8a2a2a;
+  font-size: 0.82rem;
 }
-.field.invalid input,
-.field.invalid select,
-.field.invalid textarea {
-  border-color: #9b2c2c;
-}
-.field.invalid .error { display: block; }
-.form-actions {
-  display: grid;
-  gap: 0.75rem;
-  margin-top: 0.25rem;
-}
-.form-success {
+.field.bad input,
+.field.bad select,
+.field.bad textarea { border-color: #8a2a2a; }
+.field.bad .err { display: block; }
+.form-ok {
   display: none;
-  padding: 1rem 1.1rem;
-  background: rgba(47, 92, 69, 0.1);
-  border: 1px solid rgba(47, 92, 69, 0.25);
-  border-radius: 0.4rem;
-  color: var(--fir);
+  padding: 0.9rem 1rem;
+  background: rgba(36, 61, 50, 0.1);
+  border-left: 3px solid var(--needle);
   font-weight: 600;
+  color: var(--fir);
 }
-.form.sent .form-success { display: block; }
-.form.sent .form-fields { display: none; }
+.form.sent .form-ok { display: block; }
+.form.sent .fields { display: none; }
 
-/* Footer */
-.site-footer {
-  background: #0b1a14;
-  color: rgba(243, 247, 245, 0.72);
-  padding: 2.5rem 0 6.5rem;
+/* —— Footer —— */
+.foot {
+  background: #0a100d;
+  color: rgba(242, 239, 230, 0.65);
+  padding: 2.5rem 0 6.25rem;
 }
-@media (min-width: 800px) {
-  .site-footer { padding-bottom: 2.5rem; }
-}
-.footer-grid {
+@media (min-width: 860px) { .foot { padding-bottom: 2.5rem; } }
+.foot-grid {
   display: grid;
-  gap: 1.5rem;
+  gap: 1.75rem;
 }
-@media (min-width: 720px) {
-  .footer-grid {
-    grid-template-columns: 1.4fr 1fr 1fr;
-    align-items: start;
-  }
+@media (min-width: 760px) {
+  .foot-grid { grid-template-columns: 1.5fr 1fr 1fr; }
 }
-.footer-brand {
-  font-family: var(--ff-display);
+.foot-brand {
+  font-family: var(--display);
   font-weight: 800;
-  font-size: 1.25rem;
-  color: #fff;
-  margin-bottom: 0.5rem;
+  font-size: 1.35rem;
+  color: var(--bone);
+  letter-spacing: -0.03em;
+  margin-bottom: 0.45rem;
 }
-.footer-brand span { color: var(--amber); }
-.footer-grid h4 {
-  color: #fff;
-  font-size: 0.85rem;
+.foot-brand i { font-style: normal; color: var(--filament); }
+.foot h4 {
+  color: var(--bone);
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
   margin-bottom: 0.65rem;
 }
-.footer-grid p, .footer-grid li { font-size: 0.95rem; }
-.footer-grid a:hover { color: var(--amber); }
-.footer-bottom {
+.foot a:hover { color: var(--filament); }
+.foot-bottom {
   margin-top: 2rem;
-  padding-top: 1.25rem;
-  border-top: 1px solid rgba(243, 247, 245, 0.1);
-  font-size: 0.88rem;
+  padding-top: 1.15rem;
+  border-top: 1px solid rgba(242, 239, 230, 0.1);
+  font-size: 0.85rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.5rem;
+  justify-content: space-between;
 }
+.credits a { text-decoration: underline; text-underline-offset: 2px; }
 
-/* Sticky mobile CTA */
-.sticky-cta {
+/* sticky mobile */
+.dock {
   position: fixed;
   inset-inline: 0;
   bottom: 0;
-  z-index: 50;
-  padding: 0.75rem 1rem calc(0.75rem + env(safe-area-inset-bottom));
-  background: linear-gradient(180deg, transparent, rgba(15, 36, 28, 0.92) 30%);
-  display: grid;
+  z-index: 40;
+  padding: 0.7rem 1rem calc(0.7rem + env(safe-area-inset-bottom));
+  background: linear-gradient(180deg, transparent, rgba(16, 24, 20, 0.94) 28%);
 }
-.sticky-cta .btn { width: 100%; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25); }
-@media (min-width: 800px) {
-  .sticky-cta { display: none; }
-}
-
-/* Reveal motion */
-.reveal {
-  opacity: 0;
-  transform: translateY(18px);
-  transition: opacity 0.7s var(--ease), transform 0.7s var(--ease);
-}
-.reveal.in {
-  opacity: 1;
-  transform: none;
-}
+.dock .btn { width: 100%; }
+@media (min-width: 860px) { .dock { display: none; } }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .hero-media img { animation: none; }
-  .reveal { opacity: 1; transform: none; transition: none; }
-  .btn:hover, .package:hover { transform: none; }
+  .hero-photo img, .ticker-track { animation: none; }
+  .rise { opacity: 1; transform: none; transition: none; }
+  .btn:hover { transform: none; }
 }
 </style>
 </head>
 <body>
-<div class="grain" aria-hidden="true"></div>
 
-<header class="site-header">
+<header class="top">
   <div class="wrap">
-    <a class="logo" href="#top">Cascadia Cinema <span>Co.</span></a>
+    <a class="mark" href="#top">Cascadia Cinema <i>Co.</i></a>
     <nav class="nav" aria-label="Primary">
       <a href="#packages">Packages</a>
       <a href="#how">How it works</a>
-      <a href="#area">Service area</a>
+      <a href="#area">Towns</a>
       <a href="#faq">FAQ</a>
     </nav>
-    <a class="btn btn-amber header-cta" href="#book">Book your night</a>
+    <a class="top-cta" href="#book">Book a night</a>
   </div>
 </header>
 
 <main id="top">
-  <section class="hero" aria-label="Cascadia Cinema Co. outdoor movie rentals">
-    <div class="hero-media" aria-hidden="true">
-      <!-- Swap with your own PNW dusk / outdoor cinema photo when ready -->
+  <section class="hero" aria-label="Cascadia Cinema Co.">
+    <div class="hero-photo" aria-hidden="true">
       <img
-        src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=2000&q=80"
+        src="assets/photos/hero-outdoor-cinema.jpg"
         alt=""
-        width="2000"
-        height="1333"
+        width="2400"
+        height="1600"
         fetchpriority="high">
     </div>
-    <div class="wrap hero-content">
-      <p class="brand-mark">Cascadia Cinema <em>Co.</em></p>
-      <h1>Outdoor movie nights, delivered under Oregon skies.</h1>
-      <p>Professional screen and sound for backyard parties, campgrounds, and community nights from Lyons to Bend.</p>
-      <div class="hero-ctas">
-        <a class="btn btn-amber" href="#book">Book your night</a>
-        <a class="btn btn-ghost" href="#packages">See packages</a>
+    <div class="hero-inner">
+      <p class="hero-brand">Cascadia Cinema <span>Co.</span></p>
+      <h1>Outdoor movie nights under Oregon skies — screen, sound, and the film you choose.</h1>
+      <div class="hero-actions">
+        <a class="btn btn-solid" href="#book">Book a night</a>
+        <a class="btn btn-line" href="#packages">See packages</a>
       </div>
     </div>
   </section>
 
-  <section class="trust" id="area" aria-label="Why rent from us">
-    <div class="wrap trust-grid">
-      <div class="trust-towns">
-        Lyons · Detroit Lake · Salem · Sisters · Bend
-        <small>Outside this corridor? Ask us — travel quotes welcome.</small>
+  <div class="ticker" id="area" aria-label="Service area">
+    <div class="ticker-track">
+      <p>Lyons <span>·</span> Detroit Lake <span>·</span> Salem <span>·</span> Sisters <span>·</span> Bend <span>·</span> We deliver &amp; set up <span>·</span> You pick the movie <span>·</span> Outside the corridor? Ask us <span>·</span></p>
+      <p aria-hidden="true">Lyons <span>·</span> Detroit Lake <span>·</span> Salem <span>·</span> Sisters <span>·</span> Bend <span>·</span> We deliver &amp; set up <span>·</span> You pick the movie <span>·</span> Outside the corridor? Ask us <span>·</span></p>
+    </div>
+  </div>
+
+  <section class="band">
+    <div class="wrap intro rise">
+      <div>
+        <p class="kicker">What we do</p>
+        <h2 class="display">A real outdoor cinema — not a sheet on a fence.</h2>
       </div>
-      <div class="trust-item">
-        <strong>We deliver &amp; set up</strong>
-        <span>Arrive, plug in, press play</span>
-      </div>
-      <div class="trust-item">
-        <strong>You pick the movie</strong>
-        <span>Any title you want to watch</span>
-      </div>
-      <div class="trust-item">
-        <strong>Local &amp; professional</strong>
-        <span>Family, HOA &amp; campground nights</span>
-      </div>
+      <aside class="intro-aside">
+        <strong>Family yards. Campgrounds. Block parties.</strong>
+        We haul the screen and speakers, dial in the picture, and leave you to the blankets and the opening credits.
+      </aside>
     </div>
   </section>
 
-  <section class="section packages" id="packages">
+  <section class="band menu-band" id="packages">
     <div class="wrap">
-      <div class="section-head reveal">
-        <span class="eyebrow">Packages</span>
-        <h2>Choose your night.</h2>
-        <p>Every package includes delivery, setup, screen, speakers, and the movie you choose. Prices shown are starting ranges — we’ll confirm your exact quote.</p>
+      <div class="menu-head rise">
+        <p class="kicker">Packages</p>
+        <h2 class="display">Pick a night. We’ll price the rest.</h2>
+        <p class="lede">Starting ranges below. Exact quotes depend on town, guest count, and add-ons.</p>
       </div>
 
-      <div class="package-grid">
-        <article class="package reveal">
-          <div class="package-top">
+      <div class="menu">
+        <article class="menu-item rise">
+          <div>
             <h3>Basic Cinema</h3>
-            <p>Screen, speakers, and your movie — the classic backyard theater.</p>
+            <p>Screen, speakers, projector setup, delivery, and pack-up. You bring the movie title.</p>
+            <ul class="menu-list">
+              <li>Outdoor screen</li>
+              <li>Amplified speakers</li>
+              <li>Playback setup</li>
+              <li>Any film you want</li>
+            </ul>
           </div>
-          <div class="price">From $275<small>starting range · exact quote after details</small></div>
-          <ul>
-            <li>Outdoor movie screen</li>
-            <li>Amplified speakers</li>
-            <li>Projector &amp; playback setup</li>
-            <li>Delivery, setup &amp; pack-up</li>
-            <li>Any movie you want to see</li>
-          </ul>
-          <button type="button" class="btn btn-fir" data-package="basic">Request this package</button>
+          <div class="menu-price">From $275<small>starting range</small></div>
+          <button type="button" class="btn btn-dark" data-package="basic">Request</button>
         </article>
 
-        <article class="package featured reveal">
-          <div class="package-top">
+        <article class="menu-item featured rise">
+          <div>
             <h3>Cinema + Popcorn</h3>
-            <p>The full theater feel — warm popcorn while the credits roll.</p>
+            <p>Everything in Basic, plus a popcorn machine and serving supplies for the crowd.</p>
+            <ul class="menu-list">
+              <li>Full Basic Cinema</li>
+              <li>Popcorn machine</li>
+              <li>Serving supplies</li>
+              <li>Birthday favorite</li>
+            </ul>
           </div>
-          <div class="price">From $375<small>starting range · exact quote after details</small></div>
-          <ul>
-            <li>Everything in Basic Cinema</li>
-            <li>Popcorn machine</li>
-            <li>Serving supplies for your guests</li>
-            <li>Ideal for birthdays &amp; family nights</li>
-          </ul>
-          <button type="button" class="btn btn-amber" data-package="popcorn">Request this package</button>
+          <div class="menu-price">From $375<small>starting range</small></div>
+          <button type="button" class="btn btn-solid" data-package="popcorn">Request</button>
         </article>
 
-        <article class="package reveal">
-          <div class="package-top">
+        <article class="menu-item rise">
+          <div>
             <h3>Full Night Out</h3>
-            <p>Movie, popcorn, and a bouncy house — an all-ages evening.</p>
+            <p>Movie, popcorn, and a bouncy house — pre-show energy for kids, then lights down.</p>
+            <ul class="menu-list">
+              <li>Cinema + Popcorn</li>
+              <li>Bouncy house</li>
+              <li>Dual setup</li>
+              <li>All-ages nights</li>
+            </ul>
           </div>
-          <div class="price">From $525<small>starting range · exact quote after details</small></div>
-          <ul>
-            <li>Everything in Cinema + Popcorn</li>
-            <li>Bouncy house for pre-show fun</li>
-            <li>Great for kids’ parties &amp; block events</li>
-            <li>We handle setup for both attractions</li>
-          </ul>
-          <button type="button" class="btn btn-fir" data-package="full">Request this package</button>
+          <div class="menu-price">From $525<small>starting range</small></div>
+          <button type="button" class="btn btn-dark" data-package="full">Request</button>
         </article>
       </div>
 
-      <div class="addons reveal">
-        <h3>À la carte add-ons</h3>
-        <div class="addon-row">
-          <div class="addon">
-            <div>
-              <strong>Popcorn machine</strong>
-              <span>Add theater snacks to Basic Cinema</span>
-            </div>
-            <em>From $95</em>
+      <div class="addons rise">
+        <div class="addon">
+          <div>
+            <strong>Popcorn machine</strong>
+            <span>Bolt theater snacks onto Basic Cinema</span>
           </div>
-          <div class="addon">
-            <div>
-              <strong>Bouncy house</strong>
-              <span>Pre-show energy for kids and families</span>
-            </div>
-            <em>From $175</em>
+          <b>From $95</b>
+        </div>
+        <div class="addon">
+          <div>
+            <strong>Bouncy house</strong>
+            <span>Pre-show play before the feature</span>
           </div>
+          <b>From $175</b>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section" id="how">
+  <section class="breakout" aria-label="Backyard cinema under the firs">
+    <img
+      src="assets/photos/intimate-backyard.jpg"
+      alt="Couple watching an outdoor movie on a screen hung between pine trees under string lights"
+      width="2400"
+      height="1600"
+      loading="lazy">
+    <div class="wrap breakout-copy rise">
+      <p class="kicker">The night</p>
+      <h2>String lights. Pine needles. Opening credits.</h2>
+      <p>From Detroit Lake weekends to Bend backyards — we build a cinema that feels like it belongs outside.</p>
+    </div>
+  </section>
+
+  <section class="band" id="how">
     <div class="wrap">
-      <div class="section-head reveal">
-        <span class="eyebrow">How it works</span>
-        <h2>Booked in three easy steps.</h2>
-        <p>No complicated gear lists. We bring the cinema — you bring the blankets.</p>
-      </div>
-      <ol class="steps">
-        <li class="step reveal">
-          <h3>Book</h3>
-          <p>Tell us your date, town, package, and movie. We reply same day with availability and a clear quote.</p>
+      <p class="kicker rise">How it works</p>
+      <h2 class="display rise" style="font-size: clamp(2rem, 4vw, 2.8rem); margin-bottom: 1.5rem; max-width: 16ch;">Three steps. Then the projector warms up.</h2>
+      <ol class="how-grid">
+        <li class="how-step rise">
+          <div class="n">01</div>
+          <h3>Tell us the night</h3>
+          <p>Date, town, package, movie. We reply same day with availability and a clear quote.</p>
         </li>
-        <li class="step reveal">
-          <h3>We deliver &amp; set up</h3>
-          <p>We arrive early, place the screen, dial in the sound, and run a quick test so showtime feels effortless.</p>
+        <li class="how-step rise">
+          <div class="n">02</div>
+          <h3>We set the stage</h3>
+          <p>Screen up, speakers balanced, a quick test run — before your guests arrive.</p>
         </li>
-        <li class="step reveal">
-          <h3>You press play</h3>
-          <p>Guests settle in under the firs. When the night ends, we pack everything up — you enjoy the memories.</p>
+        <li class="how-step rise">
+          <div class="n">03</div>
+          <h3>You hit play</h3>
+          <p>When the credits roll, we pack it all. You keep the night.</p>
         </li>
       </ol>
     </div>
   </section>
 
-  <section class="night" aria-label="The Cascadia cinema experience">
-    <div class="night-media" aria-hidden="true">
-      <!-- Swap with your own PNW lakeside / forest dusk photo -->
-      <img
-        src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=2000&q=80"
-        alt=""
-        width="2000"
-        height="1333"
-        loading="lazy">
-    </div>
-    <div class="wrap night-copy reveal">
-      <span class="eyebrow" style="color: var(--amber);">The night</span>
-      <h2>Dusk settles. The screen glows. Oregon does the rest.</h2>
-      <p>From Detroit Lake campgrounds to Salem backyards and Bend block parties — we build a cinema that feels like it belongs here.</p>
-    </div>
-  </section>
-
-  <section class="section occasions" id="occasions">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <span class="eyebrow">Occasions</span>
-        <h2>Made for the nights that matter.</h2>
-        <p>Pick the moment — we’ll match the package.</p>
-      </div>
-      <div class="occasion-list">
-        <article class="occasion reveal">
-          <h3>Birthday &amp; backyard</h3>
-          <p>Kids’ favorites or a nostalgic classic — popcorn optional, laughter included.</p>
-        </article>
-        <article class="occasion reveal">
-          <h3>Campground nights</h3>
-          <p>Detroit Lake and canyon weekends with a proper screen under the stars.</p>
-        </article>
-        <article class="occasion reveal">
-          <h3>HOA &amp; community</h3>
-          <p>Neighborhood movie nights that bring the block together.</p>
-        </article>
-        <article class="occasion reveal">
-          <h3>Wedding welcome</h3>
-          <p>A soft outdoor screening the night before — romantic, memorable, easy.</p>
-        </article>
-        <article class="occasion reveal">
-          <h3>School &amp; team</h3>
-          <p>End-of-season celebrations and fundraiser nights with professional sound.</p>
-        </article>
-        <article class="occasion reveal">
-          <h3>Just because</h3>
-          <p>Friday under the firs. You pick the film. We’ll be there at dusk.</p>
-        </article>
+  <section class="band" style="background: var(--paper);">
+    <div class="wrap occ-layout">
+      <figure class="occ-photo rise">
+        <img
+          src="assets/photos/community-screening.jpg"
+          alt="Rows of chairs facing a large outdoor cinema screen surrounded by trees at dusk"
+          width="2400"
+          height="1600"
+          loading="lazy">
+        <figcaption>Community &amp; private screenings · photo via Pexels</figcaption>
+      </figure>
+      <div>
+        <p class="kicker rise">Occasions</p>
+        <h2 class="display rise" style="font-size: clamp(1.9rem, 3.5vw, 2.6rem); margin-bottom: 1.25rem;">Nights we show up for.</h2>
+        <ul class="occ-list">
+          <li class="rise"><strong>Birthday backyard</strong><span>Kids’ picks or a nostalgic classic — popcorn optional.</span></li>
+          <li class="rise"><strong>Campground</strong><span>Detroit Lake and canyon weekends under a real screen.</span></li>
+          <li class="rise"><strong>HOA / block</strong><span>Neighborhood nights that fill every folding chair.</span></li>
+          <li class="rise"><strong>Wedding welcome</strong><span>A soft outdoor screening the night before.</span></li>
+          <li class="rise"><strong>School &amp; team</strong><span>End-of-season nights with sound that carries.</span></li>
+          <li class="rise"><strong>Just because</strong><span>Friday under the firs. You pick the film.</span></li>
+        </ul>
       </div>
     </div>
   </section>
 
-  <section class="section" id="included">
+  <section class="band details" id="included">
     <div class="wrap">
-      <div class="section-head reveal">
-        <span class="eyebrow">Details</span>
-        <h2>What’s included &amp; what you’ll need.</h2>
-        <p>Clear expectations make for an easy, professional night.</p>
-      </div>
-      <div class="include-grid">
-        <div class="include-block reveal">
+      <p class="kicker" style="color: var(--filament);">The fine print you’ll actually want</p>
+      <h2 class="display" style="font-size: clamp(1.9rem, 3.8vw, 2.7rem); max-width: 18ch;">What we haul. What you need.</h2>
+      <div class="details-grid">
+        <div class="rise">
           <h3>We bring</h3>
           <ul>
-            <li>Outdoor screen sized for your guest count</li>
-            <li>Projector, media playback, and amplified speakers</li>
-            <li>Extension power as needed for setup</li>
-            <li>Popcorn machine and/or bouncy house on upgraded packages</li>
-            <li>Delivery, professional setup, and pack-up</li>
+            <li>Outdoor screen sized for your crowd</li>
+            <li>Projector, media playback, amplified speakers</li>
+            <li>Power leads for a clean setup</li>
+            <li>Popcorn machine and/or bouncy house on upgraded nights</li>
+            <li>Delivery, setup, and pack-up</li>
           </ul>
         </div>
-        <div class="include-block reveal">
+        <div class="rise">
           <h3>You’ll need</h3>
           <ul>
-            <li>A relatively flat open space for the screen</li>
-            <li>Standard outdoor power access nearby</li>
-            <li>Your chosen movie title (streaming account or disc)</li>
-            <li>Blankets, chairs, and the guest list</li>
-            <li>A rain plan — we reschedule weather washouts</li>
+            <li>Flat open space for the screen</li>
+            <li>A nearby outdoor outlet</li>
+            <li>Your movie (stream, USB, or disc)</li>
+            <li>Blankets, chairs, people you like</li>
+            <li>A rain plan — we reschedule washouts</li>
           </ul>
-          <p class="note">Movie note: you choose the title; we handle the screen and sound. Please use a properly licensed or personal copy for private events.</p>
+          <p class="note">You choose the title; we handle screen and sound. Private events should use a licensed or personal copy.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section faq" id="faq">
+  <section class="band faq" id="faq">
     <div class="wrap">
-      <div class="section-head reveal">
-        <span class="eyebrow">FAQ</span>
-        <h2>Questions before you book.</h2>
-        <p>Straight answers so you can plan with confidence.</p>
-      </div>
-      <div class="faq-list">
-        <details class="faq-item reveal">
+      <p class="kicker rise">FAQ</p>
+      <h2 class="display rise" style="font-size: clamp(1.9rem, 3.5vw, 2.6rem); margin-bottom: 1.25rem;">Before you book.</h2>
+      <div class="faq-wrap">
+        <details class="rise">
           <summary>What if it rains?</summary>
-          <p>Pacific Northwest weather happens. If rain or high wind makes the night unsafe or unwatchable, we reschedule with you at no penalty. Light drizzle can sometimes continue under covered spaces — we’ll decide together the day of.</p>
+          <p>If rain or wind kills the night, we reschedule at no penalty. Covered spaces sometimes keep a light drizzle going — we’ll call it together that day.</p>
         </details>
-        <details class="faq-item reveal">
-          <summary>How long does setup take?</summary>
-          <p>Most Basic Cinema setups take about 45–75 minutes. Full Night Out (with bouncy house) usually needs a bit longer. We’ll arrive early enough that your guests never wait on gear.</p>
+        <details class="rise">
+          <summary>How long is setup?</summary>
+          <p>Basic Cinema is usually 45–75 minutes. Full Night Out with a bouncy house needs a little more. We arrive early so guests never wait on gear.</p>
         </details>
-        <details class="faq-item reveal">
-          <summary>Can we really watch any movie?</summary>
-          <p>Yes — bring the title you want on a streaming account, USB, or disc. We connect playback to our projector and speakers. For public or ticketed events, ask us about licensing so everything stays above board.</p>
+        <details class="rise">
+          <summary>Any movie we want?</summary>
+          <p>Yes — streaming account, USB, or disc. For public or ticketed events, ask us about licensing.</p>
         </details>
-        <details class="faq-item reveal">
-          <summary>What kind of power do we need?</summary>
-          <p>A standard outdoor outlet is enough for most backyard setups. Campgrounds and larger community nights may need a dedicated circuit — mention your venue when you request a quote and we’ll confirm.</p>
+        <details class="rise">
+          <summary>Power requirements?</summary>
+          <p>A standard outdoor outlet covers most yards. Campgrounds and big community nights may need a dedicated circuit — mention your venue on the form.</p>
         </details>
-        <details class="faq-item reveal">
-          <summary>Do you travel outside Lyons–Bend?</summary>
-          <p>Our core corridor is Lyons, Detroit Lake, Salem, Sisters, and Bend. Nearby towns are often easy to add. Farther trips may include a travel fee — just ask.</p>
+        <details class="rise">
+          <summary>Outside Lyons–Bend?</summary>
+          <p>Nearby towns are often easy. Farther trips may include travel — just ask.</p>
         </details>
-        <details class="faq-item reveal">
-          <summary>Is there a deposit?</summary>
-          <p>A modest deposit holds your date once you approve the quote. The balance is due before showtime. We’ll spell out payment details in your confirmation.</p>
+        <details class="rise">
+          <summary>Deposit?</summary>
+          <p>A modest deposit holds the date after you approve the quote. Balance before showtime.</p>
         </details>
       </div>
     </div>
   </section>
 
-  <section class="section book" id="book">
-    <div class="wrap book-layout">
-      <div class="book-copy reveal">
-        <span class="eyebrow">Book</span>
-        <h2>Request your outdoor cinema night.</h2>
-        <p>Share a few details and we’ll reply with availability and a clear quote — usually the same day.</p>
-        <div class="contact-lines">
+  <section class="band book" id="book">
+    <div class="wrap book-grid">
+      <div class="rise">
+        <p class="kicker">Book</p>
+        <h2>Request your night.</h2>
+        <p class="lede">A few details, then a same-day reply with availability and a quote.</p>
+        <div class="phones">
           <a href="tel:+15035550192">(503) 555-0192</a>
           <a href="mailto:hello@cascadiacinema.example">hello@cascadiacinema.example</a>
         </div>
-        <p class="reassure">Prefer to text or call? We’re happy to plan your night by phone.</p>
+        <p class="reply">Prefer text or a quick call? That works too.</p>
       </div>
 
-      <form class="form reveal" id="quote-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
-        <div class="form-success" role="status">Thanks — your request is ready to send. If Formspree isn’t connected yet, your email client will open with the details.</div>
-        <div class="form-fields">
-          <div class="form-row two">
+      <form class="form rise" id="quote-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
+        <div class="form-ok" role="status">Thanks — if Formspree isn’t connected yet, your email app will open with the details.</div>
+        <div class="fields">
+          <div class="row two">
             <div class="field">
               <label for="name">Name</label>
               <input id="name" name="name" type="text" autocomplete="name" required>
-              <span class="error">Please enter your name.</span>
+              <span class="err">Please enter your name.</span>
             </div>
             <div class="field">
               <label for="email">Email</label>
               <input id="email" name="email" type="email" autocomplete="email" required>
-              <span class="error">Enter a valid email.</span>
+              <span class="err">Enter a valid email.</span>
             </div>
           </div>
-          <div class="form-row two">
+          <div class="row two">
             <div class="field">
               <label for="phone">Phone</label>
               <input id="phone" name="phone" type="tel" autocomplete="tel" required>
-              <span class="error">Please add a phone number.</span>
+              <span class="err">Add a phone number.</span>
             </div>
             <div class="field">
               <label for="date">Event date</label>
               <input id="date" name="date" type="date" required>
-              <span class="error">Choose your preferred date.</span>
+              <span class="err">Choose a date.</span>
             </div>
           </div>
-          <div class="form-row two">
+          <div class="row two">
             <div class="field">
               <label for="location">Town / location</label>
-              <input id="location" name="location" type="text" placeholder="e.g. Detroit Lake, Salem, Bend" required>
-              <span class="error">Tell us where the night will be.</span>
+              <input id="location" name="location" type="text" placeholder="Detroit Lake, Salem, Bend…" required>
+              <span class="err">Where’s the night?</span>
             </div>
             <div class="field">
               <label for="package">Package</label>
               <select id="package" name="package" required>
-                <option value="">Select a package</option>
+                <option value="">Select</option>
                 <option value="basic">Basic Cinema</option>
                 <option value="popcorn">Cinema + Popcorn</option>
                 <option value="full">Full Night Out</option>
               </select>
-              <span class="error">Select a package.</span>
+              <span class="err">Select a package.</span>
             </div>
           </div>
           <div class="field">
             <label for="movie">Movie preference</label>
-            <input id="movie" name="movie" type="text" placeholder="Title you’d love to watch (optional)">
+            <input id="movie" name="movie" type="text" placeholder="Optional — title you’d love">
           </div>
           <div class="field">
             <label for="message">Anything else?</label>
-            <textarea id="message" name="message" placeholder="Guest count, add-ons, power notes, occasion…"></textarea>
+            <textarea id="message" name="message" placeholder="Guest count, add-ons, power notes…"></textarea>
           </div>
           <input type="hidden" name="_subject" value="Cascadia Cinema Co. quote request">
-          <div class="form-actions">
-            <button type="submit" class="btn btn-amber">Send quote request</button>
-          </div>
+          <button type="submit" class="btn btn-solid btn-wide">Send quote request</button>
         </div>
       </form>
     </div>
   </section>
 </main>
 
-<footer class="site-footer">
-  <div class="wrap footer-grid">
+<footer class="foot">
+  <div class="wrap foot-grid">
     <div>
-      <div class="footer-brand">Cascadia Cinema <span>Co.</span></div>
-      <p>Professional outdoor movie night rentals across the Willamette Valley and Cascades corridor.</p>
+      <div class="foot-brand">Cascadia Cinema <i>Co.</i></div>
+      <p>Outdoor movie nights across the Willamette Valley and Cascades corridor.</p>
     </div>
     <div>
-      <h4>Service area</h4>
+      <h4>Towns</h4>
       <ul>
         <li>Lyons</li>
         <li>Detroit Lake</li>
@@ -1188,115 +1118,102 @@ ul { list-style: none; }
       </ul>
     </div>
   </div>
-  <div class="wrap footer-bottom">
-    <p>&copy; <span id="year"></span> Cascadia Cinema Co. Outdoor movie rentals in Oregon.</p>
+  <div class="wrap foot-bottom">
+    <p>&copy; <span id="year"></span> Cascadia Cinema Co.</p>
+    <p class="credits">Photos: <a href="https://www.pexels.com/" rel="noopener">Pexels</a> · Son Tung Tran, Ron Lach, Sami Abdullah</p>
   </div>
 </footer>
 
-<div class="sticky-cta">
-  <a class="btn btn-amber" href="#book">Book your night</a>
+<div class="dock">
+  <a class="btn btn-solid" href="#book">Book a night</a>
 </div>
 
 <script>
 (function () {
   document.getElementById("year").textContent = String(new Date().getFullYear());
 
-  // Scroll reveals
-  const reveals = document.querySelectorAll(".reveal");
+  var rises = document.querySelectorAll(".rise");
   if ("IntersectionObserver" in window) {
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
         if (entry.isIntersecting) {
-          entry.target.classList.add("in");
+          entry.target.classList.add("on");
           io.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.12, rootMargin: "0px 0px -8% 0px" });
-    reveals.forEach((el) => io.observe(el));
+    }, { threshold: 0.12, rootMargin: "0px 0px -6% 0px" });
+    rises.forEach(function (el) { io.observe(el); });
   } else {
-    reveals.forEach((el) => el.classList.add("in"));
+    rises.forEach(function (el) { el.classList.add("on"); });
   }
 
-  // Package preselect → book form
-  const packageSelect = document.getElementById("package");
-  document.querySelectorAll("[data-package]").forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const value = btn.getAttribute("data-package");
+  var packageSelect = document.getElementById("package");
+  document.querySelectorAll("[data-package]").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var value = btn.getAttribute("data-package");
       if (packageSelect && value) {
         packageSelect.value = value;
         packageSelect.dispatchEvent(new Event("change", { bubbles: true }));
       }
-      const book = document.getElementById("book");
+      var book = document.getElementById("book");
       if (book) book.scrollIntoView({ behavior: "smooth", block: "start" });
-      window.setTimeout(() => {
-        const name = document.getElementById("name");
+      window.setTimeout(function () {
+        var name = document.getElementById("name");
         if (name) name.focus({ preventScroll: true });
       }, 450);
     });
   });
 
-  // Form validation + Formspree / mailto fallback
-  const form = document.getElementById("quote-form");
+  var form = document.getElementById("quote-form");
   if (!form) return;
+  var required = ["name", "email", "phone", "date", "location", "package"];
 
-  const requiredFields = ["name", "email", "phone", "date", "location", "package"];
-
-  function validateField(id) {
-    const el = document.getElementById(id);
-    const wrap = el && el.closest(".field");
+  function validate(id) {
+    var el = document.getElementById(id);
+    var wrap = el && el.closest(".field");
     if (!el || !wrap) return true;
-    let ok = el.checkValidity();
-    if (id === "email") {
-      ok = ok && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(el.value.trim());
-    }
-    wrap.classList.toggle("invalid", !ok);
+    var ok = el.checkValidity();
+    if (id === "email") ok = ok && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(el.value.trim());
+    wrap.classList.toggle("bad", !ok);
     return ok;
   }
 
-  requiredFields.forEach((id) => {
-    const el = document.getElementById(id);
+  required.forEach(function (id) {
+    var el = document.getElementById(id);
     if (!el) return;
-    el.addEventListener("blur", () => validateField(id));
-    el.addEventListener("input", () => {
-      const wrap = el.closest(".field");
-      if (wrap && wrap.classList.contains("invalid")) validateField(id);
+    el.addEventListener("blur", function () { validate(id); });
+    el.addEventListener("input", function () {
+      if (el.closest(".field").classList.contains("bad")) validate(id);
     });
   });
 
-  form.addEventListener("submit", (event) => {
-    let valid = true;
-    requiredFields.forEach((id) => {
-      if (!validateField(id)) valid = false;
-    });
+  form.addEventListener("submit", function (event) {
+    var valid = true;
+    required.forEach(function (id) { if (!validate(id)) valid = false; });
     if (!valid) {
       event.preventDefault();
-      const firstBad = form.querySelector(".field.invalid input, .field.invalid select");
-      if (firstBad) firstBad.focus();
+      var bad = form.querySelector(".field.bad input, .field.bad select");
+      if (bad) bad.focus();
       return;
     }
-
-    const action = form.getAttribute("action") || "";
-    if (action.includes("YOUR_FORM_ID")) {
+    var action = form.getAttribute("action") || "";
+    if (action.indexOf("YOUR_FORM_ID") !== -1) {
       event.preventDefault();
-      const data = new FormData(form);
-      const body = [
-        "Cascadia Cinema Co. quote request",
-        "",
+      var data = new FormData(form);
+      var body = [
+        "Cascadia Cinema Co. quote request", "",
         "Name: " + (data.get("name") || ""),
         "Email: " + (data.get("email") || ""),
         "Phone: " + (data.get("phone") || ""),
         "Date: " + (data.get("date") || ""),
         "Location: " + (data.get("location") || ""),
         "Package: " + (data.get("package") || ""),
-        "Movie: " + (data.get("movie") || "(not specified)"),
-        "",
-        "Notes:",
-        data.get("message") || "(none)"
+        "Movie: " + (data.get("movie") || "(not specified)"), "",
+        "Notes:", data.get("message") || "(none)"
       ].join("\n");
-      const mailto = "mailto:hello@cascadiacinema.example?subject=" +
+      window.location.href = "mailto:hello@cascadiacinema.example?subject=" +
         encodeURIComponent("Cascadia Cinema Co. quote request") +
         "&body=" + encodeURIComponent(body);
-      window.location.href = mailto;
       form.classList.add("sent");
     }
   });

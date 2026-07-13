@@ -40,24 +40,27 @@ Outside this corridor? The site invites travel quotes.
 ## Features
 
 - Single `index.html` — no build step or dependencies
-- Responsive layout for phone and desktop
+- Local Pexels photos of outdoor cinemas (see `assets/photos/`)
+- Editorial layout: menu-style packages, town ticker, photo breakouts
 - LocalBusiness structured data + Open Graph meta
-- Conversion UX: package preselect, form validation, sticky CTA
-- Subtle motion: hero drift, scroll reveals, button/package hover
+- Conversion UX: package preselect, form validation, sticky mobile CTA
+- Motion: hero drift, town ticker, scroll reveals
 
 ## File structure
 
 ```
-index.html           — Full marketing + booking site
-README.md            — This file
-GITHUB_SETUP_GUIDE.md — Deploy to GitHub Pages or Netlify
+index.html              — Marketing + booking site
+assets/photos/          — Outdoor cinema photos from Pexels
+assets/photos/ATTRIBUTION.txt
+README.md
+GITHUB_SETUP_GUIDE.md
 ```
 
 ## Before you go live
 
 1. Replace placeholder phone `(503) 555-0192` and email `hello@cascadiacinema.example` with your real contact info.
 2. Connect the quote form: replace `YOUR_FORM_ID` in the form `action` with your [Formspree](https://formspree.io) form ID (or keep the mailto fallback).
-3. Swap Unsplash hero/night images for your own PNW outdoor cinema photos (marked with comments in `index.html`).
+3. Optionally swap Pexels photos for your own event photography.
 4. Adjust “starting at” prices to match your real rates.
 5. Rename **Cascadia Cinema Co.** if you have a final business name.
 
