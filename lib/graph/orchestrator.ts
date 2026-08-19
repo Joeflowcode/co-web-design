@@ -5,6 +5,7 @@ import type { BaseChatModel } from "@langchain/core/language_models/chat_models"
 import { AGENTS, getAgent } from "@/lib/agents/definitions";
 import { buildMemoryContext } from "@/lib/memory/store";
 import { createLLM, getDefaultLLMConfig } from "@/lib/llm/providers";
+import { ALL_TOOLS } from "@/lib/tools/real-tools";
 import type { AgentId, AgentMessage, CollaborationResult } from "@/lib/types";
 
 const GraphState = Annotation.Root({
@@ -58,10 +59,16 @@ async function runAgent(
   const agent = getAgent(agentId);
   const agentMemory = await buildMemoryContext(agentId);
 
-  const response = await llm.invoke([
+  // Bind tools to the model if it supports tool calling
+  const modelWithTools = "bindTools" in llm && typeof (llm as { bindTools?: unknown }).bindTools === "function"
+    ? (llm as BaseChatModel & { bindTools: (tools: unknown[]) => BaseChatModel }).bindTools(ALL_TOOLS)
+    : llm;
+
+  const response = await modelWithTools.invoke([
     new SystemMessage(`${agent.systemPrompt}${memoryContext}${agentMemory}
 
-You are collaborating with other team members. Be concise (2-4 paragraphs). End with 1-2 specific action items.`),
+You are collaborating with other team members. Be concise (2-4 paragraphs). End with 1-2 specific action items.
+You have tools available: web_search, save_memory, recall_memory, create_task, get_financials, trigger_automation. Use them when useful.`),
     new HumanMessage(userMessage),
   ]);
 

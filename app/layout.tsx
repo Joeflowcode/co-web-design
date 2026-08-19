@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
+import { DemoBanner } from "@/components/demo-banner";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -27,6 +28,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning className={`${geistSans.variable} ${geistMono.variable} h-full`}>
       <body className="h-full antialiased">
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
+          {process.env.NEXT_PUBLIC_DEMO_MODE === "true" && <DemoBanner />}
           {children}
         </ThemeProvider>
       </body>
